@@ -37,3 +37,6 @@ build/
 
 # macOS metadata
 __MACOSX/
+
+# Benchmark run artifacts (baseline.json is committed; results.json is not)
+benchmark/results.json

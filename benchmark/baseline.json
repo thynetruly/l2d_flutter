@@ -1,0 +1,91 @@
+{
+  "_comment": [
+    "Committed performance baseline. Regression thresholds per benchmark.",
+    "compare_baseline.dart reads this file, diffs it against results.json,",
+    "and exits non-zero if any entry is breached.",
+    "",
+    "IMPORTANT: This file is a TEMPLATE — the numeric thresholds below are",
+    "placeholders that will produce either 'OK' or harmless warnings until",
+    "they are replaced with real per-hardware measurements. To capture the",
+    "true baseline on your dev machine:",
+    "  1. dart run benchmark/run_all.dart",
+    "  2. Inspect benchmark/results.json",
+    "  3. Copy meaningful thresholds into this file's 'benchmarks' map,",
+    "     using the result meanNs for 'prevMeanNs' and a small margin for",
+    "     'maxMeanNs' / 'maxMsPerFrame' entries. See README for details.",
+    "",
+    "Keys are 'module/name' or 'module/name@variant' — the canonical form",
+    "matches BenchResult.key in harness.dart."
+  ],
+  "schemaVersion": 1,
+  "defaults": {
+    "regressionTolerancePct": 20,
+    "multiInstanceScalingMaxSuperlinearityPct": 30,
+    "multiModelPerModelWarnVariance": 3.0
+  },
+  "benchmarks": {
+    "math/cosf": {
+      "_note": "Default variant (no isLeaf). Replace maxMeanNs with observed mean × 1.2"
+    },
+    "math/cosf@isLeaf": {
+      "_note": "Should be noticeably faster than @default; capture after first run"
+    },
+    "math/cardanoAlgorithmForBezier": {
+      "_note": "Hottest motion path. Replace with observed mean × 1.2"
+    },
+    "math/matrixMultiply@aliased": {
+      "_note": "Tier 2 candidate: eliminate Float32List(16) scratch allocations"
+    },
+    "math/matrixMultiply@nonAliased": {
+      "_note": "Same optimisation target as aliased variant"
+    },
+    "math/vector2.addChain": {
+      "_note": "Counts ~5 CubismVector2 allocations per run"
+    },
+    "effect/breath": {
+      "_note": "Haru breath, 360 frames"
+    },
+    "effect/eyeBlink@steady": {
+      "_note": "Pure arithmetic baseline; 600 frames"
+    },
+    "effect/pose": {
+      "_note": "Haru pose3.json, 120 frames"
+    },
+    "motion/curveEval@linear": {
+      "_note": "Lower-bound curve evaluation cost"
+    },
+    "motion/curveEval@bezierCardano": {
+      "_note": "Worst-case curve evaluation cost — Cardano path"
+    },
+    "motion/fullMotion": {
+      "_note": "Haru idle motion, 600 frames. Primary motion-playback number."
+    },
+    "motion/queueTransition": {
+      "_note": "Two-motion priority crossfade, 120 frames"
+    },
+    "physics/pendulum@haru_8particles": {
+      "_note": "Haru 8-particle pendulum, 300 frames"
+    },
+    "physics/pendulumStress@10rigs_5particles": {
+      "_note": "Scaling point; compare ms/frame to haru_8particles"
+    },
+    "pipeline/fullFrame@60fps": {
+      "_note": "HEADLINE METRIC — 60 fps full pipeline. Target ≤ 16.6 ms/frame."
+    },
+    "pipeline/fullFrame@120fps": {
+      "_note": "120 fps full pipeline. Target ≤ 8.3 ms/frame."
+    },
+    "pipeline/multiInstance@4x60fps": {
+      "_note": "Homogeneous multi-instance @ 4 copies × 60 fps. Target ≤ 16.6 ms/frame."
+    },
+    "pipeline/multiInstance@4x120fps": {
+      "_note": "Homogeneous multi-instance @ 4 copies × 120 fps. Target ≤ 8.3 ms/frame."
+    },
+    "pipeline/multiModel@4models@60fps": {
+      "_note": "Heterogeneous 4-model mix @ 60 fps. Target ≤ 16.6 ms/frame."
+    },
+    "pipeline/multiModel@4models@120fps": {
+      "_note": "Heterogeneous 4-model mix @ 120 fps. Target ≤ 8.3 ms/frame."
+    }
+  }
+}
