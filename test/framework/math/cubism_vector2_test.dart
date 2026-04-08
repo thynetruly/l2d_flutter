@@ -121,22 +121,22 @@ void main() {
       test('normalizing (3, 4) produces unit length', () {
         final v = CubismVector2(3.0, 4.0);
         v.normalize();
-        expect(v.length, closeTo(1.0, 1e-10));
-        expect(v.x, closeTo(3.0 / 5.0, 1e-10));
-        expect(v.y, closeTo(4.0 / 5.0, 1e-10));
+        expect(v.length, closeTo(1.0, 1e-6));
+        expect(v.x, closeTo(3.0 / 5.0, 1e-6));
+        expect(v.y, closeTo(4.0 / 5.0, 1e-6));
       });
 
       test('normalizing (1, 0) stays (1, 0)', () {
         final v = CubismVector2(1.0, 0.0);
         v.normalize();
-        expect(v.x, closeTo(1.0, 1e-10));
-        expect(v.y, closeTo(0.0, 1e-10));
+        expect(v.x, closeTo(1.0, 1e-6));
+        expect(v.y, closeTo(0.0, 1e-6));
       });
 
       test('normalized() returns unit-length copy without mutating original', () {
         final v = CubismVector2(3.0, 4.0);
         final n = v.normalized();
-        expect(n.length, closeTo(1.0, 1e-10));
+        expect(n.length, closeTo(1.0, 1e-6));
         // Original unchanged
         expect(v.x, equals(3.0));
         expect(v.y, equals(4.0));
@@ -159,7 +159,7 @@ void main() {
 
       test('dot product with itself equals length squared', () {
         final v = CubismVector2(3.0, 4.0);
-        expect(v.dot(v), closeTo(v.length * v.length, 1e-10));
+        expect(v.dot(v), closeTo(v.length * v.length, 1e-6));
       });
     });
 
@@ -185,7 +185,7 @@ void main() {
         final a = CubismVector2(1.0, 2.0);
         final b = CubismVector2(4.0, 6.0);
         final expected = math.sqrt(9.0 + 16.0); // sqrt((4-1)^2 + (6-2)^2) = 5
-        expect(a.distanceTo(b), closeTo(expected, 1e-10));
+        expect(a.distanceTo(b), closeTo(expected, 1e-6));
       });
     });
 

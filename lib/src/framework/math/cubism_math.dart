@@ -1,7 +1,6 @@
-import 'dart:math' as math;
-
 import 'cubism_vector2.dart';
 import 'float32.dart';
+import 'libm.dart';
 
 /// Static math utility functions for the Cubism Framework.
 ///
@@ -36,17 +35,17 @@ class CubismMath {
     return val;
   }
 
-  /// Sine function.
-  static double sinF(double x) => math.sin(x);
+  /// Sine function (single-precision via libm `sinf`).
+  static double sinF(double x) => LibM.sinf(x);
 
-  /// Cosine function.
-  static double cosF(double x) => math.cos(x);
+  /// Cosine function (single-precision via libm `cosf`).
+  static double cosF(double x) => LibM.cosf(x);
 
   /// Absolute value.
   static double absF(double x) => x.abs();
 
-  /// Square root.
-  static double sqrtF(double x) => math.sqrt(x);
+  /// Square root (single-precision via libm `sqrtf`).
+  static double sqrtF(double x) => LibM.sqrtf(x);
 
   /// Returns the larger of [l] and [r].
   static double max(double l, double r) => (l > r) ? l : r;
@@ -57,18 +56,14 @@ class CubismMath {
   /// Sine-wave easing for fade-in/fade-out.
   ///
   /// Maps [value] in [0..1] to a smooth ease curve using cosine.
-  /// Formula: `0.5 - 0.5 * cos(value * pi)`
+  /// Formula: `0.5 - 0.5 * cosf(value * Pi)` (matches C++ exactly).
   ///
-  /// Each intermediate is truncated to float32 to match C++ as closely as
-  /// possible. Residual <1e-7 drift remains because Dart's `math.cos` is
-  /// double-precision while C++ uses `cosf` (single-precision); the result
-  /// can differ in the last ULP. Achieving bit-exact parity here would
-  /// require implementing `cosf` in pure Dart.
+  /// Uses [LibM.cosf] for bit-exact parity with the C++ Cubism Framework.
   static double getEasingSine(double value) {
     if (value < 0.0) return 0.0;
     if (value > 1.0) return 1.0;
     final x = Float32.cast(value * piF32);
-    final c = Float32.cast(math.cos(x));
+    final c = LibM.cosf(x);
     return Float32.cast(0.5 - Float32.cast(0.5 * c));
   }
 
@@ -82,12 +77,10 @@ class CubismMath {
   ///
   /// Result is normalized to [-pi, pi] range.
   ///
-  /// Each step is truncated to float32 to match C++ as closely as possible.
-  /// Residual <1e-7 drift may remain because Dart's `math.atan2` is double-
-  /// precision while C++ uses `atan2f` (single-precision).
+  /// Uses [LibM.atan2f] for bit-exact parity with the C++ Cubism Framework.
   static double directionToRadian(CubismVector2 from, CubismVector2 to) {
-    final q1 = Float32.cast(math.atan2(to.y, to.x));
-    final q2 = Float32.cast(math.atan2(from.y, from.x));
+    final q1 = LibM.atan2f(to.y, to.x);
+    final q2 = LibM.atan2f(from.y, from.x);
     var ret = Float32.cast(q1 - q2);
 
     final twoPi = Float32.cast(piF32 * 2.0);
@@ -126,7 +119,8 @@ class CubismMath {
       }
       return -c / b;
     }
-    return -(b + math.sqrt(b * b - 4.0 * a * c)) / (2.0 * a);
+    return Float32.cast(
+        -(b + LibM.sqrtf(Float32.cast(b * b - 4.0 * a * c))) / (2.0 * a));
   }
 
   /// Solves a cubic equation using Cardano's algorithm for Bezier curves.
@@ -134,9 +128,10 @@ class CubismMath {
   /// Solves: `a*x^3 + b*x^2 + c*x + d = 0`
   /// Returns a solution in [0.0, 1.0] for valid Bezier t-values.
   ///
-  /// Each intermediate is truncated to float32 to match C++ behavior.
-  /// Residual <1e-7 drift may remain because Dart's `math.sqrt`, `math.acos`,
-  /// `math.cos`, and `_cbrt` are double-precision.
+  /// Uses [LibM.sqrtf]/[LibM.cosf] for the float-precision parts and
+  /// [LibM.acos]/[LibM.cbrt] (DOUBLE precision) for the parts where C++
+  /// intentionally uses double-precision (`acos`/`cbrt`) for stability.
+  /// Achieves bit-exact parity with the C++ Cubism Framework.
   static double cardanoAlgorithmForBezier(
       double a, double b, double c, double d) {
     if (absF(a) < epsilon) {
@@ -164,17 +159,20 @@ class CubismMath {
       // Three distinct real roots
       final mp3 = f(-p / 3.0);
       final mp33 = f(f(mp3 * mp3) * mp3);
-      final r = f(math.sqrt(mp33));
+      final r = f(LibM.sqrtf(mp33));
       final t = f(-q / f(2.0 * r));
       final cosphi = rangeF(t, -1.0, 1.0);
-      final phi = f(math.acos(cosphi));
-      final crtr = f(_cbrt(r));
+      // C++ uses double-precision `acos()` here intentionally for stability,
+      // then truncates the result to csmFloat32 on assignment.
+      final phi = f(LibM.acos(cosphi));
+      // C++ uses double-precision `cbrt()` here intentionally, then truncates.
+      final crtr = f(LibM.cbrt(r));
       final t1 = f(2.0 * crtr);
 
-      final root1 = f(f(t1 * f(math.cos(f(phi / 3.0)))) - f(ba / 3.0));
-      final root2 = f(f(t1 * f(math.cos(f(f(phi + f(2.0 * piF32)) / 3.0)))) -
+      final root1 = f(f(t1 * LibM.cosf(f(phi / 3.0))) - f(ba / 3.0));
+      final root2 = f(f(t1 * LibM.cosf(f(f(phi + f(2.0 * piF32)) / 3.0))) -
           f(ba / 3.0));
-      final root3 = f(f(t1 * f(math.cos(f(f(phi + f(4.0 * piF32)) / 3.0)))) -
+      final root3 = f(f(t1 * LibM.cosf(f(f(phi + f(4.0 * piF32)) / 3.0))) -
           f(ba / 3.0));
 
       if ((root1 - center).abs() < threshold) {
@@ -185,12 +183,12 @@ class CubismMath {
       }
       return rangeF(root3, 0.0, 1.0);
     } else if (discriminant == 0.0) {
-      // Repeated roots
+      // Repeated roots — C++ uses double-precision `cbrt()`.
       double u1;
       if (q2 < 0.0) {
-        u1 = f(_cbrt(-q2));
+        u1 = f(LibM.cbrt(-q2));
       } else {
-        u1 = f(-_cbrt(q2));
+        u1 = f(-LibM.cbrt(q2));
       }
 
       final root1 = f(f(2.0 * u1) - f(ba / 3.0));
@@ -201,10 +199,10 @@ class CubismMath {
       }
       return rangeF(root2, 0.0, 1.0);
     } else {
-      // One real root
-      final sd = f(math.sqrt(discriminant));
-      final u1 = f(_cbrt(f(sd - q2)));
-      final v1 = f(_cbrt(f(sd + q2)));
+      // One real root — C++ uses sqrtf, cbrt (double).
+      final sd = f(LibM.sqrtf(discriminant));
+      final u1 = f(LibM.cbrt(f(sd - q2)));
+      final v1 = f(LibM.cbrt(f(sd + q2)));
       final root1 = f(f(u1 - v1) - f(ba / 3.0));
 
       return rangeF(root1, 0.0, 1.0);
@@ -221,13 +219,5 @@ class CubismMath {
     final absDivisor = divisor.abs();
     final result = absDividend - (absDividend / absDivisor).floorToDouble() * absDivisor;
     return dividend.isNegative ? -result : result;
-  }
-
-  /// Cube root function (handles negative values).
-  static double _cbrt(double x) {
-    if (x >= 0.0) {
-      return math.pow(x, 1.0 / 3.0).toDouble();
-    }
-    return -math.pow(-x, 1.0 / 3.0).toDouble();
   }
 }

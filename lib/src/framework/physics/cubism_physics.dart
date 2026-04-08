@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'dart:math' as math;
 
 import '../../core/cubism_model.dart';
 import '../math/cubism_math.dart';
+import '../math/libm.dart';
 import '../math/cubism_vector2.dart';
 
 // ---------------------------------------------------------------------------
@@ -333,12 +333,16 @@ class CubismPhysics {
 
   static void _applyRotation(CubismVector2 translation, double angle) {
     final rad = CubismMath.degreesToRadian(-angle);
-    final cosA = math.cos(rad);
-    final sinA = math.sin(rad);
-    final x = translation.x * cosA - translation.y * sinA;
-    final y = translation.x * sinA + translation.y * cosA;
-    translation.x = x;
-    translation.y = y;
+    final cosA = LibM.cosf(rad);
+    final sinA = LibM.sinf(rad);
+    // BIT-EXACT PARITY: match the C++ Cubism Framework's sequential variable
+    // update at CubismPhysics.cpp:749-750. The second formula reads the
+    // ALREADY-MODIFIED translation.x value. This is a sheared transformation,
+    // not a true 2D rotation, but it is the documented C++ behavior. Dart
+    // intentionally reproduces this for frame-for-frame parity. Do not "fix"
+    // this without coordinating with the upstream Cubism SDK.
+    translation.x = translation.x * cosA - translation.y * sinA;
+    translation.y = translation.x * sinA + translation.y * cosA;
   }
 
   double _calculateOutputValue(PhysicsSubRig rig, PhysicsOutput output) {
@@ -466,15 +470,20 @@ class CubismPhysics {
 
       final delay = strand[i].delay * deltaTimeSeconds * 30.0;
 
-      var direction = strand[i].position - strand[i - 1].position;
+      final direction = strand[i].position - strand[i - 1].position;
 
       // Gravity rotation with air resistance damping
       final radian = CubismMath.directionToRadian(strand[i].lastGravity, currentGravity) / airResistance;
-      final cosR = math.cos(radian);
-      final sinR = math.sin(radian);
-      final dx = cosR * direction.x - sinR * direction.y;
-      final dy = sinR * direction.x + cosR * direction.y;
-      direction = CubismVector2(dx, dy);
+      final cosR = LibM.cosf(radian);
+      final sinR = LibM.sinf(radian);
+      // BIT-EXACT PARITY: match C++ Cubism Framework's sequential variable
+      // update at CubismPhysics.cpp:309-310. The second formula reads the
+      // ALREADY-MODIFIED direction.x value. This is a sheared transformation,
+      // not a true 2D rotation, but it is the documented C++ behavior. Dart
+      // intentionally reproduces this for frame-for-frame parity. Do not
+      // "fix" this without coordinating with the upstream Cubism SDK.
+      direction.x = (cosR * direction.x) - (direction.y * sinR);
+      direction.y = (sinR * direction.x) + (direction.y * cosR);
 
       strand[i].position = strand[i - 1].position + direction;
 

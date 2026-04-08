@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'dart:math' as math;
 
 import '../../core/cubism_model.dart';
+import '../math/cubism_math.dart';
 
 /// Blend mode for expression parameters.
 enum ExpressionBlendType {
@@ -180,18 +180,21 @@ class CubismExpressionMotionManager {
         }
       }
 
-      // Calculate fade weight
+      // Calculate fade weight (uses CubismMath.getEasingSine for bit-exact
+      // parity with C++; previously this duplicated the formula).
       final fadein = (expression.fadeInTime <= 0.0)
           ? 1.0
-          : _easingSine((_userTimeSeconds - entry.fadeInStartTimeSeconds) /
-              expression.fadeInTime);
+          : CubismMath.getEasingSine(
+              (_userTimeSeconds - entry.fadeInStartTimeSeconds) /
+                  expression.fadeInTime);
 
       double fadeout = 1.0;
       if (entry.endTimeSeconds > 0.0) {
         fadeout = (expression.fadeOutTime <= 0.0)
             ? 1.0
-            : _easingSine(
-                (entry.endTimeSeconds - _userTimeSeconds) / expression.fadeOutTime);
+            : CubismMath.getEasingSine(
+                (entry.endTimeSeconds - _userTimeSeconds) /
+                    expression.fadeOutTime);
       }
 
       final fadeWeight = (fadein * fadeout).clamp(0.0, 1.0);
@@ -326,11 +329,6 @@ class CubismExpressionMotionManager {
     }
   }
 
-  static double _easingSine(double value) {
-    if (value < 0.0) return 0.0;
-    if (value > 1.0) return 1.0;
-    return 0.5 - 0.5 * math.cos(value * 3.1415926535897932384626433832795);
-  }
 }
 
 class _ExpressionEntry {

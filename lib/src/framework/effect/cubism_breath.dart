@@ -1,7 +1,7 @@
-import 'dart:math' as math;
-
 import '../../core/cubism_model.dart';
 import '../math/cubism_math.dart';
+import '../math/float32.dart';
+import '../math/libm.dart';
 
 /// Configuration for a single breathing parameter.
 class BreathParameterData {
@@ -49,18 +49,23 @@ class CubismBreath {
   /// Updates breathing parameters on [model].
   ///
   /// For each configured parameter, calculates:
-  /// `value = offset + peak * sin(2π * currentTime / cycle)`
+  /// `value = offset + peak * sinf(2π * currentTime / cycle)`
   /// and adds it to the parameter value with the configured weight.
+  ///
+  /// Uses [LibM.sinf] and float32 truncation throughout for bit-exact parity
+  /// with the C++ Cubism Framework.
   void updateParameters(CubismModel model, double deltaTimeSeconds) {
-    _currentTime += deltaTimeSeconds;
-    final t = _currentTime * 2.0 * CubismMath.pi;
+    // Match C++ csmFloat32 _currentTime accumulator (truncated each frame).
+    _currentTime = Float32.cast(_currentTime + deltaTimeSeconds);
+    final t = Float32.cast(_currentTime * Float32.cast(2.0 * CubismMath.pi));
 
     for (final data in parameters) {
       final param = model.getParameter(data.parameterId);
       if (param == null) continue;
 
-      final value = data.offset + (data.peak * math.sin(t / data.cycle));
-      // Additive blend: current + value * weight
+      final s = LibM.sinf(Float32.cast(t / data.cycle));
+      final value = Float32.cast(data.offset + Float32.cast(data.peak * s));
+      // Additive blend: model->AddParameterValue(id, value, weight)
       param.value = param.value + value * data.weight;
     }
   }

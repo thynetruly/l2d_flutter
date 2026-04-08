@@ -11,21 +11,21 @@
   "_categories": {
     "exact": "Modules that achieve bit-exact 0 parity. Any drift = bug.",
     "near_exact": "Modules with <1e-9 drift, limited only by JSON %.10g rounding.",
-    "transcendental_limited": "Modules using sin/cos/atan2/sqrt/cbrt. Inherent ~1e-8 limit because Dart's math functions are double-precision while C++ uses float versions.",
-    "iterative": "Multi-frame simulations where rounding errors accumulate."
+    "libm_ffi": "Modules using libm transcendentals via FFI. Bit-exact with C++ on the same platform; residual <1e-10 is JSON rounding floor.",
+    "iterative": "Multi-frame simulations where polynomial Bezier rounding accumulates."
   },
   "modules": {
     "math.easingSine": {
-      "max_abs_tolerance": 5e-8,
+      "max_abs_tolerance": 1e-10,
       "samples": 101,
-      "category": "transcendental_limited",
-      "notes": "Float32 cast at each step. Residual ~3e-8 from cosf vs cos precision."
+      "category": "libm_ffi",
+      "notes": "Uses LibM.cosf via FFI. Max observed 5e-11 — at JSON %.10g rounding floor."
     },
     "math.cardanoAlgorithmForBezier": {
-      "max_abs_tolerance": 5e-8,
+      "max_abs_tolerance": 1e-10,
       "samples": 5,
-      "category": "transcendental_limited",
-      "notes": "Float32 cast throughout. Residual ~1e-8 from sqrt/cbrt/acos/cos in double."
+      "category": "libm_ffi",
+      "notes": "Uses LibM.sqrtf/cosf and LibM.acos/cbrt (double, matches C++). Max observed 2.4e-11."
     },
     "math.matrixMultiply": {
       "max_abs_tolerance": 0,
@@ -37,25 +37,25 @@
       "max_abs_tolerance": 1e-9,
       "samples": 16,
       "category": "near_exact",
-      "notes": "Float32 cast at each binop. Residual <1e-9 from JSON %.10g rounding."
+      "notes": "Float32 cast at each binop. Max observed 2.8e-10."
     },
     "math.directionToRadian": {
       "max_abs_tolerance": 1e-9,
       "samples": 5,
-      "category": "near_exact",
-      "notes": "Float32 cast at each step. Residual <1e-9 from atan2f vs atan2 cast."
+      "category": "libm_ffi",
+      "notes": "Uses LibM.atan2f via FFI. Max observed 4.9e-10."
     },
     "breath.sineWave": {
-      "max_abs_tolerance": 5e-8,
+      "max_abs_tolerance": 1e-10,
       "samples": 360,
-      "category": "transcendental_limited",
-      "notes": "Float32 cast each iteration. Residual ~3e-8 from sinf vs sin precision."
+      "category": "libm_ffi",
+      "notes": "Uses LibM.sinf via FFI. Max observed 5e-11 — at JSON %.10g rounding floor."
     },
     "look.formula": {
       "max_abs_tolerance": 5e-9,
       "samples": 7,
       "category": "near_exact",
-      "notes": "Pure arithmetic with Float32 casts. Residual <2e-9 from JSON rounding."
+      "notes": "Pure arithmetic with Float32 casts. Max observed 1.5e-9 from JSON rounding."
     },
     "modelSetting.parsing": {
       "max_abs_tolerance": 0,
@@ -73,19 +73,19 @@
       "max_abs_tolerance": 1e-3,
       "samples": 3000,
       "category": "iterative",
-      "notes": "BezierEvaluate (linear-t) accumulated drift. Max observed 9.6e-4. Could be reduced by adding Float32.cast throughout CubismMotion (currently not done due to invasiveness)."
+      "notes": "BezierEvaluate (linear-t) polynomial chain. Max observed 9.6e-4. Eliminating this would require Float32.cast throughout CubismMotion's Bezier evaluation; not done because animation perception is unaffected."
     },
     "motionQueue.priorityTransition": {
       "max_abs_tolerance": 1e-4,
       "samples": 360,
       "category": "iterative",
-      "notes": "Priority motion transition with fade crossfade. Max observed 6.5e-5."
+      "notes": "Priority motion transition with fade crossfade. Max observed 6.5e-5. Same root cause as motion.curves."
     },
     "physics.300frame": {
-      "max_abs_tolerance": 5e-5,
+      "max_abs_tolerance": 5e-6,
       "samples": 1500,
       "category": "iterative",
-      "notes": "Pendulum simulation, 300 iterations. Max observed 3.4e-5."
+      "notes": "Pendulum simulation, 300 iterations. Max observed 1.9e-6 after libm FFI + C++ rotation bug replication. Down from 3.4e-5 (18x improvement)."
     },
     "pose.120frame": {
       "max_abs_tolerance": 0,

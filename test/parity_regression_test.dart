@@ -30,6 +30,7 @@ import 'package:l2d_flutter_plugin/src/framework/math/cubism_math.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_matrix44.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_vector2.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/float32.dart';
+import 'package:l2d_flutter_plugin/src/framework/math/libm.dart';
 import 'package:l2d_flutter_plugin/src/framework/cubism_model_setting_json.dart';
 import 'package:l2d_flutter_plugin/src/framework/motion/cubism_motion.dart';
 import 'package:l2d_flutter_plugin/src/framework/motion/cubism_motion_manager.dart';
@@ -194,9 +195,8 @@ void main() {
       for (final f in (g['frames'] as List).cast<Map<String, dynamic>>()) {
         currentTime = Float32.cast(currentTime + dt);
         final t = Float32.cast(currentTime * twoPi);
-        // sinf is single-precision; Dart math.sin is double — there is an
-        // inherent ~1e-7 ULP gap here that no amount of casting can close.
-        final s = Float32.cast(math.sin(Float32.cast(t / cycle)));
+        // LibM.sinf is the same single-precision sinf C++ uses — bit-exact.
+        final s = LibM.sinf(Float32.cast(t / cycle));
         final actual = Float32.cast(offset + Float32.cast(peak * s));
         r.record((f['value'] as num).toDouble(), actual);
       }
@@ -374,9 +374,15 @@ void main() {
       final r = ParityResult();
       const dt = 1.0 / 60.0;
       final frameData = (g['frameData'] as List).cast<Map<String, dynamic>>();
+      // Match C++ float32-truncated input chain: sin(i * 0.1f) * 30.0f
+      final f01 = Float32.cast(0.1);
+      final f30 = Float32.cast(30.0);
       for (int i = 0; i < frameData.length; i++) {
         final px = model.getParameter('ParamAngleX');
-        if (px != null) px.value = math.sin(i * 0.1) * 30.0;
+        if (px != null) {
+          final ix = Float32.cast(i.toDouble() * f01);
+          px.value = Float32.cast(math.sin(ix) * f30);
+        }
         physics.evaluate(model, dt);
         model.update();
         for (final s in (frameData[i]['paramSamples'] as List).cast<Map<String, dynamic>>()) {

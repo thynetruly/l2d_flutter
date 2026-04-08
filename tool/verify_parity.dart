@@ -19,6 +19,7 @@ import 'package:l2d_flutter_plugin/src/core/native_library.dart';
 import 'package:l2d_flutter_plugin/src/core/cubism_moc.dart';
 import 'package:l2d_flutter_plugin/src/core/cubism_model.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_math.dart';
+import 'package:l2d_flutter_plugin/src/framework/math/libm.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_matrix44.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_vector2.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/float32.dart';
@@ -164,7 +165,7 @@ void verifyBreath() {
   for (int i = 0; i < frames.length; i++) {
     currentTime = Float32.cast(currentTime + dt);
     final t = Float32.cast(currentTime * twoPi);
-    final s = Float32.cast(math.sin(Float32.cast(t / cycle)));
+    final s = LibM.sinf(Float32.cast(t / cycle));
     final actual = Float32.cast(offset + Float32.cast(peak * s));
     final expected = (frames[i]['value'] as num).toDouble();
     diff.record(expected, actual, 'frame=$i');
@@ -395,10 +396,18 @@ void verifyPhysics(CubismMoc moc) {
   final dt = 1.0 / 60.0;
   final frameData = (g['frameData'] as List).cast<Map<String, dynamic>>();
 
+  // Match C++ generator's float32-truncated input chain:
+  //   sin(i * 0.1f) * 30.0f
+  // 0.1f and 30.0f are float32 constants in C++; the multiplication is in
+  // float32 then promoted to double for sin().
+  final f01 = Float32.cast(0.1);
+  final f30 = Float32.cast(30.0);
   for (int i = 0; i < frameData.length; i++) {
     final paramAngleX = model.getParameter('ParamAngleX');
     if (paramAngleX != null) {
-      paramAngleX.value = math.sin(i * 0.1) * 30.0;
+      // Match C++: i * 0.1f (float multiplication, then promote to double for sin)
+      final ix = Float32.cast(i.toDouble() * f01);
+      paramAngleX.value = Float32.cast(math.sin(ix) * f30);
     }
     physics.evaluate(model, dt);
     model.update();

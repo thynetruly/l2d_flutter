@@ -131,14 +131,17 @@ void main() {
     });
 
     group('trig functions', () {
-      test('sinF matches dart:math sin', () {
+      // sinF/cosF now use LibM.sinf/cosf via FFI for bit-exact parity with C++.
+      // These are single-precision; comparing against double-precision math.sin
+      // requires float32-epsilon tolerance.
+      test('sinF approximates dart:math sin', () {
         for (double x = -2 * CubismMath.pi; x <= 2 * CubismMath.pi; x += 0.5) {
-          expect(CubismMath.sinF(x), closeTo(math.sin(x), 1e-10));
+          expect(CubismMath.sinF(x), closeTo(math.sin(x), 1e-6));
         }
       });
-      test('cosF matches dart:math cos', () {
+      test('cosF approximates dart:math cos', () {
         for (double x = -2 * CubismMath.pi; x <= 2 * CubismMath.pi; x += 0.5) {
-          expect(CubismMath.cosF(x), closeTo(math.cos(x), 1e-10));
+          expect(CubismMath.cosF(x), closeTo(math.cos(x), 1e-6));
         }
       });
     });

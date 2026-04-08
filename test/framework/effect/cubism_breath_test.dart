@@ -68,9 +68,11 @@ void main() {
 
       expect(breath.currentTime, equals(0.0));
       breath.updateParameters(model, 0.5);
-      expect(breath.currentTime, closeTo(0.5, 1e-10));
+      // currentTime is now Float32-truncated (matches C++ csmFloat32). 0.5 is
+      // exactly representable but accumulated values may drift by ~1e-7.
+      expect(breath.currentTime, closeTo(0.5, 1e-6));
       breath.updateParameters(model, 0.3);
-      expect(breath.currentTime, closeTo(0.8, 1e-10));
+      expect(breath.currentTime, closeTo(0.8, 1e-6));
 
       model.dispose();
     });
