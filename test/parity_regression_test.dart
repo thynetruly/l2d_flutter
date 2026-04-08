@@ -29,6 +29,7 @@ import 'package:l2d_flutter_plugin/src/core/cubism_model.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_math.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_matrix44.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_vector2.dart';
+import 'package:l2d_flutter_plugin/src/framework/math/float32.dart';
 import 'package:l2d_flutter_plugin/src/framework/cubism_model_setting_json.dart';
 import 'package:l2d_flutter_plugin/src/framework/motion/cubism_motion.dart';
 import 'package:l2d_flutter_plugin/src/framework/motion/cubism_motion_manager.dart';
@@ -179,16 +180,24 @@ void main() {
 
     test('breath.sineWave', () {
       final g = _loadGolden('breath_golden.json');
-      final offset = (g['offset'] as num).toDouble();
-      final peak = (g['peak'] as num).toDouble();
-      final cycle = (g['cycle'] as num).toDouble();
+      final offset = Float32.cast((g['offset'] as num).toDouble());
+      final peak = Float32.cast((g['peak'] as num).toDouble());
+      final cycle = Float32.cast((g['cycle'] as num).toDouble());
       final r = ParityResult();
+      // Match C++ exactly:
+      //   _currentTime += deltaTimeSeconds; (float32 accumulator)
+      //   t = _currentTime * 2.0f * Pi
+      //   value = offset + peak * sinf(t / cycle)
       double currentTime = 0.0;
-      const dt = 1.0 / 60.0;
+      final dt = Float32.cast(1.0 / 60.0);
+      final twoPi = Float32.cast(2.0 * CubismMath.pi);
       for (final f in (g['frames'] as List).cast<Map<String, dynamic>>()) {
-        currentTime += dt;
-        final t = currentTime * 2.0 * CubismMath.pi;
-        final actual = offset + peak * math.sin(t / cycle);
+        currentTime = Float32.cast(currentTime + dt);
+        final t = Float32.cast(currentTime * twoPi);
+        // sinf is single-precision; Dart math.sin is double — there is an
+        // inherent ~1e-7 ULP gap here that no amount of casting can close.
+        final s = Float32.cast(math.sin(Float32.cast(t / cycle)));
+        final actual = Float32.cast(offset + Float32.cast(peak * s));
         r.record((f['value'] as num).toDouble(), actual);
       }
       _expectParity('breath.sineWave', r);
@@ -196,14 +205,25 @@ void main() {
 
     test('look.formula', () {
       final g = _loadGolden('look_golden.json');
-      final fX = (g['factorX'] as num).toDouble();
-      final fY = (g['factorY'] as num).toDouble();
-      final fXY = (g['factorXY'] as num).toDouble();
+      // Inputs from JSON come as doubles parsed from "%.10g" floats.
+      // Cast each to float32 to match C++ generator's computation chain.
+      final fX = Float32.cast((g['factorX'] as num).toDouble());
+      final fY = Float32.cast((g['factorY'] as num).toDouble());
+      final fXY = Float32.cast((g['factorXY'] as num).toDouble());
       final r = ParityResult();
       for (final c in (g['inputs'] as List).cast<Map<String, dynamic>>()) {
-        final dx = (c['dragX'] as num).toDouble();
-        final dy = (c['dragY'] as num).toDouble();
-        r.record((c['delta'] as num).toDouble(), fX * dx + fY * dy + fXY * dx * dy);
+        final dx = Float32.cast((c['dragX'] as num).toDouble());
+        final dy = Float32.cast((c['dragY'] as num).toDouble());
+        // C++ computation chain (with float32 truncation at each step):
+        //   csmFloat32 dragXY = dx * dy;
+        //   csmFloat32 result = fX*dx + fY*dy + fXY*dragXY;
+        // Each operation truncates to float32.
+        final dragXY = Float32.cast(dx * dy);
+        final t1 = Float32.cast(fX * dx);
+        final t2 = Float32.cast(fY * dy);
+        final t3 = Float32.cast(fXY * dragXY);
+        final actual = Float32.cast(Float32.cast(t1 + t2) + t3);
+        r.record((c['delta'] as num).toDouble(), actual);
       }
       _expectParity('look.formula', r);
     });

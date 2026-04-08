@@ -8,71 +8,90 @@
     "5. If regressions: tolerances exceeded => fix the bug"
   ],
   "_format": "Each module records max absolute difference observed and counts of samples exceeding standard thresholds.",
+  "_categories": {
+    "exact": "Modules that achieve bit-exact 0 parity. Any drift = bug.",
+    "near_exact": "Modules with <1e-9 drift, limited only by JSON %.10g rounding.",
+    "transcendental_limited": "Modules using sin/cos/atan2/sqrt/cbrt. Inherent ~1e-8 limit because Dart's math functions are double-precision while C++ uses float versions.",
+    "iterative": "Multi-frame simulations where rounding errors accumulate."
+  },
   "modules": {
     "math.easingSine": {
-      "max_abs_tolerance": 1e-6,
+      "max_abs_tolerance": 5e-8,
       "samples": 101,
-      "notes": "C++ float vs Dart double precision. Should be near-identical."
+      "category": "transcendental_limited",
+      "notes": "Float32 cast at each step. Residual ~3e-8 from cosf vs cos precision."
     },
     "math.cardanoAlgorithmForBezier": {
-      "max_abs_tolerance": 1e-6,
+      "max_abs_tolerance": 5e-8,
       "samples": 5,
-      "notes": "Cubic equation solver. Float vs double precision."
+      "category": "transcendental_limited",
+      "notes": "Float32 cast throughout. Residual ~1e-8 from sqrt/cbrt/acos/cos in double."
     },
     "math.matrixMultiply": {
-      "max_abs_tolerance": 1e-6,
+      "max_abs_tolerance": 0,
       "samples": 16,
-      "notes": "Pure float arithmetic, should match exactly within float precision."
+      "category": "exact",
+      "notes": "Float32List storage truncates each result. Bit-exact match."
     },
     "math.matrixInverse": {
-      "max_abs_tolerance": 1e-6,
+      "max_abs_tolerance": 1e-9,
       "samples": 16,
-      "notes": "Cofactor / determinant. Minor float vs double drift expected."
+      "category": "near_exact",
+      "notes": "Float32 cast at each binop. Residual <1e-9 from JSON %.10g rounding."
     },
     "math.directionToRadian": {
-      "max_abs_tolerance": 1e-6,
+      "max_abs_tolerance": 1e-9,
       "samples": 5,
-      "notes": "atan2 + normalization. Float vs double precision."
+      "category": "near_exact",
+      "notes": "Float32 cast at each step. Residual <1e-9 from atan2f vs atan2 cast."
     },
     "breath.sineWave": {
-      "max_abs_tolerance": 1e-4,
+      "max_abs_tolerance": 5e-8,
       "samples": 360,
-      "notes": "Pure sine wave. Some samples exceed 1e-6 due to float vs double precision in cycle ratio."
+      "category": "transcendental_limited",
+      "notes": "Float32 cast each iteration. Residual ~3e-8 from sinf vs sin precision."
     },
     "look.formula": {
-      "max_abs_tolerance": 1e-6,
+      "max_abs_tolerance": 5e-9,
       "samples": 7,
-      "notes": "Linear formula factorX*dragX + factorY*dragY + factorXY*dragXY."
+      "category": "near_exact",
+      "notes": "Pure arithmetic with Float32 casts. Residual <2e-9 from JSON rounding."
     },
     "modelSetting.parsing": {
       "max_abs_tolerance": 0,
       "samples": 31,
-      "notes": "All field parsing must match exactly (strings, ints)."
+      "category": "exact",
+      "notes": "String/int parsing — bit-exact."
     },
     "expression.weightSamples": {
       "max_abs_tolerance": 0,
       "samples": 5,
-      "notes": "Expression blend math should produce identical float output."
+      "category": "exact",
+      "notes": "Writes through float32 FFI model parameters — bit-exact."
     },
     "motion.curves": {
       "max_abs_tolerance": 1e-3,
       "samples": 3000,
-      "notes": "Float vs double precision in BezierEvaluate (linear-t mode used when AreBeziersRestricted=true). Max observed 9.6e-4."
+      "category": "iterative",
+      "notes": "BezierEvaluate (linear-t) accumulated drift. Max observed 9.6e-4. Could be reduced by adding Float32.cast throughout CubismMotion (currently not done due to invasiveness)."
     },
     "motionQueue.priorityTransition": {
       "max_abs_tolerance": 1e-4,
       "samples": 360,
-      "notes": "Priority motion transition with fade-in/fade-out crossfade. Max observed 6.5e-5 (float precision)."
+      "category": "iterative",
+      "notes": "Priority motion transition with fade crossfade. Max observed 6.5e-5."
     },
     "physics.300frame": {
-      "max_abs_tolerance": 1e-4,
+      "max_abs_tolerance": 5e-5,
       "samples": 1500,
-      "notes": "Iterative pendulum simulation. Float vs double accumulation over 300 frames."
+      "category": "iterative",
+      "notes": "Pendulum simulation, 300 iterations. Max observed 3.4e-5."
     },
     "pose.120frame": {
       "max_abs_tolerance": 0,
       "samples": 1200,
-      "notes": "Part opacity transitions. Perfect match across 120 frames."
+      "category": "exact",
+      "notes": "Writes through float32 FFI model parts — bit-exact."
     }
   }
 }

@@ -115,21 +115,58 @@ Declarative tolerances per module. Update this file when:
 
 ## Current Parity Status
 
+Categorized by what limits parity:
+
+### Exact (bit-exact 0)
+| Module | Max Abs Diff | Why |
+|--------|--------------|-----|
+| math.matrixMultiply | **0** | Float32List storage truncates each result |
+| modelSetting.parsing | **0** | String/int parsing — no float math |
+| expression.weightSamples | **0** | Writes through float32 FFI model parameters |
+| pose.120frame | **0** | Writes through float32 FFI model parts |
+
+### Near-exact (<1e-9, limited by JSON `%.10g` rounding)
+| Module | Max Abs Diff | Improvement |
+|--------|--------------|-------------|
+| math.matrixInverse | 2.8e-10 | Was 2.4e-7 — 850× better via Float32 cast at each binop |
+| math.directionToRadian | 4.9e-10 | Was 8.7e-8 — 175× better via Float32 cast |
+| look.formula | 1.5e-9 | Was 8.5e-7 — 570× better via Float32 chain in test |
+
+### Transcendental-limited (~1e-8, single ULP from C++ `cosf`/`sinf`/etc.)
+| Module | Max Abs Diff | Why |
+|--------|--------------|-----|
+| math.easingSine | 3.0e-8 | Dart `math.cos` is double-precision; C++ uses `cosf` |
+| math.cardanoAlgorithmForBezier | 1.2e-8 | Uses `sqrt`/`acos`/`cos`/`cbrt` |
+| breath.sineWave | 3.0e-8 | Uses `math.sin` |
+
+### Iterative simulations (accumulated drift over many frames)
 | Module | Max Abs Diff | Notes |
 |--------|--------------|-------|
-| math.easingSine | 9.6e-8 | Float vs double precision |
-| math.cardanoAlgorithmForBezier | 6.0e-8 | Float vs double precision |
-| math.matrixMultiply | 0 | Exact match |
-| math.matrixInverse | 2.4e-7 | Float vs double precision |
-| math.directionToRadian | 8.7e-8 | Float vs double precision |
-| breath.sineWave | 1.4e-5 | Float vs double in cycle ratio |
-| look.formula | 8.5e-7 | Float vs double precision |
-| modelSetting.parsing | 0 | Exact string/int match |
-| expression.weightSamples | 0 | Exact match |
-| motion.curves | 9.6e-4 | Float vs double in BezierEvaluate |
-| motionQueue.priorityTransition | 6.5e-5 | Float precision |
-| physics.300frame | 3.4e-5 | Float precision over 300 iterations |
-| pose.120frame | 0 | Exact match |
+| motion.curves | 9.6e-4 | 3000-sample motion playback (could be reduced by Float32-casting CubismMotion internals) |
+| motionQueue.priorityTransition | 6.5e-5 | 360-frame priority transition |
+| physics.300frame | 3.4e-5 | 300-frame pendulum simulation |
+
+### Why the gaps cannot be closed without float32 emulation
+
+1. **Transcendentals**: Dart's `math.cos`/`math.sin`/`math.atan2`/`math.acos`/`math.sqrt` all return double-precision results. C++ uses `cosf`/`sinf`/`atan2f`/etc. which compute in single-precision throughout. Casting Dart's double result to float32 doesn't perfectly match C++'s float32 result because the underlying computations have different rounding paths in the last few bits. The residual ~1e-8 drift is exactly 1 float32 ULP — the theoretical minimum.
+
+2. **Iterative simulations**: To make them exact, every binary operation in the simulation loop would need to be wrapped in `Float32.cast()`. This is invasive (touches every line of physics/motion math) for marginal benefit (the existing drift is below visual perception). Documented as a known precision limit.
+
+## How Float32 emulation works
+
+Dart's `Float32List` performs single-precision storage but reads/writes happen via doubles. The `Float32` helper class wraps this:
+
+```dart
+class Float32 {
+  static final Float32List _buf = Float32List(1);
+  static double cast(double v) {
+    _buf[0] = v;  // Truncates to float32 on store
+    return _buf[0];  // Reads back as double
+  }
+}
+```
+
+Use `Float32.cast()` at every intermediate step where C++ would use a `csmFloat32` variable. The native code already uses Float32List for matrix storage, so matrix ops are float32 by default.
 
 ## Bugs Found Through Parity Testing
 

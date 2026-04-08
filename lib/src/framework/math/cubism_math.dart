@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'cubism_vector2.dart';
+import 'float32.dart';
 
 /// Static math utility functions for the Cubism Framework.
 ///
@@ -10,6 +11,9 @@ class CubismMath {
 
   static const double pi = 3.1415926535897932384626433832795;
   static const double epsilon = 0.00001;
+
+  /// Pi truncated to float32 precision (matches C++ `Pi` constant exactly).
+  static final double piF32 = Float32.cast(pi);
 
   /// Clamps [value] within [min]..[max] range (float).
   static double rangeF(double value, double min, double max) {
@@ -54,10 +58,18 @@ class CubismMath {
   ///
   /// Maps [value] in [0..1] to a smooth ease curve using cosine.
   /// Formula: `0.5 - 0.5 * cos(value * pi)`
+  ///
+  /// Each intermediate is truncated to float32 to match C++ as closely as
+  /// possible. Residual <1e-7 drift remains because Dart's `math.cos` is
+  /// double-precision while C++ uses `cosf` (single-precision); the result
+  /// can differ in the last ULP. Achieving bit-exact parity here would
+  /// require implementing `cosf` in pure Dart.
   static double getEasingSine(double value) {
     if (value < 0.0) return 0.0;
     if (value > 1.0) return 1.0;
-    return 0.5 - 0.5 * cosF(value * pi);
+    final x = Float32.cast(value * piF32);
+    final c = Float32.cast(math.cos(x));
+    return Float32.cast(0.5 - Float32.cast(0.5 * c));
   }
 
   /// Converts degrees to radians.
@@ -69,16 +81,21 @@ class CubismMath {
   /// Calculates the angle between two vectors in radians.
   ///
   /// Result is normalized to [-pi, pi] range.
+  ///
+  /// Each step is truncated to float32 to match C++ as closely as possible.
+  /// Residual <1e-7 drift may remain because Dart's `math.atan2` is double-
+  /// precision while C++ uses `atan2f` (single-precision).
   static double directionToRadian(CubismVector2 from, CubismVector2 to) {
-    final q1 = math.atan2(to.y, to.x);
-    final q2 = math.atan2(from.y, from.x);
-    var ret = q1 - q2;
+    final q1 = Float32.cast(math.atan2(to.y, to.x));
+    final q2 = Float32.cast(math.atan2(from.y, from.x));
+    var ret = Float32.cast(q1 - q2);
 
-    while (ret < -pi) {
-      ret += pi * 2.0;
+    final twoPi = Float32.cast(piF32 * 2.0);
+    while (ret < -piF32) {
+      ret = Float32.cast(ret + twoPi);
     }
-    while (ret > pi) {
-      ret -= pi * 2.0;
+    while (ret > piF32) {
+      ret = Float32.cast(ret - twoPi);
     }
 
     return ret;
@@ -116,39 +133,49 @@ class CubismMath {
   ///
   /// Solves: `a*x^3 + b*x^2 + c*x + d = 0`
   /// Returns a solution in [0.0, 1.0] for valid Bezier t-values.
+  ///
+  /// Each intermediate is truncated to float32 to match C++ behavior.
+  /// Residual <1e-7 drift may remain because Dart's `math.sqrt`, `math.acos`,
+  /// `math.cos`, and `_cbrt` are double-precision.
   static double cardanoAlgorithmForBezier(
       double a, double b, double c, double d) {
     if (absF(a) < epsilon) {
       return rangeF(quadraticEquation(b, c, d), 0.0, 1.0);
     }
 
-    final ba = b / a;
-    final ca = c / a;
-    final da = d / a;
+    double f(double v) => Float32.cast(v);
 
-    final p = (3.0 * ca - ba * ba) / 3.0;
-    final p3 = p / 3.0;
-    final q = (2.0 * ba * ba * ba - 9.0 * ba * ca + 27.0 * da) / 27.0;
-    final q2 = q / 2.0;
-    final discriminant = q2 * q2 + p3 * p3 * p3;
+    final ba = f(b / a);
+    final ca = f(c / a);
+    final da = f(d / a);
+
+    final p = f(f(f(3.0 * ca) - f(ba * ba)) / 3.0);
+    final p3 = f(p / 3.0);
+    final q = f(f(f(f(2.0 * f(f(ba * ba) * ba)) - f(f(9.0 * ba) * ca)) +
+            f(27.0 * da)) /
+        27.0);
+    final q2 = f(q / 2.0);
+    final discriminant = f(f(q2 * q2) + f(f(p3 * p3) * p3));
 
     const center = 0.5;
     const threshold = center + 0.01;
 
     if (discriminant < 0.0) {
       // Three distinct real roots
-      final mp3 = -p / 3.0;
-      final mp33 = mp3 * mp3 * mp3;
-      final r = math.sqrt(mp33);
-      final t = -q / (2.0 * r);
+      final mp3 = f(-p / 3.0);
+      final mp33 = f(f(mp3 * mp3) * mp3);
+      final r = f(math.sqrt(mp33));
+      final t = f(-q / f(2.0 * r));
       final cosphi = rangeF(t, -1.0, 1.0);
-      final phi = math.acos(cosphi);
-      final crtr = _cbrt(r);
-      final t1 = 2.0 * crtr;
+      final phi = f(math.acos(cosphi));
+      final crtr = f(_cbrt(r));
+      final t1 = f(2.0 * crtr);
 
-      final root1 = t1 * math.cos(phi / 3.0) - ba / 3.0;
-      final root2 = t1 * math.cos((phi + 2.0 * pi) / 3.0) - ba / 3.0;
-      final root3 = t1 * math.cos((phi + 4.0 * pi) / 3.0) - ba / 3.0;
+      final root1 = f(f(t1 * f(math.cos(f(phi / 3.0)))) - f(ba / 3.0));
+      final root2 = f(f(t1 * f(math.cos(f(f(phi + f(2.0 * piF32)) / 3.0)))) -
+          f(ba / 3.0));
+      final root3 = f(f(t1 * f(math.cos(f(f(phi + f(4.0 * piF32)) / 3.0)))) -
+          f(ba / 3.0));
 
       if ((root1 - center).abs() < threshold) {
         return rangeF(root1, 0.0, 1.0);
@@ -161,13 +188,13 @@ class CubismMath {
       // Repeated roots
       double u1;
       if (q2 < 0.0) {
-        u1 = _cbrt(-q2);
+        u1 = f(_cbrt(-q2));
       } else {
-        u1 = -_cbrt(q2);
+        u1 = f(-_cbrt(q2));
       }
 
-      final root1 = 2.0 * u1 - ba / 3.0;
-      final root2 = -u1 - ba / 3.0;
+      final root1 = f(f(2.0 * u1) - f(ba / 3.0));
+      final root2 = f(-u1 - f(ba / 3.0));
 
       if ((root1 - center).abs() < threshold) {
         return rangeF(root1, 0.0, 1.0);
@@ -175,10 +202,10 @@ class CubismMath {
       return rangeF(root2, 0.0, 1.0);
     } else {
       // One real root
-      final sd = math.sqrt(discriminant);
-      final u1 = _cbrt(sd - q2);
-      final v1 = _cbrt(sd + q2);
-      final root1 = u1 - v1 - ba / 3.0;
+      final sd = f(math.sqrt(discriminant));
+      final u1 = f(_cbrt(f(sd - q2)));
+      final v1 = f(_cbrt(f(sd + q2)));
+      final root1 = f(f(u1 - v1) - f(ba / 3.0));
 
       return rangeF(root1, 0.0, 1.0);
     }

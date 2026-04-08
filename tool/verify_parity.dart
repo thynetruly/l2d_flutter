@@ -21,6 +21,7 @@ import 'package:l2d_flutter_plugin/src/core/cubism_model.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_math.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_matrix44.dart';
 import 'package:l2d_flutter_plugin/src/framework/math/cubism_vector2.dart';
+import 'package:l2d_flutter_plugin/src/framework/math/float32.dart';
 import 'package:l2d_flutter_plugin/src/framework/cubism_model_setting_json.dart';
 import 'package:l2d_flutter_plugin/src/framework/motion/cubism_motion.dart';
 import 'package:l2d_flutter_plugin/src/framework/motion/cubism_motion_manager.dart';
@@ -149,20 +150,22 @@ void verifyMath() {
 // BREATH
 // ---------------------------------------------------------------------------
 void verifyBreath() {
-  _section('Breath sine wave');
+  _section('Breath sine wave (with Float32 truncation)');
   final g = _loadGolden('breath_golden.json');
-  final offset = (g['offset'] as num).toDouble();
-  final peak = (g['peak'] as num).toDouble();
-  final cycle = (g['cycle'] as num).toDouble();
+  final offset = Float32.cast((g['offset'] as num).toDouble());
+  final peak = Float32.cast((g['peak'] as num).toDouble());
+  final cycle = Float32.cast((g['cycle'] as num).toDouble());
 
   final diff = Diff();
   double currentTime = 0.0;
-  final dt = 1.0 / 60.0;
+  final dt = Float32.cast(1.0 / 60.0);
+  final twoPi = Float32.cast(2.0 * CubismMath.pi);
   final frames = (g['frames'] as List).cast<Map<String, dynamic>>();
   for (int i = 0; i < frames.length; i++) {
-    currentTime += dt;
-    final t = currentTime * 2.0 * CubismMath.pi;
-    final actual = offset + peak * math.sin(t / cycle);
+    currentTime = Float32.cast(currentTime + dt);
+    final t = Float32.cast(currentTime * twoPi);
+    final s = Float32.cast(math.sin(Float32.cast(t / cycle)));
+    final actual = Float32.cast(offset + Float32.cast(peak * s));
     final expected = (frames[i]['value'] as num).toDouble();
     diff.record(expected, actual, 'frame=$i');
   }
@@ -173,18 +176,23 @@ void verifyBreath() {
 // LOOK
 // ---------------------------------------------------------------------------
 void verifyLook() {
-  _section('Look formula');
+  _section('Look formula (with Float32 truncation)');
   final g = _loadGolden('look_golden.json');
-  final fX = (g['factorX'] as num).toDouble();
-  final fY = (g['factorY'] as num).toDouble();
-  final fXY = (g['factorXY'] as num).toDouble();
+  final fX = Float32.cast((g['factorX'] as num).toDouble());
+  final fY = Float32.cast((g['factorY'] as num).toDouble());
+  final fXY = Float32.cast((g['factorXY'] as num).toDouble());
 
   final diff = Diff();
   for (final c in (g['inputs'] as List).cast<Map<String, dynamic>>()) {
-    final dx = (c['dragX'] as num).toDouble();
-    final dy = (c['dragY'] as num).toDouble();
+    final dx = Float32.cast((c['dragX'] as num).toDouble());
+    final dy = Float32.cast((c['dragY'] as num).toDouble());
     final expected = (c['delta'] as num).toDouble();
-    final actual = fX * dx + fY * dy + fXY * dx * dy;
+    // Match C++ float32 chain: each binop truncates to float32
+    final dragXY = Float32.cast(dx * dy);
+    final t1 = Float32.cast(fX * dx);
+    final t2 = Float32.cast(fY * dy);
+    final t3 = Float32.cast(fXY * dragXY);
+    final actual = Float32.cast(Float32.cast(t1 + t2) + t3);
     diff.record(expected, actual, 'dx=$dx,dy=$dy');
   }
   print('  ${diff.summary()}');

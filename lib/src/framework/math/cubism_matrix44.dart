@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 
 import 'cubism_math.dart';
+import 'float32.dart';
 
 /// 4x4 matrix for 2D/3D transformations (column-major storage).
 ///
@@ -102,8 +103,12 @@ class CubismMatrix44 {
   /// Calculates the inverse of this matrix.
   ///
   /// Returns identity matrix if the determinant is too small.
+  ///
+  /// Each intermediate result is truncated to float32 to match the C++
+  /// Framework's behavior exactly. Without this, accumulated double-precision
+  /// arithmetic produces results that differ from C++ at ~1e-7 ULP scale.
   CubismMatrix44 getInvert() {
-    // Extract 3x3 rotation part
+    // Extract 3x3 rotation part — Float32List reads are already float32-precise
     final r00 = _tr[0], r10 = _tr[1], r20 = _tr[2];
     final r01 = _tr[4], r11 = _tr[5], r21 = _tr[6];
     final r02 = _tr[8], r12 = _tr[9], r22 = _tr[10];
@@ -111,10 +116,20 @@ class CubismMatrix44 {
     // Extract translation
     final tx = _tr[12], ty = _tr[13], tz = _tr[14];
 
-    // Calculate 3x3 determinant
-    final det = r00 * (r11 * r22 - r12 * r21) -
-        r01 * (r10 * r22 - r12 * r20) +
-        r02 * (r10 * r21 - r11 * r20);
+    // Helper for brevity
+    double f(double v) => Float32.cast(v);
+
+    // Calculate 3x3 determinant — match C++ float32 binop chain
+    final m11_22 = f(r11 * r22);
+    final m12_21 = f(r12 * r21);
+    final t1 = f(m11_22 - m12_21);
+    final m10_22 = f(r10 * r22);
+    final m12_20 = f(r12 * r20);
+    final t2 = f(m10_22 - m12_20);
+    final m10_21 = f(r10 * r21);
+    final m11_20 = f(r11 * r20);
+    final t3 = f(m10_21 - m11_20);
+    final det = f(f(f(r00 * t1) - f(r01 * t2)) + f(r02 * t3));
 
     final result = CubismMatrix44();
     if (CubismMath.absF(det) < CubismMath.epsilon) {
@@ -122,23 +137,23 @@ class CubismMatrix44 {
     }
 
     // Cofactor matrix / determinant
-    final inv00 = (r11 * r22 - r12 * r21) / det;
-    final inv01 = -(r01 * r22 - r02 * r21) / det;
-    final inv02 = (r01 * r12 - r02 * r11) / det;
-    final inv10 = -(r10 * r22 - r12 * r20) / det;
-    final inv11 = (r00 * r22 - r02 * r20) / det;
-    final inv12 = -(r00 * r12 - r02 * r10) / det;
-    final inv20 = (r10 * r21 - r11 * r20) / det;
-    final inv21 = -(r00 * r21 - r01 * r20) / det;
-    final inv22 = (r00 * r11 - r01 * r10) / det;
+    final inv00 = f(t1 / det);
+    final inv01 = f(-f(f(r01 * r22) - f(r02 * r21)) / det);
+    final inv02 = f(f(f(r01 * r12) - f(r02 * r11)) / det);
+    final inv10 = f(-t2 / det);
+    final inv11 = f(f(f(r00 * r22) - f(r02 * r20)) / det);
+    final inv12 = f(-f(f(r00 * r12) - f(r02 * r10)) / det);
+    final inv20 = f(t3 / det);
+    final inv21 = f(-f(f(r00 * r21) - f(r01 * r20)) / det);
+    final inv22 = f(f(f(r00 * r11) - f(r01 * r10)) / det);
 
     final dst = result._tr;
     dst[0] = inv00;  dst[1] = inv10;  dst[2] = inv20;  dst[3] = 0.0;
     dst[4] = inv01;  dst[5] = inv11;  dst[6] = inv21;  dst[7] = 0.0;
     dst[8] = inv02;  dst[9] = inv12;  dst[10] = inv22; dst[11] = 0.0;
-    dst[12] = -(inv00 * tx + inv01 * ty + inv02 * tz);
-    dst[13] = -(inv10 * tx + inv11 * ty + inv12 * tz);
-    dst[14] = -(inv20 * tx + inv21 * ty + inv22 * tz);
+    dst[12] = f(-f(f(f(inv00 * tx) + f(inv01 * ty)) + f(inv02 * tz)));
+    dst[13] = f(-f(f(f(inv10 * tx) + f(inv11 * ty)) + f(inv12 * tz)));
+    dst[14] = f(-f(f(f(inv20 * tx) + f(inv21 * ty)) + f(inv22 * tz)));
     dst[15] = 1.0;
 
     return result;

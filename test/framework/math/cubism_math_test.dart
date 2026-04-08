@@ -44,9 +44,11 @@ void main() {
         }
       });
       test('matches formula: 0.5 - 0.5*cos(value*pi)', () {
+        // Note: getEasingSine intentionally truncates to float32 precision
+        // to match C++ Framework. Tolerance is float32 epsilon (~1e-7).
         for (double t = 0.0; t <= 1.0; t += 0.1) {
           final expected = 0.5 - 0.5 * math.cos(t * CubismMath.pi);
-          expect(CubismMath.getEasingSine(t), closeTo(expected, 1e-10));
+          expect(CubismMath.getEasingSine(t), closeTo(expected, 1e-7));
         }
       });
     });
