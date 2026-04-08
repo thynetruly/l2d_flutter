@@ -1,0 +1,43 @@
+
+{
+  "factorX": 30,
+  "factorY": 20,
+  "factorXY": 5,
+  "inputs": [
+    {
+      "dragX": 0,
+      "dragY": 0,
+      "delta": 0
+    },
+    {
+      "dragX": 1,
+      "dragY": 0,
+      "delta": 30
+    },
+    {
+      "dragX": 0,
+      "dragY": 1,
+      "delta": 20
+    },
+    {
+      "dragX": 1,
+      "dragY": 1,
+      "delta": 55
+    },
+    {
+      "dragX": -0.5,
+      "dragY": 0.3000000119,
+      "delta": -9.75
+    },
+    {
+      "dragX": -1,
+      "dragY": -1,
+      "delta": -45
+    },
+    {
+      "dragX": 0.6999999881,
+      "dragY": -0.400000006,
+      "delta": 11.60000038
+    }
+  ]
+}

@@ -1,0 +1,5405 @@
+
+{
+  "frames": [
+    {
+      "frame": 0,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 72,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 73,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 74,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 75,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 76,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 77,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 78,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 79,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 80,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 81,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 82,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 83,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 84,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 85,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 86,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 87,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 88,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 89,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 90,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 91,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 92,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 93,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 94,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 95,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 96,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 97,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 98,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 99,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 100,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 101,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 102,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 103,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 104,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 105,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 106,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 107,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 108,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 109,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 110,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 111,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 112,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 113,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 114,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 115,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 116,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 117,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 118,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    },
+    {
+      "frame": 119,
+      "partOpacities": [
+        {
+          "id": "Part01Core",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Hoho001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Brow001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Tear",
+          "opacity": 1
+        },
+        {
+          "id": "Part01EyeBall001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Eye001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Nose001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Mouth001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Face001",
+          "opacity": 1
+        },
+        {
+          "id": "Part01Ear001",
+          "opacity": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+
+{
+  "modelFileName": "Haru.moc3",
+  "textureCount": 2,
+  "physicsFileName": "Haru.physics3.json",
+  "poseFileName": "Haru.pose3.json",
+  "expressionCount": 8,
+  "motionGroupCount": 2,
+  "hitAreasCount": 2,
+  "eyeBlinkParameterCount": 2,
+  "lipSyncParameterCount": 1,
+  "textures": [
+    {
+      "file": "Haru.2048/texture_00.png"
+    },
+    {
+      "file": "Haru.2048/texture_01.png"
+    }
+  ],
+  "expressions": [
+    {
+      "name": "F01",
+      "file": "expressions/F01.exp3.json"
+    },
+    {
+      "name": "F02",
+      "file": "expressions/F02.exp3.json"
+    },
+    {
+      "name": "F03",
+      "file": "expressions/F03.exp3.json"
+    },
+    {
+      "name": "F04",
+      "file": "expressions/F04.exp3.json"
+    },
+    {
+      "name": "F05",
+      "file": "expressions/F05.exp3.json"
+    },
+    {
+      "name": "F06",
+      "file": "expressions/F06.exp3.json"
+    },
+    {
+      "name": "F07",
+      "file": "expressions/F07.exp3.json"
+    },
+    {
+      "name": "F08",
+      "file": "expressions/F08.exp3.json"
+    }
+  ],
+  "motionGroups": [
+    {
+      "name": "Idle",
+      "count": 2,
+      "motions": [
+        {
+          "file": "motions/haru_g_idle.motion3.json",
+          "fadeIn": 0.5,
+          "fadeOut": 0.5
+        },
+        {
+          "file": "motions/haru_g_m15.motion3.json",
+          "fadeIn": 0.5,
+          "fadeOut": 0.5
+        }
+      ]
+    },
+    {
+      "name": "TapBody",
+      "count": 4,
+      "motions": [
+        {
+          "file": "motions/haru_g_m26.motion3.json",
+          "fadeIn": 0.5,
+          "fadeOut": 0.5
+        },
+        {
+          "file": "motions/haru_g_m06.motion3.json",
+          "fadeIn": 0.5,
+          "fadeOut": 0.5
+        },
+        {
+          "file": "motions/haru_g_m20.motion3.json",
+          "fadeIn": 0.5,
+          "fadeOut": 0.5
+        },
+        {
+          "file": "motions/haru_g_m09.motion3.json",
+          "fadeIn": 0.5,
+          "fadeOut": 0.5
+        }
+      ]
+    }
+  ],
+  "hitAreas": [
+    {
+      "id": "HitArea",
+      "name": "Head"
+    },
+    {
+      "id": "HitArea2",
+      "name": "Body"
+    }
+  ]
+}

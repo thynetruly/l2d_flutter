@@ -1,0 +1,25 @@
+# Run with `dart run ffigen --config ffigen.yaml`.
+name: CubismCoreBindings
+description: |
+  FFI bindings for the Live2D Cubism Core C API (v5-r.5).
+  All 55 functions from Live2DCubismCore.h.
+
+  Regenerate bindings with `dart run ffigen --config ffigen.yaml`.
+output: 'lib/src/generated/cubism_core_bindings.dart'
+headers:
+  entry-points:
+    - 'Core/include/Live2DCubismCore.h'
+  include-directives:
+    - 'Core/include/Live2DCubismCore.h'
+compiler-opts:
+  - '-DCSM_CORE_WIN32_DLL=0'
+preamble: |
+  // ignore_for_file: always_specify_types
+  // ignore_for_file: camel_case_types
+  // ignore_for_file: non_constant_identifier_names
+  //
+  // Auto-generated FFI bindings for Live2D Cubism Core SDK v5-r.5.
+  // Copyright(c) Live2D Inc. All rights reserved.
+comments:
+  style: any
+  length: full

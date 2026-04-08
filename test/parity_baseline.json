@@ -1,0 +1,97 @@
+{
+  "_comment": "Baseline parity tolerances per module. Maximum allowed difference between Dart implementation and C++ Framework golden reference. Updated whenever parity is verified. Use tool/verify_parity.dart to regenerate.",
+  "_workflow": [
+    "1. Edit Dart implementation",
+    "2. Run: dart run tool/verify_parity.dart",
+    "3. Compare output against this baseline",
+    "4. If improvements: update baseline tolerances downward",
+    "5. If regressions: tolerances exceeded => fix the bug"
+  ],
+  "_format": "Each module records max absolute difference observed and counts of samples exceeding standard thresholds.",
+  "_categories": {
+    "exact": "Modules that achieve bit-exact 0 parity. Any drift = bug.",
+    "near_exact": "Modules with <1e-9 drift, limited only by JSON %.10g rounding.",
+    "libm_ffi": "Modules using libm transcendentals via FFI. Bit-exact with C++ on the same platform; residual <1e-10 is JSON rounding floor.",
+    "iterative": "Multi-frame simulations where polynomial Bezier rounding accumulates."
+  },
+  "modules": {
+    "math.easingSine": {
+      "max_abs_tolerance": 1e-10,
+      "samples": 101,
+      "category": "libm_ffi",
+      "notes": "Uses LibM.cosf via FFI. Max observed 5e-11 — at JSON %.10g rounding floor."
+    },
+    "math.cardanoAlgorithmForBezier": {
+      "max_abs_tolerance": 1e-10,
+      "samples": 5,
+      "category": "libm_ffi",
+      "notes": "Uses LibM.sqrtf/cosf and LibM.acos/cbrt (double, matches C++). Max observed 2.4e-11."
+    },
+    "math.matrixMultiply": {
+      "max_abs_tolerance": 0,
+      "samples": 16,
+      "category": "exact",
+      "notes": "Float32List storage truncates each result. Bit-exact match."
+    },
+    "math.matrixInverse": {
+      "max_abs_tolerance": 1e-9,
+      "samples": 16,
+      "category": "near_exact",
+      "notes": "Float32 cast at each binop. Max observed 2.8e-10."
+    },
+    "math.directionToRadian": {
+      "max_abs_tolerance": 1e-9,
+      "samples": 5,
+      "category": "libm_ffi",
+      "notes": "Uses LibM.atan2f via FFI. Max observed 4.9e-10."
+    },
+    "breath.sineWave": {
+      "max_abs_tolerance": 1e-10,
+      "samples": 360,
+      "category": "libm_ffi",
+      "notes": "Uses LibM.sinf via FFI. Max observed 5e-11 — at JSON %.10g rounding floor."
+    },
+    "look.formula": {
+      "max_abs_tolerance": 5e-9,
+      "samples": 7,
+      "category": "near_exact",
+      "notes": "Pure arithmetic with Float32 casts. Max observed 1.5e-9 from JSON rounding."
+    },
+    "modelSetting.parsing": {
+      "max_abs_tolerance": 0,
+      "samples": 31,
+      "category": "exact",
+      "notes": "String/int parsing — bit-exact."
+    },
+    "expression.weightSamples": {
+      "max_abs_tolerance": 0,
+      "samples": 5,
+      "category": "exact",
+      "notes": "Writes through float32 FFI model parameters — bit-exact."
+    },
+    "motion.curves": {
+      "max_abs_tolerance": 1e-3,
+      "samples": 3000,
+      "category": "iterative",
+      "notes": "BezierEvaluate (linear-t) polynomial chain. Max observed 9.6e-4. Eliminating this would require Float32.cast throughout CubismMotion's Bezier evaluation; not done because animation perception is unaffected."
+    },
+    "motionQueue.priorityTransition": {
+      "max_abs_tolerance": 1e-4,
+      "samples": 360,
+      "category": "iterative",
+      "notes": "Priority motion transition with fade crossfade. Max observed 6.5e-5. Same root cause as motion.curves."
+    },
+    "physics.300frame": {
+      "max_abs_tolerance": 5e-6,
+      "samples": 1500,
+      "category": "iterative",
+      "notes": "Pendulum simulation, 300 iterations. Max observed 1.9e-6 after libm FFI + C++ rotation bug replication. Down from 3.4e-5 (18x improvement)."
+    },
+    "pose.120frame": {
+      "max_abs_tolerance": 0,
+      "samples": 1200,
+      "category": "exact",
+      "notes": "Writes through float32 FFI model parts — bit-exact."
+    }
+  }
+}
