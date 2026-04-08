@@ -1,0 +1,3009 @@
+
+{
+  "blinkInterval": 4,
+  "closingSeconds": 0.1000000015,
+  "closedSeconds": 0.05000000075,
+  "openingSeconds": 0.150000006,
+  "frames": [
+    {
+      "t": 0.01666666754,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.03333333507,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.05000000447,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.06666667014,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.08333333582,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.1000000015,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.1166666672,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.1333333403,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.150000006,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.1666666716,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.1833333373,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.200000003,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.2166666687,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.2333333343,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.25,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.2666666806,
+      "state": 2,
+      "paramValue": 1
+    },
+    {
+      "t": 0.2833333611,
+      "state": 2,
+      "paramValue": 0.8333331943
+    },
+    {
+      "t": 0.3000000417,
+      "state": 2,
+      "paramValue": 0.6666663885
+    },
+    {
+      "t": 0.3166667223,
+      "state": 2,
+      "paramValue": 0.4999995828
+    },
+    {
+      "t": 0.3333334029,
+      "state": 2,
+      "paramValue": 0.333332777
+    },
+    {
+      "t": 0.3500000834,
+      "state": 2,
+      "paramValue": 0.1666659713
+    },
+    {
+      "t": 0.366666764,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 0.3833334446,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 0.4000001252,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 0.4166668057,
+      "state": 4,
+      "paramValue": 0
+    },
+    {
+      "t": 0.4333334863,
+      "state": 4,
+      "paramValue": 0.1111112013
+    },
+    {
+      "t": 0.4500001669,
+      "state": 4,
+      "paramValue": 0.2222224027
+    },
+    {
+      "t": 0.4666668475,
+      "state": 4,
+      "paramValue": 0.3333336115
+    },
+    {
+      "t": 0.483333528,
+      "state": 4,
+      "paramValue": 0.4444448054
+    },
+    {
+      "t": 0.5000001788,
+      "state": 4,
+      "paramValue": 0.5555558205
+    },
+    {
+      "t": 0.5166668296,
+      "state": 4,
+      "paramValue": 0.6666668057
+    },
+    {
+      "t": 0.5333334804,
+      "state": 4,
+      "paramValue": 0.777777791
+    },
+    {
+      "t": 0.5500001311,
+      "state": 4,
+      "paramValue": 0.8888887763
+    },
+    {
+      "t": 0.5666667819,
+      "state": 4,
+      "paramValue": 0.9999998212
+    },
+    {
+      "t": 0.5833334327,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.6000000834,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.6166667342,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.633333385,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.6500000358,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.6666666865,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.6833333373,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.6999999881,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.7166666389,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.7333332896,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.7499999404,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.7666665912,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.7833332419,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.7999998927,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.8166665435,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.8333331943,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.849999845,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.8666664958,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.8833331466,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.8999997973,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.9166664481,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.9333330989,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.9499997497,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.9666664004,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.9833330512,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 0.999999702,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.016666412,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.033333063,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.049999714,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.066666365,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.083333015,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.099999666,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.116666317,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.133332968,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.149999619,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.166666269,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.18333292,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.199999571,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.216666222,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.233332872,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.249999523,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.266666174,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.283332825,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.299999475,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.316666126,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.333332777,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.349999428,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.366666079,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.383332729,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.39999938,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.416666031,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.433332682,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.449999332,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.466665983,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.483332634,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.499999285,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.516665936,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.533332586,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.549999237,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.566665888,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.583332539,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.599999189,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.61666584,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.633332491,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.649999142,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.666665792,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.683332443,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.699999094,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.716665745,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.733332396,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.749999046,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.766665697,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.783332348,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.799998999,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.816665649,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.8333323,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.849998951,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.866665602,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.883332253,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.899998903,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.916665554,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.933332205,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.949998856,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.966665506,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.983332157,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 1.999998808,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.016665459,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.033332109,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.04999876,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.066665411,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.083332062,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.099998713,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.116665363,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.133332014,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.149998665,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.166665316,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.183331966,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.199998617,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.216665268,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.233331919,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.249998569,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.26666522,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.283331871,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.299998522,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.316665173,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.333331823,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.349998474,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.366665125,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.383331776,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.399998426,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.416665077,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.433331728,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.449998379,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.46666503,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.48333168,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.499998331,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.516664982,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.533331633,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.549998283,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.566664934,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.583331585,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.599998236,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.616664886,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.633331537,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.649998188,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.666664839,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.68333149,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.69999814,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.716664791,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.733331442,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.749998093,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.766664743,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.783331394,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.799998045,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.816664696,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.833331347,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.849997997,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.866664648,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.883331299,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 2.89999795,
+      "state": 2,
+      "paramValue": 1
+    },
+    {
+      "t": 2.9166646,
+      "state": 2,
+      "paramValue": 0.8333334923
+    },
+    {
+      "t": 2.933331251,
+      "state": 2,
+      "paramValue": 0.6666669846
+    },
+    {
+      "t": 2.949997902,
+      "state": 2,
+      "paramValue": 0.5000004768
+    },
+    {
+      "t": 2.966664553,
+      "state": 2,
+      "paramValue": 0.3333339691
+    },
+    {
+      "t": 2.983331203,
+      "state": 2,
+      "paramValue": 0.1666674614
+    },
+    {
+      "t": 2.999997854,
+      "state": 2,
+      "paramValue": 9.536743164e-07
+    },
+    {
+      "t": 3.016664505,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 3.033331156,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 3.049997807,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 3.066664457,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 3.083331108,
+      "state": 4,
+      "paramValue": 0
+    },
+    {
+      "t": 3.099997759,
+      "state": 4,
+      "paramValue": 0.1111110002
+    },
+    {
+      "t": 3.11666441,
+      "state": 4,
+      "paramValue": 0.2222220004
+    },
+    {
+      "t": 3.13333106,
+      "state": 4,
+      "paramValue": 0.3333330154
+    },
+    {
+      "t": 3.149997711,
+      "state": 4,
+      "paramValue": 0.4444440007
+    },
+    {
+      "t": 3.166664362,
+      "state": 4,
+      "paramValue": 0.555554986
+    },
+    {
+      "t": 3.183331013,
+      "state": 4,
+      "paramValue": 0.6666660309
+    },
+    {
+      "t": 3.199997663,
+      "state": 4,
+      "paramValue": 0.7777770162
+    },
+    {
+      "t": 3.216664314,
+      "state": 4,
+      "paramValue": 0.8888880014
+    },
+    {
+      "t": 3.233330965,
+      "state": 4,
+      "paramValue": 0.9999989867
+    },
+    {
+      "t": 3.249997616,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.266664267,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.283330917,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.299997568,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.316664219,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.33333087,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.34999752,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.366664171,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.383330822,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.399997473,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.416664124,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.433330774,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.449997425,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.466664076,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.483330727,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.499997377,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.516664028,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.533330679,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.54999733,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.56666398,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.583330631,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.599997282,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.616663933,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.633330584,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.649997234,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.666663885,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.683330536,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.699997187,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.716663837,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.733330488,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.749997139,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.76666379,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.783330441,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.799997091,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.816663742,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.833330393,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.849997044,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.866663694,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.883330345,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.899996996,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.916663647,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.933330297,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.949996948,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.966663599,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.98333025,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 3.999996901,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.016663551,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.033330441,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.04999733,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.066664219,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.083331108,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.099997997,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.116664886,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.133331776,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.149998665,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.166665554,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.183332443,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.199999332,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.216666222,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.233333111,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.25,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.266666889,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.283333778,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.300000668,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.316667557,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.333334446,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.350001335,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.366668224,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.383335114,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.400002003,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.416668892,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.433335781,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.45000267,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.466669559,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.483336449,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.500003338,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.516670227,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.533337116,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.550004005,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.566670895,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.583337784,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.600004673,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.616671562,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.633338451,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.650005341,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.66667223,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.683339119,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.700006008,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.716672897,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.733339787,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.750006676,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.766673565,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.783340454,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.800007343,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.816674232,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.833341122,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.850008011,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.8666749,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.883341789,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.900008678,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.916675568,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.933342457,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.950009346,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.966676235,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 4.983343124,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.000010014,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.016676903,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.033343792,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.050010681,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.06667757,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.08334446,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.100011349,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.116678238,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.133345127,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.150012016,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.166678905,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.183345795,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.200012684,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.216679573,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.233346462,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.250013351,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.266680241,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.28334713,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.300014019,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.316680908,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.333347797,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.350014687,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.366681576,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.383348465,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.400015354,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.416682243,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.433349133,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.450016022,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.466682911,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.4833498,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.500016689,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.516683578,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.533350468,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.550017357,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.566684246,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.583351135,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.600018024,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.616684914,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.633351803,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.650018692,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.666685581,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.68335247,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.70001936,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.716686249,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.733353138,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.750020027,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.766686916,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.783353806,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.800020695,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.816687584,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.833354473,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.850021362,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.866688251,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.883355141,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.90002203,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.916688919,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.933355808,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.950022697,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.966689587,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 5.983356476,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.000023365,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.016690254,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.033357143,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.050024033,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.066690922,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.083357811,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.1000247,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.116691589,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.133358479,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.150025368,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.166692257,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.183359146,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.200026035,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.216692924,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.233359814,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.250026703,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.266693592,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.283360481,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.30002737,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.31669426,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.333361149,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.350028038,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.366694927,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.383361816,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.400028706,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.416695595,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.433362484,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.450029373,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.466696262,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.483363152,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.500030041,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.51669693,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.533363819,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.550030708,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.566697598,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.583364487,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.600031376,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.616698265,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.633365154,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.650032043,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.666698933,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.683365822,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.700032711,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.7166996,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.733366489,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.750033379,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.766700268,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.783367157,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.800034046,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.816700935,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.833367825,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.850034714,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.866701603,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.883368492,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.900035381,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.916702271,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.93336916,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.950036049,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.966702938,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 6.983369827,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.000036716,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.016703606,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.033370495,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.050037384,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.066704273,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.083371162,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.100038052,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.116704941,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.13337183,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.150038719,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.166705608,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.183372498,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.200039387,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.216706276,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.233373165,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.250040054,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.266706944,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.283373833,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.300040722,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.316707611,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.3333745,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.350041389,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.366708279,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.383375168,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.400042057,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.416708946,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.433375835,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.450042725,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.466709614,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.483376503,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.500043392,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.516710281,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.533377171,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.55004406,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.566710949,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.583377838,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.600044727,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.616711617,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.633378506,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.650045395,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.666712284,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.683379173,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.700046062,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.716712952,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.733379841,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.75004673,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.766713619,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.783380508,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.800047398,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.816714287,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.833381176,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.850048065,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.866714954,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.883381844,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.900048733,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.916715622,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.933382511,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.9500494,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.96671629,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 7.983383179,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.000049591,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.016716003,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.033382416,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.050048828,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.06671524,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.083381653,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.100048065,
+      "state": 2,
+      "paramValue": 1
+    },
+    {
+      "t": 8.116714478,
+      "state": 2,
+      "paramValue": 0.8333358765
+    },
+    {
+      "t": 8.13338089,
+      "state": 2,
+      "paramValue": 0.6666717529
+    },
+    {
+      "t": 8.150047302,
+      "state": 2,
+      "paramValue": 0.5000076294
+    },
+    {
+      "t": 8.166713715,
+      "state": 2,
+      "paramValue": 0.3333435059
+    },
+    {
+      "t": 8.183380127,
+      "state": 2,
+      "paramValue": 0.1666793823
+    },
+    {
+      "t": 8.200046539,
+      "state": 2,
+      "paramValue": 1.525878906e-05
+    },
+    {
+      "t": 8.216712952,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 8.233379364,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 8.250045776,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 8.266712189,
+      "state": 3,
+      "paramValue": 0
+    },
+    {
+      "t": 8.283378601,
+      "state": 4,
+      "paramValue": 0
+    },
+    {
+      "t": 8.300045013,
+      "state": 4,
+      "paramValue": 0.1111094132
+    },
+    {
+      "t": 8.316711426,
+      "state": 4,
+      "paramValue": 0.2222188264
+    },
+    {
+      "t": 8.333377838,
+      "state": 4,
+      "paramValue": 0.3333282471
+    },
+    {
+      "t": 8.35004425,
+      "state": 4,
+      "paramValue": 0.4444376528
+    },
+    {
+      "t": 8.366710663,
+      "state": 4,
+      "paramValue": 0.5555470586
+    },
+    {
+      "t": 8.383377075,
+      "state": 4,
+      "paramValue": 0.6666564941
+    },
+    {
+      "t": 8.400043488,
+      "state": 4,
+      "paramValue": 0.7777658701
+    },
+    {
+      "t": 8.4167099,
+      "state": 4,
+      "paramValue": 0.8888753057
+    },
+    {
+      "t": 8.433376312,
+      "state": 4,
+      "paramValue": 0.9999846816
+    },
+    {
+      "t": 8.450042725,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.466709137,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.483375549,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.500041962,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.516708374,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.533374786,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.550041199,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.566707611,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.583374023,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.600040436,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.616706848,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.63337326,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.650039673,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.666706085,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.683372498,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.70003891,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.716705322,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.733371735,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.750038147,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.766704559,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.783370972,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.800037384,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.816703796,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.833370209,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.850036621,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.866703033,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.883369446,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.900035858,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.916702271,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.933368683,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.950035095,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.966701508,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 8.98336792,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.000034332,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.016700745,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.033367157,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.050033569,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.066699982,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.083366394,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.100032806,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.116699219,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.133365631,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.150032043,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.166698456,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.183364868,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.200031281,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.216697693,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.233364105,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.250030518,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.26669693,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.283363342,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.300029755,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.316696167,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.333362579,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.350028992,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.366695404,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.383361816,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.400028229,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.416694641,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.433361053,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.450027466,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.466693878,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.483360291,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.500026703,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.516693115,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.533359528,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.55002594,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.566692352,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.583358765,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.600025177,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.616691589,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.633358002,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.650024414,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.666690826,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.683357239,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.700023651,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.716690063,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.733356476,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.750022888,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.766689301,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.783355713,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.800022125,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.816688538,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.83335495,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.850021362,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.866687775,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.883354187,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.900020599,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.916687012,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.933353424,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.950019836,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.966686249,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 9.983352661,
+      "state": 1,
+      "paramValue": 1
+    },
+    {
+      "t": 10.00001907,
+      "state": 1,
+      "paramValue": 1
+    }
+  ]
+}
