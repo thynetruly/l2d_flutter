@@ -20,6 +20,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  # Performance measurement framework (benchmark/).
+  benchmark_harness: ^2.3.1
+  vm_service: ^14.2.1
 
 flutter:
   plugin:
