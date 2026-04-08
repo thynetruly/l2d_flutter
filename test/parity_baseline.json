@@ -1,0 +1,78 @@
+{
+  "_comment": "Baseline parity tolerances per module. Maximum allowed difference between Dart implementation and C++ Framework golden reference. Updated whenever parity is verified. Use tool/verify_parity.dart to regenerate.",
+  "_workflow": [
+    "1. Edit Dart implementation",
+    "2. Run: dart run tool/verify_parity.dart",
+    "3. Compare output against this baseline",
+    "4. If improvements: update baseline tolerances downward",
+    "5. If regressions: tolerances exceeded => fix the bug"
+  ],
+  "_format": "Each module records max absolute difference observed and counts of samples exceeding standard thresholds.",
+  "modules": {
+    "math.easingSine": {
+      "max_abs_tolerance": 1e-6,
+      "samples": 101,
+      "notes": "C++ float vs Dart double precision. Should be near-identical."
+    },
+    "math.cardanoAlgorithmForBezier": {
+      "max_abs_tolerance": 1e-6,
+      "samples": 5,
+      "notes": "Cubic equation solver. Float vs double precision."
+    },
+    "math.matrixMultiply": {
+      "max_abs_tolerance": 1e-6,
+      "samples": 16,
+      "notes": "Pure float arithmetic, should match exactly within float precision."
+    },
+    "math.matrixInverse": {
+      "max_abs_tolerance": 1e-6,
+      "samples": 16,
+      "notes": "Cofactor / determinant. Minor float vs double drift expected."
+    },
+    "math.directionToRadian": {
+      "max_abs_tolerance": 1e-6,
+      "samples": 5,
+      "notes": "atan2 + normalization. Float vs double precision."
+    },
+    "breath.sineWave": {
+      "max_abs_tolerance": 1e-4,
+      "samples": 360,
+      "notes": "Pure sine wave. Some samples exceed 1e-6 due to float vs double precision in cycle ratio."
+    },
+    "look.formula": {
+      "max_abs_tolerance": 1e-6,
+      "samples": 7,
+      "notes": "Linear formula factorX*dragX + factorY*dragY + factorXY*dragXY."
+    },
+    "modelSetting.parsing": {
+      "max_abs_tolerance": 0,
+      "samples": 31,
+      "notes": "All field parsing must match exactly (strings, ints)."
+    },
+    "expression.weightSamples": {
+      "max_abs_tolerance": 0,
+      "samples": 5,
+      "notes": "Expression blend math should produce identical float output."
+    },
+    "motion.curves": {
+      "max_abs_tolerance": 1e-3,
+      "samples": 3000,
+      "notes": "Float vs double precision in BezierEvaluate (linear-t mode used when AreBeziersRestricted=true). Max observed 9.6e-4."
+    },
+    "motionQueue.priorityTransition": {
+      "max_abs_tolerance": 1e-4,
+      "samples": 360,
+      "notes": "Priority motion transition with fade-in/fade-out crossfade. Max observed 6.5e-5 (float precision)."
+    },
+    "physics.300frame": {
+      "max_abs_tolerance": 1e-4,
+      "samples": 1500,
+      "notes": "Iterative pendulum simulation. Float vs double accumulation over 300 frames."
+    },
+    "pose.120frame": {
+      "max_abs_tolerance": 0,
+      "samples": 1200,
+      "notes": "Part opacity transitions. Perfect match across 120 frames."
+    }
+  }
+}

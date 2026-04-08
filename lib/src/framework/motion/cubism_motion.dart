@@ -78,6 +78,11 @@ class MotionData {
   final List<MotionPoint> points;
   final List<MotionEvent> events;
 
+  /// When true, Bezier curves use binary-search evaluation (legacy SDK R2 mode).
+  /// When false (default), Bezier curves use Cardano's algorithm (animator-correct).
+  /// Read from the `Meta.AreBeziersRestricted` field in motion3.json.
+  final bool restrictedBeziers;
+
   const MotionData({
     required this.duration,
     required this.fps,
@@ -87,6 +92,7 @@ class MotionData {
     required this.segments,
     required this.points,
     this.events = const [],
+    this.restrictedBeziers = false,
   });
 }
 
@@ -137,6 +143,109 @@ double _bezierEvaluateCardano(
   return MotionPoint.lerp(q012, q123, t).value;
 }
 
+/// Simple Bezier evaluation using linear t parameter.
+///
+/// Used when `AreBeziersRestricted` is true in the motion3.json. This is
+/// the simple De Casteljau evaluation with `t = (time - p0.t) / (p3.t - p0.t)`.
+/// It does NOT solve for the actual t given x — it just uses linear time mapping.
+/// Animator-correct evaluation uses [_bezierEvaluateCardano] instead.
+///
+/// Ported from Framework/src/Motion/CubismMotion.cpp::BezierEvaluate.
+double _bezierEvaluateSimple(
+    List<MotionPoint> points, int baseIndex, double time) {
+  final p0 = points[baseIndex];
+  final p1 = points[baseIndex + 1];
+  final p2 = points[baseIndex + 2];
+  final p3 = points[baseIndex + 3];
+
+  var t = (time - p0.time) / (p3.time - p0.time);
+  if (t < 0.0) t = 0.0;
+
+  final q01 = MotionPoint.lerp(p0, p1, t);
+  final q12 = MotionPoint.lerp(p1, p2, t);
+  final q23 = MotionPoint.lerp(p2, p3, t);
+  final q012 = MotionPoint.lerp(q01, q12, t);
+  final q123 = MotionPoint.lerp(q12, q23, t);
+
+  return MotionPoint.lerp(q012, q123, t).value;
+}
+
+/// Bezier evaluation via binary search for X component (kept for reference,
+/// not currently selected by any code path — the C++ Framework's
+/// `BezierEvaluateBinarySearch` is unused in modern motion3.json files).
+///
+/// Ported from Framework/src/Motion/CubismMotion.cpp::BezierEvaluateBinarySearch.
+// ignore: unused_element
+double _bezierEvaluateBinarySearch(
+    List<MotionPoint> points, int baseIndex, double time) {
+  const xError = 0.01;
+  final p0 = points[baseIndex];
+  final p1 = points[baseIndex + 1];
+  final p2 = points[baseIndex + 2];
+  final p3 = points[baseIndex + 3];
+
+  final x = time;
+  double x1 = p0.time;
+  double x2 = p3.time;
+  double cx1 = p1.time;
+  double cx2 = p2.time;
+
+  double ta = 0.0;
+  double tb = 1.0;
+  double t = 0.0;
+  int i = 0;
+
+  for (; i < 20; i++) {
+    if (x < x1 + xError) {
+      t = ta;
+      break;
+    }
+    if (x2 - xError < x) {
+      t = tb;
+      break;
+    }
+
+    var centerx = (cx1 + cx2) * 0.5;
+    cx1 = (x1 + cx1) * 0.5;
+    cx2 = (x2 + cx2) * 0.5;
+    final ctrlx12 = (cx1 + centerx) * 0.5;
+    final ctrlx21 = (cx2 + centerx) * 0.5;
+    centerx = (ctrlx12 + ctrlx21) * 0.5;
+
+    if (x < centerx) {
+      tb = (ta + tb) * 0.5;
+      if (centerx - xError < x) {
+        t = tb;
+        break;
+      }
+      x2 = centerx;
+      cx2 = ctrlx12;
+    } else {
+      ta = (ta + tb) * 0.5;
+      if (x < centerx + xError) {
+        t = ta;
+        break;
+      }
+      x1 = centerx;
+      cx1 = ctrlx21;
+    }
+  }
+
+  if (i == 20) {
+    t = (ta + tb) * 0.5;
+  }
+  if (t < 0.0) t = 0.0;
+  if (t > 1.0) t = 1.0;
+
+  final q01 = MotionPoint.lerp(p0, p1, t);
+  final q12 = MotionPoint.lerp(p1, p2, t);
+  final q23 = MotionPoint.lerp(p2, p3, t);
+  final q012 = MotionPoint.lerp(q01, q12, t);
+  final q123 = MotionPoint.lerp(q12, q23, t);
+
+  return MotionPoint.lerp(q012, q123, t).value;
+}
+
 double _steppedEvaluate(List<MotionPoint> points, int baseIndex, double time) {
   return points[baseIndex].value;
 }
@@ -146,13 +255,18 @@ double _inverseSteppedEvaluate(
   return points[baseIndex + 1].value;
 }
 
-double _evaluateSegment(
-    MotionSegment segment, List<MotionPoint> points, double time) {
+double _evaluateSegment(MotionSegment segment, List<MotionPoint> points,
+    double time, bool restrictedBeziers) {
   switch (segment.type) {
     case MotionSegmentType.linear:
       return _linearEvaluate(points, segment.basePointIndex, time);
     case MotionSegmentType.bezier:
-      return _bezierEvaluateCardano(points, segment.basePointIndex, time);
+      // Match C++ behavior:
+      //   areBeziersRestricted=true  -> BezierEvaluate (linear t)
+      //   areBeziersRestricted=false -> BezierEvaluateCardanoInterpretation
+      return restrictedBeziers
+          ? _bezierEvaluateSimple(points, segment.basePointIndex, time)
+          : _bezierEvaluateCardano(points, segment.basePointIndex, time);
     case MotionSegmentType.stepped:
       return _steppedEvaluate(points, segment.basePointIndex, time);
     case MotionSegmentType.inverseStepped:
@@ -183,7 +297,8 @@ double evaluateCurve(MotionData data, int curveIndex, double time) {
     return data.points[pointPosition].value;
   }
 
-  return _evaluateSegment(data.segments[target], data.points, time);
+  return _evaluateSegment(
+      data.segments[target], data.points, time, data.restrictedBeziers);
 }
 
 // ---------------------------------------------------------------------------
@@ -237,16 +352,25 @@ class CubismMotion {
 
   /// Updates model parameters based on motion curves at the given time.
   ///
-  /// [timeSeconds] is the elapsed time since motion start.
-  /// [fadeWeight] is the current fade weight (0..1).
+  /// [timeSeconds] is the elapsed time since motion start (used for curve evaluation).
+  /// [fadeWeight] is the motion-level fade weight (0..1) computed by the manager.
+  /// [fadeInStartTime] is the GLOBAL time when fade-in started.
+  /// [endTime] is the GLOBAL end time (-1 for indefinite).
+  /// [userTimeSeconds] is the GLOBAL current time (used for per-parameter fade).
   void updateParameters(
     CubismModel model,
     double timeSeconds,
     double fadeWeight,
     double fadeInStartTime,
-    double endTime,
-  ) {
+    double endTime, {
+    double? userTimeSeconds,
+  }) {
     if (_data.curveCount == 0) return;
+
+    // For backwards compat: if userTimeSeconds isn't passed, derive it
+    // assuming the call was made with motion-elapsed time matching global time
+    // (only correct when motion started at global t=0).
+    final globalTime = userTimeSeconds ?? timeSeconds;
 
     double time = timeSeconds;
     double motionDuration = _data.duration;
@@ -258,14 +382,15 @@ class CubismMotion {
       }
     }
 
-    // Compute global fade weights
+    // Compute fade weights using GLOBAL time (must match C++ exactly:
+    //   GetEasingSine((userTimeSeconds - fadeInStartTime) / fadeInSeconds))
     final tmpFadeIn = (fadeInSeconds <= 0.0)
         ? 1.0
         : CubismMath.getEasingSine(
-            (timeSeconds - fadeInStartTime) / fadeInSeconds);
+            (globalTime - fadeInStartTime) / fadeInSeconds);
     final tmpFadeOut = (fadeOutSeconds <= 0.0 || endTime < 0.0)
         ? 1.0
-        : CubismMath.getEasingSine((endTime - timeSeconds) / fadeOutSeconds);
+        : CubismMath.getEasingSine((endTime - globalTime) / fadeOutSeconds);
 
     double eyeBlinkValue = double.maxFinite;
     double lipSyncValue = double.maxFinite;
@@ -323,7 +448,7 @@ class CubismMotion {
         fin = (curve.fadeInTime == 0.0)
             ? 1.0
             : CubismMath.getEasingSine(
-                (timeSeconds - fadeInStartTime) / curve.fadeInTime);
+                (globalTime - fadeInStartTime) / curve.fadeInTime);
       }
 
       if (curve.fadeOutTime < 0.0) {
@@ -332,10 +457,12 @@ class CubismMotion {
         fout = (curve.fadeOutTime == 0.0 || endTime < 0.0)
             ? 1.0
             : CubismMath.getEasingSine(
-                (endTime - timeSeconds) / curve.fadeOutTime);
+                (endTime - globalTime) / curve.fadeOutTime);
       }
 
-      final paramFadeWeight = (fin * fout).clamp(0.0, 1.0);
+      // Apply motion-level weight, matching C++ behavior:
+      // const csmFloat32 paramWeight = _weight * fin * fout;
+      final paramFadeWeight = (weight * fin * fout).clamp(0.0, 1.0);
       param.value = sourceValue + (value - sourceValue) * paramFadeWeight;
     }
 
@@ -363,6 +490,7 @@ class CubismMotion {
     final fps = (meta['Fps'] as num).toDouble();
     final loop = meta['Loop'] as bool? ?? false;
     final curveCount = (meta['CurveCount'] as num).toInt();
+    final restrictedBeziers = meta['AreBeziersRestricted'] as bool? ?? false;
 
     final curves = <MotionCurve>[];
     final segments = <MotionSegment>[];
@@ -471,6 +599,7 @@ class CubismMotion {
       segments: segments,
       points: points,
       events: events,
+      restrictedBeziers: restrictedBeziers,
     );
   }
 }

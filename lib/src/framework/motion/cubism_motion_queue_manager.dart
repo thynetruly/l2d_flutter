@@ -99,13 +99,15 @@ class CubismMotionQueueManager {
       // Calculate elapsed time
       final timeOffset = userTimeSeconds - qe.startTimeSeconds;
 
-      // Update parameters
+      // Update parameters — pass GLOBAL userTimeSeconds for fade calculations
+      // (fadeInStartTime and endTime are in global time scale).
       motion.updateParameters(
         model,
         timeOffset < 0.0 ? 0.0 : timeOffset,
         fadeWeight,
         qe.fadeInStartTimeSeconds,
         qe.endTimeSeconds,
+        userTimeSeconds: userTimeSeconds,
       );
       updated = true;
 
