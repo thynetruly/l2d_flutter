@@ -28,11 +28,18 @@ import '../fixtures.dart';
 import '../harness.dart';
 
 class _FullFrameBench extends CubismBenchmark {
+  // One op = (targetFps × seconds) frames of the full pipeline
+  // (motion + eye blink + breath + physics + pose + model.update).
+  // Per-frame cost = meanNs / framesPerOp. Target per-frame budgets:
+  //   60 fps  → ≤ 16.6 ms/frame
+  //   120 fps → ≤  8.3 ms/frame
   _FullFrameBench({required this.targetFps, required this.seconds})
       : super(
           module: 'pipeline',
           benchName: 'fullFrame',
           variant: '${targetFps}fps',
+          opKind: OpKind.frameRun,
+          framesPerOp: (targetFps * seconds).round(),
           innerIterations: 1,
           sampleCount: 20,
           warmupMs: 100,

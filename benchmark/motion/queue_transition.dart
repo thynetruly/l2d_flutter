@@ -13,10 +13,14 @@ import '../fixtures.dart';
 import '../harness.dart';
 
 class _QueueTransitionBench extends CubismBenchmark {
+  // One op = 120-frame priority crossfade (2 s @ 60 fps) with motion A→B
+  // starting at frame 30. Per-frame cost = meanNs / 120.
   _QueueTransitionBench()
       : super(
           module: 'motion',
           benchName: 'queueTransition',
+          opKind: OpKind.frameRun,
+          framesPerOp: _frames,
           innerIterations: 1,
           sampleCount: 25,
           warmupMs: 100,

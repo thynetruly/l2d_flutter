@@ -88,10 +88,13 @@ class _LeafBindings {
 // ---------------------------------------------------------------------------
 
 abstract class _Transcendental1 extends CubismBenchmark {
+  // One op = an unrolled batch of 10 calls to the target function with
+  // varied inputs. Per-call cost is meanNs / 10 (see run() body).
   _Transcendental1(String funcName)
       : super(
           module: 'math',
           benchName: funcName,
+          opKind: OpKind.callBatch,
           innerIterations: 10000,
         );
 
@@ -240,10 +243,12 @@ class _CbrtBench extends _Transcendental1 {
 // Two-argument bench: atan2f and powf share the same pattern.
 
 abstract class _Transcendental2 extends CubismBenchmark {
+  // One op = an unrolled batch of 10 calls. Per-call cost = meanNs / 10.
   _Transcendental2(String funcName)
       : super(
           module: 'math',
           benchName: funcName,
+          opKind: OpKind.callBatch,
           innerIterations: 10000,
         );
 

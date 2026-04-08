@@ -83,6 +83,8 @@ CubismMotion _buildSyntheticMotion({required int segmentType, bool restrictedBez
 }
 
 class _CurveEvalBench extends CubismBenchmark {
+  // One op = unrolled batch of 8 evaluateCurve calls at different times.
+  // Per-call cost = meanNs / 8.
   _CurveEvalBench({
     required String variantName,
     required int segmentType,
@@ -93,6 +95,7 @@ class _CurveEvalBench extends CubismBenchmark {
           module: 'motion',
           benchName: 'curveEval',
           variant: variantName,
+          opKind: OpKind.callBatch,
           innerIterations: 10000,
         );
 

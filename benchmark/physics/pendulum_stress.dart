@@ -121,6 +121,8 @@ String generateStressRig({
 }
 
 class _PendulumStressBench extends CubismBenchmark {
+  // One op = 300-frame synthetic-rig physics evaluation. Per-frame cost
+  // = meanNs / 300. Variant encodes subRig × particle count.
   _PendulumStressBench({
     required int subRigs,
     required int particles,
@@ -130,6 +132,8 @@ class _PendulumStressBench extends CubismBenchmark {
           module: 'physics',
           benchName: 'pendulumStress',
           variant: '${subRigs}rigs_${particles}particles',
+          opKind: OpKind.frameRun,
+          framesPerOp: _frames,
           innerIterations: 1,
           sampleCount: 20,
           warmupMs: 100,

@@ -22,10 +22,14 @@ import '../fixtures.dart';
 import '../harness.dart';
 
 class _FullMotionBench extends CubismBenchmark {
+  // One op = 600-frame Haru idle motion playback (10 s @ 60 fps).
+  // Per-frame cost = meanNs / 600.
   _FullMotionBench()
       : super(
           module: 'motion',
           benchName: 'fullMotion',
+          opKind: OpKind.frameRun,
+          framesPerOp: _frames,
           innerIterations: 1,
           sampleCount: 20,
           warmupMs: 100,

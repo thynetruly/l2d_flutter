@@ -13,11 +13,15 @@ import '../fixtures.dart';
 import '../harness.dart';
 
 class _PendulumBench extends CubismBenchmark {
+  // One op = 300-frame Haru physics evaluation (5 s @ 60 fps).
+  // Per-frame cost = meanNs / 300.
   _PendulumBench()
       : super(
           module: 'physics',
           benchName: 'pendulum',
           variant: 'haru_8particles',
+          opKind: OpKind.frameRun,
+          framesPerOp: _frames,
           innerIterations: 1,
           sampleCount: 20,
           warmupMs: 100,

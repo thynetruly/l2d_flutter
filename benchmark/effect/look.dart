@@ -11,10 +11,13 @@ import '../fixtures.dart';
 import '../harness.dart';
 
 class _LookBench extends CubismBenchmark {
+  // One op = 3 updateParameters calls (each sweeping a different drag
+  // state). CubismLook has no per-frame loop; per-call = meanNs / 3.
   _LookBench()
       : super(
           module: 'effect',
           benchName: 'look',
+          opKind: OpKind.callBatch,
           innerIterations: 1000,
         );
 

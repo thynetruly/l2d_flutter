@@ -2,9 +2,9 @@
 
 Machine-readable performance suite for the Dart Cubism Framework port.
 Every benchmark emits a `BenchResult` record with mean/median/p95/p99 ns/op
-and optional bytes-allocated/op. Results land in `benchmark/results.json`,
-and `compare_baseline.dart` gates regressions against
-`benchmark/baseline.json`.
+(plus per-frame ns for frame-loop benchmarks) and optional
+bytes-allocated/op. Results land in `benchmark/results.json`, and
+`compare_baseline.dart` gates regressions against `benchmark/baseline.json`.
 
 ## TL;DR
 
@@ -13,6 +13,67 @@ dart run benchmark/run_all.dart                   # full suite
 dart run benchmark/run_all.dart --filter=math/cosf   # one function
 dart run benchmark/compare_baseline.dart          # regression check
 ```
+
+## Reading the numbers
+
+**Every time value in this suite is reported as "time per op", and the
+definition of "op" depends on the benchmark.** This is the #1 thing to get
+right when reading results. The summary printer and `results.json` both
+carry an explicit `opKind` tag so there's no ambiguity.
+
+| `opKind` | "One op" means | Per-call / per-frame |
+|---|---|---|
+| `callBatch` | An unrolled batch of N calls (see benchmark docstring for the unroll factor). Used for math micro-benchmarks to amortise Stopwatch overhead. | Per-call ≈ `meanNs / N` |
+| `singleCall` | One single function invocation. Used for matrix multiply, vector ops, etc. | `meanNs` IS per-call |
+| `frameRun` | One full simulated frame loop (e.g. 300 frames of Haru physics). The result carries `framesPerOp` and a derived `perFrameNs` field. | Per-frame = `perFrameNs` |
+
+### The summary printer
+
+```
+  benchmark/name                      per-op          per-frame            p95
+  math/cosf                           74.7 ns/batch   —                    p95  81.8 ns
+  math/matrixMultiply@aliased         56.3 ns/call    —                    p95  58.9 ns
+  physics/pendulum@haru_8particles   547.0 µs/run    1.82 µs/frame         p95 574.0 µs
+  pipeline/fullFrame@60fps            18.6 ms/run    62.0 µs/frame         p95  19.3 ms
+```
+
+- `per-op` is the raw mean. Its unit suffix (`/call`, `/batch`, `/run`)
+  tells you what one op represents — don't confuse `/run` with `/frame`.
+- `per-frame` is filled in only for `frameRun` benchmarks. When you see
+  `18.6 ms/run` alongside `62.0 µs/frame`, it means one op ran 300 frames
+  and took 18.6 ms total, averaging 62 µs per frame.
+- `p95` is always the same scale as the `per-op` column (i.e. the p95 of
+  the raw sample distribution, not derived per-frame).
+
+### Common mistake
+
+If you read `physics/pendulum@haru_8particles 547 µs` and think "ouch,
+547 µs per frame" — **stop**. Check the `opKind`. It's `frameRun` with
+`framesPerOp: 300`, so the per-frame cost is 547 ÷ 300 = 1.82 µs/frame.
+Roughly 0.01% of a 60 fps frame budget. The printer shows both columns
+so you don't have to do this arithmetic yourself — but if you're reading
+`results.json` directly, look at `perFrameNs`, not `meanNs`.
+
+### In `results.json`
+
+```jsonc
+{
+  "module": "physics",
+  "name": "pendulum",
+  "variant": "haru_8particles",
+  "opKind": "frameRun",        // how to interpret the numbers below
+  "framesPerOp": 300,           // one op iterates 300 frames
+  "meanNs": 546950.0,           // ns per full op = 547 µs per 300-frame run
+  "perFrameNs": 1823.17,        // meanNs / framesPerOp = 1.82 µs/frame
+  "p95Ns": 574000.0,
+  ...
+}
+```
+
+For `callBatch` and `singleCall` entries, `framesPerOp` and `perFrameNs`
+are absent and the per-call cost is either `meanNs` directly (singleCall)
+or `meanNs` divided by the unroll factor documented in the benchmark's
+constructor comment (callBatch).
 
 Allocation tracking requires launching under the VM service:
 

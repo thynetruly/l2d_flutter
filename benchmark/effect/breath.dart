@@ -12,10 +12,14 @@ import '../fixtures.dart';
 import '../harness.dart';
 
 class _BreathBench extends CubismBenchmark {
+  // One op = 360-frame simulated breath update (6 s @ 60 fps). Per-frame
+  // cost = meanNs / 360. The reporter shows both columns automatically.
   _BreathBench()
       : super(
           module: 'effect',
           benchName: 'breath',
+          opKind: OpKind.frameRun,
+          framesPerOp: _frames,
           innerIterations: 1,
           sampleCount: 30,
         );

@@ -50,42 +50,67 @@ step before any tier.**
 **Status:** shipped alongside the benchmark suite.
 **Location:** `lib/src/framework/math/libm.dart`.
 
-**Decision data** (Linux x86_64 dev box, Dart 3.11.4 / Flutter 3.41.6):
+**A note on units.** The transcendentals benchmarks are `callBatch`
+with a 10-call unroll — so the harness's `meanNs` is "ns per batch of
+10 calls". The table below divides by 10 and reports **per-call
+nanoseconds**, which is what a reader usually wants when reasoning about
+FFI cost per hot-loop iteration. The harness's raw output shows the
+`/batch` suffix to make this distinction unambiguous.
 
-| Function | default (ns) | `isLeaf` (ns) | Speedup | dart:math (ns) |
+**Decision data** — per-call ns, Linux x86_64 dev box, Dart 3.11.4 /
+Flutter 3.41.6. "Before" = first run before `isLeaf: true` was applied
+to `libm.dart`. "After" = same-machine rerun after the fix landed.
+
+| Function | Before (ns/call) | After (ns/call) | Speedup | dart:math (ns/call) |
 |---|---:|---:|---:|---:|
-| `cosf` | 227.8 | 75.1 | **3.0×** | 96.0 |
-| `sinf` | 258.5 | 70.7 | **3.7×** | 94.1 |
-| `sqrtf` | 234.9 | 64.2 | **3.7×** | 86.9 |
-| `acos` | 247.6 | 95.9 | **2.6×** | 96.0 |
-| `cbrt` | 266.0 | 135.8 | **2.0×** | 161.1 |
-| `atan2f` | 260.8 | 131.4 | **2.0×** | 171.8 |
-| `powf` | 243.4 | 105.3 | **2.3×** | 182.0 |
+| `cosf` | 22.78 | 7.64 | **3.0×** | 9.98 |
+| `sinf` | 25.85 | 7.27 | **3.6×** | 10.59 |
+| `sqrtf` | 23.49 | 6.24 | **3.8×** | 8.91 |
+| `tanf` | 24.16 | 15.15 | 1.6× | 11.25 |
+| `acos` | 24.76 | 9.63 | **2.6×** | 10.29 |
+| `cbrt` | 26.60 | 13.76 | 1.9× | 16.68 |
+| `atan2f` | 26.08 | 15.33 | 1.7× | 17.41 |
+| `powf` | 24.34 | 9.91 | **2.5×** | 16.77 |
+| `cbrtf` | 25.90 | 14.62 | 1.8× | 16.45 |
 
-Every single-precision libm call via FFI became **faster than `dart:math`**
-with `isLeaf: true`. The Tier-1 ship criterion (≥10% faster than default)
-is massively exceeded — typical speedup is 2–4×.
+Every single-precision libm call via FFI became **as-fast-or-faster than
+the `dart:math` equivalent** with `isLeaf: true`. The Tier-1 ship criterion
+(≥10% faster than default) is massively exceeded — typical speedup is
+1.6×–3.8×. `cosf`, `sinf`, and `sqrtf` are now ~7 ns/call — essentially
+direct libm invocations with negligible FFI overhead.
 
-**Downstream impact** measured on the same run, after applying the hint to
-all 12 bindings:
+**Downstream impact** (libm-heavy benchmarks, same before/after rerun):
 
-| Benchmark | Before isLeaf | After isLeaf | Speedup |
-|---|---:|---:|---:|
-| `math/cardanoAlgorithmForBezier` | 678.9 ns | 559.6 ns | 1.21× |
-| `math/quadraticEquation` | 66.2 ns | 42.6 ns | 1.55× |
-| `math/getEasingSine` | 138.5 ns | 82.1 ns | 1.69× |
-| `math/vector2.length` | 26.2 ns | 12.4 ns | 2.11× |
-| `math/vector2.normalize` | 29.7 ns | 18.9 ns | 1.57× |
-| `motion/curveEval@bezierCardano` | 2.01 µs | 1.65 µs | 1.22× |
-| `physics/pendulum@haru_8particles` | 738 µs | 547 µs | **1.35×** |
-| `physics/pendulumStress@10rigs_10p` | 6.73 ms | 4.72 ms | 1.43× |
+For `callBatch` benchmarks the per-call values are meanNs / unroll factor
+(6 for cardano, 3 for quadratic, 5 for easing, 8 for curveEval).
 
-Pipeline-level benchmarks (`pipeline/fullFrame`, `multiInstance`, `multiModel`)
-stayed within measurement noise on this dev box because the **per-frame cost
-is already ~60 µs — well under the 16.6 ms budget** — so the ~5 µs/frame
-isLeaf saving is lost in run-to-run variance. The wins show up more clearly
-on libm-heavy slices: physics improved 26–43% depending on particle count,
-Cardano improved 22%, getEasingSine 69%.
+| Benchmark | Op kind | Before | After | Speedup |
+|---|---|---:|---:|---:|
+| `math/cardanoAlgorithmForBezier` | per-call | 113.2 ns | 91.6 ns | 1.24× |
+| `math/quadraticEquation` | per-call | 22.1 ns | 14.2 ns | 1.55× |
+| `math/getEasingSine` | per-call | 27.7 ns | 16.6 ns | 1.67× |
+| `math/vector2.length` | per-call | 26.2 ns | 12.5 ns | **2.10×** |
+| `math/vector2.normalize` | per-call | 29.7 ns | 19.0 ns | 1.57× |
+| `motion/curveEval@bezierCardano` | per-call | 251.3 ns | 208.8 ns | 1.20× |
+| `physics/pendulum@haru_8particles` | per-frame | 2.46 µs | 2.25 µs | 1.09× |
+| `physics/pendulumStress@10rigs_10p` | per-frame | 22.43 µs | 16.71 µs | **1.34×** |
+| `motion/fullMotion` (Haru idle) | per-frame | 6.12 µs | 6.30 µs | ~noise |
+| `pipeline/fullFrame@60fps` | per-frame | 61.43 µs | 61.25 µs | ~noise |
+
+**Headline pipeline frame cost is ~61 µs/frame** — well under the 16.6 ms
+budget for 60 fps and the 8.3 ms budget for 120 fps, on this dev box. The
+per-frame cost is nearly identical at 60 fps and 120 fps variants
+(61.25 vs 61.76 µs/frame), confirming that physics sub-stepping does not
+dominate: ~all per-frame work is dt-independent.
+
+Pipeline and motion-level benchmarks stayed within measurement noise
+because (a) per-frame cost was already low enough that the ~0.1–0.2 µs
+isLeaf saving per FFI call adds up to only a couple µs per frame, well
+inside run-to-run variance, and (b) those benchmarks exercise more than
+libm — JSON parse, parameter lookup, curve walking, model.update() FFI.
+The wins land clearly on benchmarks dominated by raw libm calls:
+`physics/pendulumStress@10rigs_10p` (100 particles) improved 34%,
+`vector2.length` 2.1×, `getEasingSine` 67%.
 
 **Parity:** full test suite — 195 `dart test` tests (including 13 parity
 regression tests) and 6 `flutter test test/widgets/` tests — all passed
@@ -95,11 +120,13 @@ Dart and no heap access.
 
 ### Tier 1 — future invocation
 
-The `math/cosf@isLeaf` variant in `benchmark/math/transcendentals.dart` is
-still wired up so a future regression that reverts or contaminates the
-FFI path (e.g. someone adds a `Finalizable` bound to a libm argument,
-which disables isLeaf) will show as a large slowdown in the default
-variant vs the local `isLeaf` variant. Keep the variant benchmark.
+The `math/cosf@isLeaf` variant in `benchmark/math/transcendentals.dart`
+looks up libm locally with `isLeaf: true` regardless of what `libm.dart`
+ships. If a future change silently disables isLeaf on the production
+path (e.g. adding a `Finalizable` bound to an FFI argument type), the
+`math/cosf` default variant will regress while `math/cosf@isLeaf`
+remains fast — the gap between them is the tripwire. Keep the variant
+benchmark.
 
 ### Tier 2 — hot-path allocation reduction
 

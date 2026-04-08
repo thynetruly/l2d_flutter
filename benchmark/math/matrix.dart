@@ -15,12 +15,14 @@ import 'package:l2d_flutter_plugin/src/framework/math/cubism_matrix44.dart';
 import '../harness.dart';
 
 class _MultiplyBench extends CubismBenchmark {
+  // One op = one CubismMatrix44.multiply call. meanNs is directly per-call.
   _MultiplyBench({bool aliased = false})
       : _aliased = aliased,
         super(
           module: 'math',
           benchName: 'matrixMultiply',
           variant: aliased ? 'aliased' : 'nonAliased',
+          opKind: OpKind.singleCall,
           innerIterations: 100000,
         );
 
@@ -49,10 +51,12 @@ class _MultiplyBench extends CubismBenchmark {
 }
 
 class _TranslateRelativeBench extends CubismBenchmark {
+  // One op = 2 translateRelative calls (alternating sign). Per-call = meanNs/2.
   _TranslateRelativeBench()
       : super(
           module: 'math',
           benchName: 'translateRelative',
+          opKind: OpKind.callBatch,
           innerIterations: 100000,
         );
 
@@ -77,10 +81,12 @@ class _TranslateRelativeBench extends CubismBenchmark {
 }
 
 class _ScaleRelativeBench extends CubismBenchmark {
+  // One op = 2 scaleRelative calls (alternating factors). Per-call = meanNs/2.
   _ScaleRelativeBench()
       : super(
           module: 'math',
           benchName: 'scaleRelative',
+          opKind: OpKind.callBatch,
           innerIterations: 100000,
         );
 
@@ -104,10 +110,12 @@ class _ScaleRelativeBench extends CubismBenchmark {
 }
 
 class _GetInvertBench extends CubismBenchmark {
+  // One op = one getInvert() call. meanNs is directly per-call.
   _GetInvertBench()
       : super(
           module: 'math',
           benchName: 'getInvert',
+          opKind: OpKind.singleCall,
           innerIterations: 10000,
         );
 

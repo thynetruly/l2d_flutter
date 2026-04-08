@@ -11,10 +11,14 @@ import '../fixtures.dart';
 import '../harness.dart';
 
 class _PoseBench extends CubismBenchmark {
+  // One op = 120-frame pose crossfade simulation (2 s @ 60 fps).
+  // Per-frame cost = meanNs / 120.
   _PoseBench()
       : super(
           module: 'effect',
           benchName: 'pose',
+          opKind: OpKind.frameRun,
+          framesPerOp: _frames,
           innerIterations: 1,
           sampleCount: 30,
         );

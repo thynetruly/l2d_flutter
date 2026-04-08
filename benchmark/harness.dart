@@ -14,6 +14,33 @@
 //     sharing the same setup/teardown path.
 //   - We want machine-readable output at the end of a run, not lines printed
 //     to stdout that need parsing.
+//
+// ---------------------------------------------------------------------------
+// Reading the numbers
+// ---------------------------------------------------------------------------
+// Every measurement is reported as "time per op". The definition of "op"
+// depends on the benchmark's [opKind]:
+//
+//   OpKind.callBatch — one op is a short unrolled batch of function calls
+//                      (e.g. math/cosf runs 10 cosf calls per op). The
+//                      division is inside run() so meanNs is "ns per full
+//                      run() body" — divide further only if you want
+//                      per-call cost and you know the unroll factor.
+//
+//   OpKind.frameRun  — one op is the full simulated frame loop the
+//                      benchmark encapsulates. [framesPerOp] tells you how
+//                      many frames the loop iterated. The reporter computes
+//                      `perFrameNs = meanNs / framesPerOp` automatically
+//                      and prints BOTH total-per-op and per-frame columns.
+//
+//   OpKind.singleCall — one op is a single function invocation with no
+//                      unrolling and no inner loop. Used for one-shot
+//                      benchmarks like CubismMatrix44.multiply where a
+//                      single call is the thing we're measuring.
+//
+// Pipeline, effect, motion, and physics benchmarks are OpKind.frameRun.
+// Raw math micro-benchmarks are OpKind.callBatch (unrolled to amortise
+// Stopwatch overhead). Matrix/vector ops are OpKind.singleCall.
 
 import 'dart:convert';
 import 'dart:io';
@@ -21,11 +48,44 @@ import 'dart:math' as math;
 
 import 'package:benchmark_harness/benchmark_harness.dart';
 
+/// What a single "op" means for a benchmark. Determines how the reporter
+/// prints the result and whether per-frame columns are included.
+enum OpKind {
+  /// One op = one unrolled batch of N function calls (math micro-benchmarks).
+  /// meanNs is "ns per full run() body". The benchmark's docstring should
+  /// note the unroll factor if per-call cost matters downstream.
+  callBatch,
+
+  /// One op = one single function invocation (matrix multiply, vector dot).
+  /// meanNs is directly "ns per call".
+  singleCall,
+
+  /// One op = one full simulated frame loop. [BenchResult.framesPerOp]
+  /// records how many frames one op ran, and [BenchResult.perFrameNs] is
+  /// the derived per-frame cost. The summary printer shows both.
+  frameRun,
+}
+
 /// Machine-readable result for a single (module, name, variant) measurement.
+///
+/// All time fields are nanoseconds-per-op. For [OpKind.frameRun] the
+/// [framesPerOp] field is non-null and [perFrameNs] = meanNs / framesPerOp.
 class BenchResult {
   final String module;
   final String name;
   final String variant;
+
+  /// What one "op" means for this benchmark. See [OpKind] docstrings.
+  final OpKind opKind;
+
+  /// Number of frames simulated per op. Non-null when [opKind] is
+  /// [OpKind.frameRun], null otherwise.
+  final int? framesPerOp;
+
+  /// Convenience: meanNs / framesPerOp. Null when [framesPerOp] is null.
+  /// Populated automatically so readers scanning results.json can see
+  /// per-frame cost without having to do the division.
+  final double? perFrameNs;
 
   final double meanNs;
   final double medianNs;
@@ -51,6 +111,7 @@ class BenchResult {
     required this.module,
     required this.name,
     required this.variant,
+    required this.opKind,
     required this.meanNs,
     required this.medianNs,
     required this.p95Ns,
@@ -59,6 +120,8 @@ class BenchResult {
     required this.opsPerSec,
     required this.samples,
     required this.iterationsPerSample,
+    this.framesPerOp,
+    this.perFrameNs,
     this.bytesAllocPerOp,
     this.gcCount,
     this.metadata = const {},
@@ -74,7 +137,10 @@ class BenchResult {
         'module': module,
         'name': name,
         'variant': variant,
+        'opKind': opKind.name,
+        if (framesPerOp != null) 'framesPerOp': framesPerOp,
         'meanNs': _round(meanNs),
+        if (perFrameNs != null) 'perFrameNs': _round(perFrameNs!),
         'medianNs': _round(medianNs),
         'p95Ns': _round(p95Ns),
         'p99Ns': _round(p99Ns),
@@ -100,6 +166,15 @@ abstract class CubismBenchmark extends BenchmarkBase {
   final String benchName;
   final String variant;
 
+  /// What one "op" means for this benchmark. Used by the reporter to pick
+  /// the right units in the summary and to decide whether to emit a
+  /// per-frame column.
+  final OpKind opKind;
+
+  /// Number of frames a single op iterates. Only meaningful when
+  /// [opKind] is [OpKind.frameRun]; ignored otherwise.
+  final int framesPerOp;
+
   /// Iterations per sample. Adaptive for sub-microsecond ops — override
   /// when the default (1) is too few to amortise Stopwatch overhead.
   final int innerIterations;
@@ -115,6 +190,8 @@ abstract class CubismBenchmark extends BenchmarkBase {
     required this.module,
     required this.benchName,
     this.variant = 'default',
+    this.opKind = OpKind.singleCall,
+    this.framesPerOp = 0,
     this.innerIterations = 1,
     this.sampleCount = 50,
     this.warmupMs = 200,
@@ -219,10 +296,14 @@ abstract class CubismBenchmark extends BenchmarkBase {
     final stddev = math.sqrt(variance);
     final opsPerSec = mean > 0 ? 1e9 / mean : 0.0;
 
+    final isFrameRun = opKind == OpKind.frameRun && framesPerOp > 0;
     return BenchResult(
       module: module,
       name: benchName,
       variant: variant,
+      opKind: opKind,
+      framesPerOp: isFrameRun ? framesPerOp : null,
+      perFrameNs: isFrameRun ? mean / framesPerOp : null,
       meanNs: mean,
       medianNs: median,
       p95Ns: p95,
@@ -250,38 +331,77 @@ class BenchReporter {
   void add(BenchResult r) => results.add(r);
   void addAll(Iterable<BenchResult> rs) => results.addAll(rs);
 
-  /// Prints a compact one-line summary per result to stdout.
+  /// Prints a compact summary per result to stdout with explicit units.
+  ///
+  /// Layout:
+  ///
+  ///   name                           per-op          per-frame       p95
+  ///   math/cosf                      74.7 ns/call    —               81.8 ns
+  ///   physics/pendulum@haru_8part    547.0 µs/run    1.82 µs/frame   574.0 µs
+  ///   pipeline/fullFrame@60fps       18.61 ms/run    62.0 µs/frame   19.31 ms
+  ///
+  /// The `per-op` column unit suffix tells you what one op means:
+  ///   `/call` — single function invocation (OpKind.singleCall)
+  ///   `/batch` — unrolled call batch (OpKind.callBatch; see benchmark
+  ///              docstring for unroll factor)
+  ///   `/run`  — one full frame-loop op (OpKind.frameRun); per-frame
+  ///              column shows meanNs / framesPerOp
   void printSummary() {
     stdout.writeln('');
-    stdout.writeln('─' * 78);
-    stdout.writeln('  Cubism Framework benchmark summary (${results.length} results)');
-    stdout.writeln('─' * 78);
+    stdout.writeln('─' * 92);
+    stdout.writeln(
+        '  Cubism Framework benchmark summary (${results.length} results)');
+    stdout.writeln('─' * 92);
+    stdout.writeln('  Columns: per-op = time for one benchmark op');
+    stdout.writeln('           per-frame = meanNs / framesPerOp (only for '
+        'frameRun benchmarks)');
+    stdout.writeln('           op suffix: /call = single invocation, '
+        '/batch = unrolled batch,');
+    stdout.writeln('                      /run = one full frame-loop run');
+    stdout.writeln('─' * 92);
+
     final nameWidth = results.fold<int>(
-      24,
+      30,
       (w, r) => math.max(w, r.key.length),
     );
+
     for (final r in results) {
-      final ns = r.meanNs;
-      final unit = ns < 1e3
-          ? '${ns.toStringAsFixed(1)} ns'
-          : ns < 1e6
-              ? '${(ns / 1e3).toStringAsFixed(2)} µs'
-              : '${(ns / 1e6).toStringAsFixed(3)} ms';
+      final perOp = _fmtTime(r.meanNs) + _opUnitSuffix(r.opKind);
+      final perFrame = r.perFrameNs != null
+          ? '${_fmtTime(r.perFrameNs!)}/frame'
+          : '—';
+      final p95 = _fmtTime(r.p95Ns);
       final alloc = r.bytesAllocPerOp != null
           ? '  ${r.bytesAllocPerOp}B/op'
           : '';
+
       stdout.writeln(
-        '  ${r.key.padRight(nameWidth)}  ${unit.padLeft(12)}'
-        '  p95=${_fmtNs(r.p95Ns).padLeft(10)}$alloc',
+        '  ${r.key.padRight(nameWidth)}  '
+        '${perOp.padLeft(14)}  '
+        '${perFrame.padLeft(18)}  '
+        'p95 ${p95.padLeft(10)}$alloc',
       );
     }
-    stdout.writeln('─' * 78);
+    stdout.writeln('─' * 92);
   }
 
-  static String _fmtNs(double ns) {
-    if (ns < 1e3) return '${ns.toStringAsFixed(1)}ns';
-    if (ns < 1e6) return '${(ns / 1e3).toStringAsFixed(2)}µs';
-    return '${(ns / 1e6).toStringAsFixed(2)}ms';
+  /// Formats a nanosecond value with an auto-scaled unit. No unit suffix
+  /// indicating what an "op" is — [_opUnitSuffix] adds that separately.
+  static String _fmtTime(double ns) {
+    if (ns < 1e3) return '${ns.toStringAsFixed(1)} ns';
+    if (ns < 1e6) return '${(ns / 1e3).toStringAsFixed(2)} µs';
+    return '${(ns / 1e6).toStringAsFixed(2)} ms';
+  }
+
+  static String _opUnitSuffix(OpKind kind) {
+    switch (kind) {
+      case OpKind.singleCall:
+        return '/call';
+      case OpKind.callBatch:
+        return '/batch';
+      case OpKind.frameRun:
+        return '/run';
+    }
   }
 
   /// Serialises all collected results to `benchmark/results.json`.

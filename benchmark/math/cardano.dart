@@ -17,10 +17,13 @@ import 'package:l2d_flutter_plugin/src/framework/math/cubism_math.dart';
 import '../harness.dart';
 
 class _CardanoBench extends CubismBenchmark {
+  // One op = unrolled batch of 6 cardanoAlgorithmForBezier calls spanning
+  // all 5 discriminant branches. Per-call cost = meanNs / 6.
   _CardanoBench()
       : super(
           module: 'math',
           benchName: 'cardanoAlgorithmForBezier',
+          opKind: OpKind.callBatch,
           innerIterations: 10000,
         );
 
@@ -50,10 +53,12 @@ class _CardanoBench extends CubismBenchmark {
 }
 
 class _QuadraticBench extends CubismBenchmark {
+  // One op = unrolled batch of 3 calls. Per-call cost = meanNs / 3.
   _QuadraticBench()
       : super(
           module: 'math',
           benchName: 'quadraticEquation',
+          opKind: OpKind.callBatch,
           innerIterations: 100000,
         );
 
@@ -73,10 +78,12 @@ class _QuadraticBench extends CubismBenchmark {
 }
 
 class _EasingSineBench extends CubismBenchmark {
+  // One op = unrolled batch of 5 calls. Per-call cost = meanNs / 5.
   _EasingSineBench()
       : super(
           module: 'math',
           benchName: 'getEasingSine',
+          opKind: OpKind.callBatch,
           innerIterations: 100000,
         );
 

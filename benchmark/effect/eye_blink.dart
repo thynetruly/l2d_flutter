@@ -19,12 +19,18 @@ import '../fixtures.dart';
 import '../harness.dart';
 
 class _EyeBlinkBench extends CubismBenchmark {
+  // One op = [frames]-frame simulated eye-blink state machine. Per-frame
+  // cost = meanNs / frames. Variants:
+  //   steady     — 600 frames (10 s @ 60 fps), idle interval dominant
+  //   transition — 60 frames (1 s), focuses on closing/closed/opening work
   _EyeBlinkBench({required int frames, required int seed, required super.variant})
       : _frames = frames,
         _seed = seed,
         super(
           module: 'effect',
           benchName: 'eyeBlink',
+          opKind: OpKind.frameRun,
+          framesPerOp: frames,
           innerIterations: 1,
           sampleCount: 30,
         );

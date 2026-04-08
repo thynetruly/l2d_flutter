@@ -53,6 +53,10 @@ class _Instance {
 }
 
 class _MultiInstanceBench extends CubismBenchmark {
+  // One op = (targetFps × seconds) frames, with each frame ticking
+  // [instanceCount] independent Haru pipelines. Per-frame cost (for the
+  // entire group) = meanNs / framesPerOp. Per-instance per-frame cost
+  // = that value / instanceCount — useful for scaling analysis.
   _MultiInstanceBench({
     required this.instanceCount,
     required this.targetFps,
@@ -61,6 +65,8 @@ class _MultiInstanceBench extends CubismBenchmark {
           module: 'pipeline',
           benchName: 'multiInstance',
           variant: '${instanceCount}x${targetFps}fps',
+          opKind: OpKind.frameRun,
+          framesPerOp: (targetFps * seconds).round(),
           innerIterations: 1,
           // Heavy benchmarks: trim sample count so a single --run-all doesn't
           // take forever. Still well above statistical noise floor.

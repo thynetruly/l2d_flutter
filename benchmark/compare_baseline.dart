@@ -92,15 +92,24 @@ Future<int> main(List<String> argv) async {
       violations.add('$key: meanNs=$meanNs > max=$maxMeanNs');
     }
 
-    // msPerFrame = meanNs / 1e6, assuming one "op" = one full run
+    // Per-frame limit — uses the perFrameNs field populated by the harness
+    // for frameRun benchmarks. Falls back to dividing meanNs by the frame
+    // count in metadata for older results.json files.
     final msPerFrameLimit =
         (limits['maxMsPerFrame'] as num?)?.toDouble();
     if (msPerFrameLimit != null) {
-      final ms = meanNs / 1e6;
-      // For pipeline benchmarks that run N frames per op, divide by N.
-      final meta = rec['metadata'] as Map<String, dynamic>?;
-      final frames = (meta?['frames'] as num?)?.toInt() ?? 1;
-      final msPerFrame = ms / frames;
+      double? msPerFrame;
+      final perFrameNs = (rec['perFrameNs'] as num?)?.toDouble();
+      if (perFrameNs != null) {
+        msPerFrame = perFrameNs / 1e6;
+      } else {
+        final framesPerOp = (rec['framesPerOp'] as num?)?.toInt();
+        final fromMeta =
+            ((rec['metadata'] as Map<String, dynamic>?)?['frames'] as num?)
+                ?.toInt();
+        final frames = framesPerOp ?? fromMeta ?? 1;
+        msPerFrame = (meanNs / 1e6) / frames;
+      }
       if (msPerFrame > msPerFrameLimit) {
         violations.add('$key: ms/frame=${msPerFrame.toStringAsFixed(3)} '
             '> max=${msPerFrameLimit.toStringAsFixed(3)}');
@@ -134,6 +143,8 @@ Future<int> main(List<String> argv) async {
   }
 
   // --- multi_instance superlinearity gate ---
+  // Uses perFrameNs from the harness when present; falls back to dividing
+  // meanNs by metadata.frames for older results.json files.
   final mi60 = <int, double>{};
   final mi120 = <int, double>{};
   for (final rec in byKey.values) {
@@ -143,9 +154,17 @@ Future<int> main(List<String> argv) async {
     if (match == null) continue;
     final n = int.parse(match.group(1)!);
     final fps = int.parse(match.group(2)!);
-    final meta = rec['metadata'] as Map<String, dynamic>;
-    final frames = (meta['frames'] as num).toInt();
-    final msPerFrame = (rec['meanNs'] as num) / 1e6 / frames;
+    double msPerFrame;
+    final perFrameNs = (rec['perFrameNs'] as num?)?.toDouble();
+    if (perFrameNs != null) {
+      msPerFrame = perFrameNs / 1e6;
+    } else {
+      final framesPerOp = (rec['framesPerOp'] as num?)?.toInt() ??
+          ((rec['metadata'] as Map<String, dynamic>?)?['frames'] as num?)
+              ?.toInt() ??
+          1;
+      msPerFrame = (rec['meanNs'] as num) / 1e6 / framesPerOp;
+    }
     final perInstance = msPerFrame / n;
     (fps == 60 ? mi60 : mi120)[n] = perInstance;
   }

@@ -15,10 +15,13 @@ import 'package:l2d_flutter_plugin/src/framework/math/cubism_vector2.dart';
 import '../harness.dart';
 
 class _AddChainBench extends CubismBenchmark {
+  // One op = one full `a + b * s + c * (s*s)` chain, allocating 5 new
+  // CubismVector2 instances in the process. meanNs is per full chain.
   _AddChainBench()
       : super(
           module: 'math',
           benchName: 'vector2.addChain',
+          opKind: OpKind.singleCall,
           innerIterations: 100000,
         );
 
@@ -50,10 +53,12 @@ class _AddChainBench extends CubismBenchmark {
 }
 
 class _LengthBench extends CubismBenchmark {
+  // One op = one `.length` call (1 LibM.sqrtf + 2 muls + 1 add).
   _LengthBench()
       : super(
           module: 'math',
           benchName: 'vector2.length',
+          opKind: OpKind.singleCall,
           innerIterations: 100000,
         );
 
@@ -78,10 +83,12 @@ class _LengthBench extends CubismBenchmark {
 }
 
 class _DistanceToBench extends CubismBenchmark {
+  // One op = one `.distanceTo(other)` call.
   _DistanceToBench()
       : super(
           module: 'math',
           benchName: 'vector2.distanceTo',
+          opKind: OpKind.singleCall,
           innerIterations: 100000,
         );
 
@@ -107,10 +114,12 @@ class _DistanceToBench extends CubismBenchmark {
 }
 
 class _NormalizeBench extends CubismBenchmark {
+  // One op = one `.normalize()` call.
   _NormalizeBench()
       : super(
           module: 'math',
           benchName: 'vector2.normalize',
+          opKind: OpKind.singleCall,
           innerIterations: 100000,
         );
 
@@ -138,10 +147,12 @@ class _NormalizeBench extends CubismBenchmark {
 }
 
 class _DotBench extends CubismBenchmark {
+  // One op = one `.dot(other)` call. Baseline for "fastest possible op".
   _DotBench()
       : super(
           module: 'math',
           benchName: 'vector2.dot',
+          opKind: OpKind.singleCall,
           innerIterations: 1000000,
         );
 

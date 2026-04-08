@@ -112,6 +112,9 @@ class _ModelPipeline {
 }
 
 class _MultiModelBench extends CubismBenchmark {
+  // One op = (targetFps × seconds) frames, with each frame ticking
+  // [modelCount] DISTINCT sample models. Per-frame cost (for the entire
+  // mix) = meanNs / framesPerOp. See metadata.*_us for per-model splits.
   _MultiModelBench({
     required this.modelCount,
     required this.targetFps,
@@ -120,6 +123,8 @@ class _MultiModelBench extends CubismBenchmark {
           module: 'pipeline',
           benchName: 'multiModel',
           variant: '${modelCount}models@${targetFps}fps',
+          opKind: OpKind.frameRun,
+          framesPerOp: (targetFps * seconds).round(),
           innerIterations: 1,
           sampleCount: 15,
           warmupMs: 100,
