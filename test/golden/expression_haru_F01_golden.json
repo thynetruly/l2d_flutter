@@ -1,0 +1,59 @@
+
+{
+  "fadeInTime": 1,
+  "fadeOutTime": 1,
+  "expressionParameters": [
+    {
+      "id": "ParamMouthForm",
+      "blendType": 0,
+      "value": 0.2700000107
+    }
+  ],
+  "weightSamples": [
+    {
+      "weight": 0,
+      "params": [
+        {
+          "id": "ParamMouthForm",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "weight": 0.25,
+      "params": [
+        {
+          "id": "ParamMouthForm",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "weight": 0.5,
+      "params": [
+        {
+          "id": "ParamMouthForm",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "weight": 0.75,
+      "params": [
+        {
+          "id": "ParamMouthForm",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "weight": 1,
+      "params": [
+        {
+          "id": "ParamMouthForm",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

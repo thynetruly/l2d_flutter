@@ -1,0 +1,7506 @@
+
+{
+  "frames": 300,
+  "frameData": [
+    {
+      "frame": 0,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 2.995002747
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 5.96007967
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 8.865606308
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 11.68255043
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 5,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 14.38276672
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 6,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 16.93927383
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 7,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 19.32653046
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 8,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 21.52068329
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 9,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 23.49980736
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 10,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 25.24412918
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 11,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 26.73622131
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 12,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 27.9611721
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 13,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.90674591
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 14,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.56349182
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 15,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.92485046
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 16,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.98720741
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 17,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.74994469
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 18,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.21542931
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 19,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.38900185
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 20,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 27.27892303
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 21,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 25.89627838
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 22,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 24.25489044
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 23,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 22.37115669
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 24,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 20.26389503
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 25,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 17.9541626
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 26,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 15.4650383
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 27,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 12.82139587
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 28,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 10.04964638
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 29,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 7.17747736
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 30,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 4.23360014
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 31,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 1.247415662
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 32,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -1.751225829
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 33,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -4.732369423
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 34,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -7.666235924
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 35,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -10.52349663
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 36,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -13.27561665
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 37,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -15.89508533
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 38,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -18.35573578
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 39,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -20.63298798
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -22.70407486
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -24.54831123
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 42,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -26.14727592
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 43,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -27.48497963
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 44,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.54806328
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 45,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.32590294
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 46,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.81072998
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 47,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.99769783
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 48,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.88493919
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 49,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.4735775
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 50,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.76772881
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 51,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -27.77444267
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 52,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -26.50363541
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 53,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -24.96801949
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 54,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -23.18293381
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 55,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -21.16620827
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 56,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -18.93800163
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 57,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -16.52055931
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 58,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -13.93806076
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 59,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -11.21629715
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 60,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -8.382464409
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 61,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -5.464878082
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 62,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -2.492673635
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 63,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 0.5044227242
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 64,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 3.496479034
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 65,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 6.453599453
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 66,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 9.346238136
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 67,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 12.14550591
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 68,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 14.82340527
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 69,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 17.35319519
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 70,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 19.70959854
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 71,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 21.86907005
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 72,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 23.81004143
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 73,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 25.51310158
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 74,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 26.96124458
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 75,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.13999939
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 76,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.03759003
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 77,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.64504814
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 78,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.95630074
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 79,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.96824074
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 80,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.68074799
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 81,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.09669113
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 82,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.22191811
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 83,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 27.06515121
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 84,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 25.63795662
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 85,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 23.95461464
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 86,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 22.03190422
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 87,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 19.88908005
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 88,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 17.54751015
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 89,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 15.03061104
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 90,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 12.36355495
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 91,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 9.572939873
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 92,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 6.686702728
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 93,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 3.733627081
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 94,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 0.7432456017
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 95,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -2.254533768
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 96,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -5.229814529
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 97,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -8.152812958
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 98,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -10.99437904
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 99,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -13.72609234
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 100,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -16.32063293
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 101,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -18.7521286
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 102,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -20.9962368
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 103,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -23.03057861
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 104,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -24.83480453
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 105,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -26.39087296
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 106,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -27.68326759
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 107,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.699049
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 108,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.42808914
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 109,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.86308861
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 110,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.99970627
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 111,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.83657646
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 112,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.37533379
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 113,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.62057495
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 114,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -27.57984734
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 115,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -26.26356506
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 116,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -24.68485069
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 117,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -22.85951042
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 118,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -20.80574799
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 119,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -18.54409981
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 120,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -16.09718704
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 121,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -13.48941422
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 122,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -10.74688339
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 123,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -7.896948338
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 124,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -4.968108177
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 125,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -1.989656806
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 126,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 1.008702755
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 127,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 3.996955395
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 128,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 6.945300579
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 129,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 9.824249268
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 130,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 12.60501099
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 131,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 15.25985432
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 132,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 17.76220131
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 133,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 20.08709717
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 134,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 22.21128845
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 135,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 24.11353302
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 136,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 25.77486038
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 137,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 27.17864037
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 138,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.31087112
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 139,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.16022873
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 140,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.71822166
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 141,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.97928238
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 142,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.94079971
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 143,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.60315895
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 144,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.96973038
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 145,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.04685211
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 146,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 26.84373093
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 147,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 25.37240791
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 148,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 23.64755821
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 149,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 21.68642807
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 150,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 19.50863647
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 151,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 17.13589668
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 152,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 14.59196568
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 153,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 11.90221214
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 154,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 9.09353447
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 155,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 6.194024563
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 156,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 3.232598305
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 157,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 0.2389012277
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 158,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -2.757211208
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 159,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -5.725774288
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 160,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -8.637099266
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 161,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -11.46215248
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 162,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -14.1726799
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 163,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -16.74159622
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 164,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -19.14319229
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 165,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -21.35355949
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 166,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -23.35056877
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 167,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -25.11426544
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 168,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -26.62702751
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 169,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -27.87371635
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 170,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.84192467
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 171,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.52195168
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 172,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.9070034
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 173,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.99323273
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 174,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.77978325
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 175,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.26877975
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 176,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.46533203
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 177,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -27.37746429
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 178,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -26.01604843
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 179,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -24.39472008
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 180,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -22.52961731
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 181,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -20.43940544
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 182,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -18.14496613
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 183,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -15.66922951
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 184,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -13.03697872
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 185,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -10.27441883
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 186,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -7.409198761
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 187,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -4.469948292
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 188,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -1.486034989
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 189,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 1.512669206
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 190,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 4.496315956
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 191,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 7.435037136
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 192,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 10.29946995
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 193,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 13.06099129
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 194,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 15.6919632
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 195,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 18.16619492
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 196,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 20.45891762
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 197,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 22.54721832
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 198,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 24.41023254
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 199,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 26.02931595
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 200,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 27.38835907
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 201,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.47374153
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 202,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.27462006
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 203,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.78299713
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 204,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.99378586
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 205,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.90489388
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 206,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.51719856
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 207,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.83457565
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 208,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 27.86384392
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 209,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 26.61473083
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 210,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 25.0996685
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 211,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 23.33381844
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 212,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 21.33481979
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 213,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 19.12265205
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 214,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 16.71945953
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 215,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 14.14916992
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 216,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 11.43750381
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 217,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 8.611557007
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 218,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 5.699566841
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 219,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 2.730683804
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 220,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -0.2655392885
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 221,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -3.259109259
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 222,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -6.220115185
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 223,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -9.118970871
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 224,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -11.92665958
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 225,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -14.61523533
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 226,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -17.15777779
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 227,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -19.5288868
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 228,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -21.70486641
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 229,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -23.66394043
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 230,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -25.38661385
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 231,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -26.85562706
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 232,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.05630493
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 233,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.97665405
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 234,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.60746384
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 235,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.94246101
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 236,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.97827911
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 237,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.71456337
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 238,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.15394592
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 239,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.30204964
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 240,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -27.16735077
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 241,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -25.76120567
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 242,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -24.09765816
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 243,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -22.19333458
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 244,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -20.0673027
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 245,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -17.74072647
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 246,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -15.23688698
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 247,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -12.58080673
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 248,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -9.799021721
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 249,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -6.919382095
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 250,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -3.970552683
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 251,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -0.982049942
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 252,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 2.016264915
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 253,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 4.994434357
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 254,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 7.922644615
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 255,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 10.77175045
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 256,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 13.51322842
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 257,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 16.11968422
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 258,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 18.56507874
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 259,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 20.8249321
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 260,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 22.87675476
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 261,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 24.69999695
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 262,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 26.27644348
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 263,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 27.59034348
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 264,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.62854958
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 265,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.38072968
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 266,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.83934402
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 267,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.99981308
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 268,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.86053085
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 269,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 29.42289925
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 270,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 28.69127846
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 271,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 27.67297935
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 272,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 26.37818146
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 273,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 24.81981659
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 274,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 23.01349831
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 275,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 20.97720146
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 276,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 18.73130417
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 277,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 16.2982502
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 278,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 13.70234776
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 279,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 10.96958923
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 280,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 8.127173424
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 281,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 5.2035532
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 282,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": 2.227940559
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 283,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -0.7699332833
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 284,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -3.760057449
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 285,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -6.712669373
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 286,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -9.598209381
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 287,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -12.3878479
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 288,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -15.05370903
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 289,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -17.56911087
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 290,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -19.90901566
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 291,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -22.04999733
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 292,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -23.97065926
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 293,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -25.6518116
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 294,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -27.07663345
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 295,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -28.23094177
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 296,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.10317421
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 297,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.68461609
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 298,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.96945572
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "frame": 299,
+      "paramSamples": [
+        {
+          "id": "ParamAngleX",
+          "value": -29.95485115
+        },
+        {
+          "id": "ParamAngleY",
+          "value": 0
+        },
+        {
+          "id": "ParamAngleZ",
+          "value": 0
+        },
+        {
+          "id": "ParamTere",
+          "value": 0
+        },
+        {
+          "id": "ParamFaceForm",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}
