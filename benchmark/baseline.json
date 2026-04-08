@@ -1,21 +1,16 @@
 {
   "_comment": [
-    "Committed performance baseline. Regression thresholds per benchmark.",
-    "compare_baseline.dart reads this file, diffs it against results.json,",
-    "and exits non-zero if any entry is breached.",
+    "Committed performance baseline \u2014 populated from first clean run after",
+    "applying Tier 1 isLeaf: true to lib/src/framework/math/libm.dart.",
+    "See docs/PERFORMANCE.md and benchmark/README.md for workflow.",
     "",
-    "IMPORTANT: This file is a TEMPLATE — the numeric thresholds below are",
-    "placeholders that will produce either 'OK' or harmless warnings until",
-    "they are replaced with real per-hardware measurements. To capture the",
-    "true baseline on your dev machine:",
-    "  1. dart run benchmark/run_all.dart",
-    "  2. Inspect benchmark/results.json",
-    "  3. Copy meaningful thresholds into this file's 'benchmarks' map,",
-    "     using the result meanNs for 'prevMeanNs' and a small margin for",
-    "     'maxMeanNs' / 'maxMsPerFrame' entries. See README for details.",
+    "compare_baseline.dart reads prevMeanNs from each entry and fails on a",
+    "regression greater than defaults.regressionTolerancePct (default 20%).",
+    "To tighten an entry, add a maxMeanNs or maxMsPerFrame field.",
     "",
-    "Keys are 'module/name' or 'module/name@variant' — the canonical form",
-    "matches BenchResult.key in harness.dart."
+    "Numbers captured on Linux x86_64 dev hardware, Dart 3.11.4. They will",
+    "drift across machines; re-capture by running the full suite on CI and",
+    "updating this file."
   ],
   "schemaVersion": 1,
   "defaults": {
@@ -25,67 +20,233 @@
   },
   "benchmarks": {
     "math/cosf": {
-      "_note": "Default variant (no isLeaf). Replace maxMeanNs with observed mean × 1.2"
+      "prevMeanNs": 74.75
     },
     "math/cosf@isLeaf": {
-      "_note": "Should be noticeably faster than @default; capture after first run"
+      "prevMeanNs": 70.27
+    },
+    "math/cosf@dartMath": {
+      "prevMeanNs": 96.02
+    },
+    "math/sinf": {
+      "prevMeanNs": 89.21
+    },
+    "math/sinf@isLeaf": {
+      "prevMeanNs": 71.51
+    },
+    "math/sinf@dartMath": {
+      "prevMeanNs": 93.78
+    },
+    "math/tanf": {
+      "prevMeanNs": 177.15
+    },
+    "math/tanf@isLeaf": {
+      "prevMeanNs": 142.65
+    },
+    "math/tanf@dartMath": {
+      "prevMeanNs": 107.6
+    },
+    "math/sqrtf": {
+      "prevMeanNs": 59.23
+    },
+    "math/sqrtf@isLeaf": {
+      "prevMeanNs": 61.25
+    },
+    "math/sqrtf@dartMath": {
+      "prevMeanNs": 90.31
+    },
+    "math/cbrtf": {
+      "prevMeanNs": 151.27
+    },
+    "math/cbrtf@isLeaf": {
+      "prevMeanNs": 149.44
+    },
+    "math/cbrtf@dartMath": {
+      "prevMeanNs": 161.19
+    },
+    "math/acos": {
+      "prevMeanNs": 98.59
+    },
+    "math/acos@isLeaf": {
+      "prevMeanNs": 98.88
+    },
+    "math/acos@dartMath": {
+      "prevMeanNs": 97.16
+    },
+    "math/cbrt": {
+      "prevMeanNs": 137.97
+    },
+    "math/cbrt@isLeaf": {
+      "prevMeanNs": 135.34
+    },
+    "math/cbrt@dartMath": {
+      "prevMeanNs": 162.05
+    },
+    "math/atan2f": {
+      "prevMeanNs": 129.77
+    },
+    "math/atan2f@isLeaf": {
+      "prevMeanNs": 128.98
+    },
+    "math/atan2f@dartMath": {
+      "prevMeanNs": 165.99
+    },
+    "math/powf": {
+      "prevMeanNs": 100.48
+    },
+    "math/powf@isLeaf": {
+      "prevMeanNs": 99.59
+    },
+    "math/powf@dartMath": {
+      "prevMeanNs": 178.08
     },
     "math/cardanoAlgorithmForBezier": {
-      "_note": "Hottest motion path. Replace with observed mean × 1.2"
+      "prevMeanNs": 559.63
     },
-    "math/matrixMultiply@aliased": {
-      "_note": "Tier 2 candidate: eliminate Float32List(16) scratch allocations"
+    "math/quadraticEquation": {
+      "prevMeanNs": 42.61
+    },
+    "math/getEasingSine": {
+      "prevMeanNs": 82.14
     },
     "math/matrixMultiply@nonAliased": {
-      "_note": "Same optimisation target as aliased variant"
+      "prevMeanNs": 78.2
+    },
+    "math/matrixMultiply@aliased": {
+      "prevMeanNs": 57.48
+    },
+    "math/translateRelative": {
+      "prevMeanNs": 131.43
+    },
+    "math/scaleRelative": {
+      "prevMeanNs": 129.32
+    },
+    "math/getInvert": {
+      "prevMeanNs": 77.79
     },
     "math/vector2.addChain": {
-      "_note": "Counts ~5 CubismVector2 allocations per run"
+      "prevMeanNs": 5.98
+    },
+    "math/vector2.length": {
+      "prevMeanNs": 12.38
+    },
+    "math/vector2.distanceTo": {
+      "prevMeanNs": 12.44
+    },
+    "math/vector2.normalize": {
+      "prevMeanNs": 18.9
+    },
+    "math/vector2.dot": {
+      "prevMeanNs": 4.41
     },
     "effect/breath": {
-      "_note": "Haru breath, 360 frames"
+      "prevMeanNs": 85633.33
     },
     "effect/eyeBlink@steady": {
-      "_note": "Pure arithmetic baseline; 600 frames"
+      "prevMeanNs": 47733.33
+    },
+    "effect/eyeBlink@transition": {
+      "prevMeanNs": 4066.67
+    },
+    "effect/look": {
+      "prevMeanNs": 523.22
     },
     "effect/pose": {
-      "_note": "Haru pose3.json, 120 frames"
+      "prevMeanNs": 10766.67
     },
     "motion/curveEval@linear": {
-      "_note": "Lower-bound curve evaluation cost"
+      "prevMeanNs": 127.12
     },
     "motion/curveEval@bezierCardano": {
-      "_note": "Worst-case curve evaluation cost — Cardano path"
+      "prevMeanNs": 1654.95
+    },
+    "motion/curveEval@bezierRestricted": {
+      "prevMeanNs": 181.5
+    },
+    "motion/curveEval@stepped": {
+      "prevMeanNs": 151.97
     },
     "motion/fullMotion": {
-      "_note": "Haru idle motion, 600 frames. Primary motion-playback number."
+      "prevMeanNs": 3690750.0
     },
     "motion/queueTransition": {
-      "_note": "Two-motion priority crossfade, 120 frames"
+      "prevMeanNs": 933520.0
     },
     "physics/pendulum@haru_8particles": {
-      "_note": "Haru 8-particle pendulum, 300 frames"
+      "prevMeanNs": 546950.0
+    },
+    "physics/pendulumStress@4rigs_5particles": {
+      "prevMeanNs": 1054750.0
     },
     "physics/pendulumStress@10rigs_5particles": {
-      "_note": "Scaling point; compare ms/frame to haru_8particles"
+      "prevMeanNs": 2620800.0
+    },
+    "physics/pendulumStress@10rigs_10particles": {
+      "prevMeanNs": 4720000.0
     },
     "pipeline/fullFrame@60fps": {
-      "_note": "HEADLINE METRIC — 60 fps full pipeline. Target ≤ 16.6 ms/frame."
+      "prevMeanNs": 18613350.0,
+      "_note": "0.062 ms/frame (300 frames)"
     },
     "pipeline/fullFrame@120fps": {
-      "_note": "120 fps full pipeline. Target ≤ 8.3 ms/frame."
+      "prevMeanNs": 36265250.0,
+      "_note": "0.060 ms/frame (600 frames)"
+    },
+    "pipeline/multiInstance@1x60fps": {
+      "prevMeanNs": 7208533.33,
+      "_note": "0.060 ms/frame (120 frames)"
+    },
+    "pipeline/multiInstance@1x120fps": {
+      "prevMeanNs": 14259000.0,
+      "_note": "0.059 ms/frame (240 frames)"
+    },
+    "pipeline/multiInstance@2x60fps": {
+      "prevMeanNs": 14618866.67,
+      "_note": "0.122 ms/frame (120 frames)"
+    },
+    "pipeline/multiInstance@2x120fps": {
+      "prevMeanNs": 29623933.33,
+      "_note": "0.123 ms/frame (240 frames)"
     },
     "pipeline/multiInstance@4x60fps": {
-      "_note": "Homogeneous multi-instance @ 4 copies × 60 fps. Target ≤ 16.6 ms/frame."
+      "prevMeanNs": 29037333.33,
+      "_note": "0.242 ms/frame (120 frames)"
     },
     "pipeline/multiInstance@4x120fps": {
-      "_note": "Homogeneous multi-instance @ 4 copies × 120 fps. Target ≤ 8.3 ms/frame."
+      "prevMeanNs": 59498333.33,
+      "_note": "0.248 ms/frame (240 frames)"
+    },
+    "pipeline/multiInstance@8x60fps": {
+      "prevMeanNs": 63009666.67,
+      "_note": "0.525 ms/frame (120 frames)"
+    },
+    "pipeline/multiInstance@8x120fps": {
+      "prevMeanNs": 126484066.67,
+      "_note": "0.527 ms/frame (240 frames)"
+    },
+    "pipeline/multiModel@2models@60fps": {
+      "prevMeanNs": 17695866.67,
+      "_note": "0.147 ms/frame (120 frames)"
+    },
+    "pipeline/multiModel@2models@120fps": {
+      "prevMeanNs": 34297000.0,
+      "_note": "0.143 ms/frame (240 frames)"
     },
     "pipeline/multiModel@4models@60fps": {
-      "_note": "Heterogeneous 4-model mix @ 60 fps. Target ≤ 16.6 ms/frame."
+      "prevMeanNs": 60280333.33,
+      "_note": "0.502 ms/frame (120 frames)"
     },
     "pipeline/multiModel@4models@120fps": {
-      "_note": "Heterogeneous 4-model mix @ 120 fps. Target ≤ 8.3 ms/frame."
+      "prevMeanNs": 122166666.67,
+      "_note": "0.509 ms/frame (240 frames)"
+    },
+    "pipeline/multiModel@8models@60fps": {
+      "prevMeanNs": 107973733.33,
+      "_note": "0.900 ms/frame (120 frames)"
+    },
+    "pipeline/multiModel@8models@120fps": {
+      "prevMeanNs": 210748933.33,
+      "_note": "0.878 ms/frame (240 frames)"
     }
   }
 }

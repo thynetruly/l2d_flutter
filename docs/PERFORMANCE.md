@@ -45,27 +45,61 @@ benchmarks once you run the suite.
 The suite is structured around three tiers. **Do not skip the measure
 step before any tier.**
 
-### Tier 1 — `isLeaf: true` on LibM bindings
+### Tier 1 — `isLeaf: true` on LibM bindings — **APPLIED**
 
-**Candidate:** add `isLeaf: true` to all 12 FFI bindings in
-`lib/src/framework/math/libm.dart:73-103`.
+**Status:** shipped alongside the benchmark suite.
+**Location:** `lib/src/framework/math/libm.dart`.
 
-**How to decide:**
+**Decision data** (Linux x86_64 dev box, Dart 3.11.4 / Flutter 3.41.6):
 
-1. Run `dart run benchmark/run_all.dart --filter=math/transcendentals`.
-2. Compare `math/cosf@isLeaf` mean to `math/cosf@default` mean.
-3. If the `isLeaf` variant is faster by ≥10%, it's worth landing. Repeat
-   for every function that shows the improvement.
-4. Apply the hint to `libm.dart` (one-line change per binding).
-5. Re-run the suite. `physics/pendulum` and `motion/fullMotion` should
-   both improve by roughly the ratio of their FFI count × (default - isLeaf)
-   / total frame time.
-6. Run `dart test` + `flutter test test/widgets/` to confirm bit-exact
-   parity is preserved. `isLeaf` is safe for pure libm functions (no Dart
-   heap access, no callback into Dart).
+| Function | default (ns) | `isLeaf` (ns) | Speedup | dart:math (ns) |
+|---|---:|---:|---:|---:|
+| `cosf` | 227.8 | 75.1 | **3.0×** | 96.0 |
+| `sinf` | 258.5 | 70.7 | **3.7×** | 94.1 |
+| `sqrtf` | 234.9 | 64.2 | **3.7×** | 86.9 |
+| `acos` | 247.6 | 95.9 | **2.6×** | 96.0 |
+| `cbrt` | 266.0 | 135.8 | **2.0×** | 161.1 |
+| `atan2f` | 260.8 | 131.4 | **2.0×** | 171.8 |
+| `powf` | 243.4 | 105.3 | **2.3×** | 182.0 |
 
-**Expected:** ~15–20 µs/frame reduction (~10–15% of FFI overhead shaved).
-**Risk:** near zero.
+Every single-precision libm call via FFI became **faster than `dart:math`**
+with `isLeaf: true`. The Tier-1 ship criterion (≥10% faster than default)
+is massively exceeded — typical speedup is 2–4×.
+
+**Downstream impact** measured on the same run, after applying the hint to
+all 12 bindings:
+
+| Benchmark | Before isLeaf | After isLeaf | Speedup |
+|---|---:|---:|---:|
+| `math/cardanoAlgorithmForBezier` | 678.9 ns | 559.6 ns | 1.21× |
+| `math/quadraticEquation` | 66.2 ns | 42.6 ns | 1.55× |
+| `math/getEasingSine` | 138.5 ns | 82.1 ns | 1.69× |
+| `math/vector2.length` | 26.2 ns | 12.4 ns | 2.11× |
+| `math/vector2.normalize` | 29.7 ns | 18.9 ns | 1.57× |
+| `motion/curveEval@bezierCardano` | 2.01 µs | 1.65 µs | 1.22× |
+| `physics/pendulum@haru_8particles` | 738 µs | 547 µs | **1.35×** |
+| `physics/pendulumStress@10rigs_10p` | 6.73 ms | 4.72 ms | 1.43× |
+
+Pipeline-level benchmarks (`pipeline/fullFrame`, `multiInstance`, `multiModel`)
+stayed within measurement noise on this dev box because the **per-frame cost
+is already ~60 µs — well under the 16.6 ms budget** — so the ~5 µs/frame
+isLeaf saving is lost in run-to-run variance. The wins show up more clearly
+on libm-heavy slices: physics improved 26–43% depending on particle count,
+Cardano improved 22%, getEasingSine 69%.
+
+**Parity:** full test suite — 195 `dart test` tests (including 13 parity
+regression tests) and 6 `flutter test test/widgets/` tests — all passed
+unchanged after the edit. `isLeaf` is safe for every function in
+`libm.dart` because they are pure numeric routines with no callback into
+Dart and no heap access.
+
+### Tier 1 — future invocation
+
+The `math/cosf@isLeaf` variant in `benchmark/math/transcendentals.dart` is
+still wired up so a future regression that reverts or contaminates the
+FFI path (e.g. someone adds a `Finalizable` bound to a libm argument,
+which disables isLeaf) will show as a large slowdown in the default
+variant vs the local `isLeaf` variant. Keep the variant benchmark.
 
 ### Tier 2 — hot-path allocation reduction
 

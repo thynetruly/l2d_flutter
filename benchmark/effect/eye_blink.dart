@@ -19,13 +19,12 @@ import '../fixtures.dart';
 import '../harness.dart';
 
 class _EyeBlinkBench extends CubismBenchmark {
-  _EyeBlinkBench({required int frames, required int seed, required String variant})
+  _EyeBlinkBench({required int frames, required int seed, required super.variant})
       : _frames = frames,
         _seed = seed,
         super(
           module: 'effect',
           benchName: 'eyeBlink',
-          variant: variant,
           innerIterations: 1,
           sampleCount: 30,
         );
