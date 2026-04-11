@@ -18,10 +18,15 @@ import 'package:l2d_flutter_plugin/src/widgets/live2d_controller.dart';
 /// Resolves the project root. When running `flutter test` or
 /// `flutter drive` from the `example/` directory, `Directory.current` is
 /// `example/`. When running from the project root, it's the root itself.
+/// Handles both forward-slash (POSIX) and backslash (Windows) separators.
 String get projectRoot {
   final cwd = Directory.current.path;
-  if (cwd.endsWith('example') || cwd.endsWith('example/')) {
-    return Directory(cwd).parent.path;
+  // Normalise: strip trailing separators for consistent matching.
+  final norm = cwd.endsWith('/') || cwd.endsWith('\\')
+      ? cwd.substring(0, cwd.length - 1)
+      : cwd;
+  if (norm.endsWith('example')) {
+    return Directory(norm).parent.path;
   }
   return cwd;
 }
@@ -37,10 +42,13 @@ void ensureCoreLoaded() {
     NativeLibrary.bindings;
     _coreLoaded = true;
   } catch (_) {
-    // Try platform-specific paths.
+    // Try platform-specific paths. Dart's File API accepts forward slashes
+    // on all platforms, so we don't need to switch separators.
     final paths = [
       '$projectRoot/Core/dll/linux/x86_64/libLive2DCubismCore.so',
       '$projectRoot/Core/dll/macos/libLive2DCubismCore.dylib',
+      '$projectRoot/Core/dll/windows/x86_64/Live2DCubismCore.dll',
+      '$projectRoot/Core/dll/windows/x86/Live2DCubismCore.dll',
     ];
     for (final path in paths) {
       if (File(path).existsSync()) {
