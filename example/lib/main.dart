@@ -1,74 +1,24 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
-import 'package:l2d_flutter_plugin/l2d_flutter_plugin.dart' as l2d_flutter_plugin;
-
+/// Minimal launcher shell for the Live2D benchmark integration tests.
+///
+/// The integration tests at `integration_test/live2d_benchmark_test.dart`
+/// replace the widget tree via `tester.pumpWidget()`, so this app only
+/// needs to be launchable — it doesn't need to load models itself.
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  late int sumResult;
-  late Future<int> sumAsyncResult;
-
-  @override
-  void initState() {
-    super.initState();
-    sumResult = l2d_flutter_plugin.sum(1, 2);
-    sumAsyncResult = l2d_flutter_plugin.sumAsync(3, 4);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    const textStyle = TextStyle(fontSize: 25);
-    const spacerSmall = SizedBox(height: 10);
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Native Packages'),
-        ),
-        body: SingleChildScrollView(
-          child: Container(
-            padding: const EdgeInsets.all(10),
-            child: Column(
-              children: [
-                const Text(
-                  'This calls a native function through FFI that is shipped as source in the package. '
-                  'The native code is built as part of the Flutter Runner build.',
-                  style: textStyle,
-                  textAlign: TextAlign.center,
-                ),
-                spacerSmall,
-                Text(
-                  'sum(1, 2) = $sumResult',
-                  style: textStyle,
-                  textAlign: TextAlign.center,
-                ),
-                spacerSmall,
-                FutureBuilder<int>(
-                  future: sumAsyncResult,
-                  builder: (BuildContext context, AsyncSnapshot<int> value) {
-                    final displayValue =
-                        (value.hasData) ? value.data : 'loading';
-                    return Text(
-                      'await sumAsync(3, 4) = $displayValue',
-                      style: textStyle,
-                      textAlign: TextAlign.center,
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
+  runApp(const MaterialApp(
+    home: Scaffold(
+      body: Center(
+        child: Text(
+          'Live2D Benchmark App\n\n'
+          'Run benchmarks via:\n'
+          '  flutter test integration_test/\n'
+          'or:\n'
+          '  flutter drive --driver=test_driver/perf_test.dart '
+          '--target=integration_test/live2d_benchmark_test.dart',
+          textAlign: TextAlign.center,
         ),
       ),
-    );
-  }
+    ),
+  ));
 }
