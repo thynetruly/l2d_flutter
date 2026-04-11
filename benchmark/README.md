@@ -75,11 +75,25 @@ are absent and the per-call cost is either `meanNs` directly (singleCall)
 or `meanNs` divided by the unroll factor documented in the benchmark's
 constructor comment (callBatch).
 
-Allocation tracking requires launching under the VM service:
+Allocation tracking and DevTools integration require the VM service:
 
 ```
+# Basic allocation profiling (whole-heap byte delta per benchmark):
 dart run --enable-vm-service --pause-isolates-on-exit=false \
     benchmark/run_all.dart --alloc
+
+# Full DevTools integration (per-class allocation breakdown + structured
+# developer.log events visible in DevTools Logging tab):
+dart run --enable-vm-service --pause-isolates-on-exit=false \
+    benchmark/run_all.dart --devtools
+
+# Automated CPU profile + timeline export (separate tool):
+dart run --enable-vm-service --pause-isolates-on-exit=false \
+    tool/profile_pipeline.dart
+
+# Interactive CPU profiling (manual DevTools connection):
+dart run --enable-vm-service --pause-isolates-on-exit=false \
+    tool/profile_pipeline.dart --interactive
 ```
 
 ## What's here
@@ -114,6 +128,79 @@ benchmark/
     ├── multi_instance.dart   N × Haru (homogeneous) @ 60 & 120 fps
     └── multi_model.dart      2/4/8 distinct models @ 60 & 120 fps
 ```
+
+## DevTools integration
+
+The benchmark pipeline integrates with the following Dart DevTools
+features. All of them work via the VM service — launch with
+`--enable-vm-service --pause-isolates-on-exit=false`.
+
+### CPU Profiler
+
+`tool/profile_pipeline.dart` runs 600 frames of the full Haru pipeline
+with `Timeline.startSync/finishSync` per phase, then:
+
+- **Automated** (default): calls `VmService.getCpuSamples()` and writes
+  `tool/cpu_profile.json`. Prints a top-10 function table to stdout.
+- **Interactive** (`--interactive`): prints the VM Service URL so you
+  can open DevTools, navigate to the CPU Profiler tab, and record
+  manually. Waits for Enter before/after the loop.
+
+The CPU profile JSON can be loaded into DevTools via the "Load" button
+in the CPU Profiler tab, or analysed programmatically.
+
+### Memory view (per-class allocation)
+
+`--devtools` on `run_all.dart` captures per-class allocation breakdowns
+via `AllocationProfile.members`. Each benchmark's `results.json` entry
+gets an `allocProfile` key in `metadata`:
+
+```jsonc
+"metadata": {
+  "allocProfile": [
+    {"className": "CubismVector2", "instancesDelta": 750, "bytesDelta": 12000},
+    {"className": "Float32List", "instancesDelta": 160, "bytesDelta": 10240},
+    ...
+  ]
+}
+```
+
+This answers "which types are driving GC pressure?" without opening
+DevTools Memory view manually.
+
+### Timeline / Performance view
+
+`tool/profile_pipeline.dart` calls `VmService.getVMTimeline()` and
+writes `tool/timeline.json` in Chrome trace format. Open it in:
+- `chrome://tracing` (paste the file)
+- DevTools → Performance tab → Load
+
+The per-phase summary printed to stdout shows total and per-frame
+duration for each pipeline phase (motion, physics, eye_blink, etc.).
+
+### Logging view
+
+When running under the VM service, every benchmark emits structured
+`developer.log()` events with category `cubism.benchmark`:
+
+```jsonc
+{"event": "start", "key": "physics/pendulum@haru_8particles"}
+{"event": "result", "key": "physics/pendulum@haru_8particles", "meanNs": 547000, "perFrameNs": 1823}
+```
+
+These appear in the DevTools Logging tab and can be filtered by the
+`cubism.benchmark` category. They coexist with the existing stdout
+printing — BenchLog is a parallel channel, not a replacement.
+
+### Not integrated (Flutter-only)
+
+- **Performance view frame timing** — requires a Flutter app to capture
+  `FrameTiming` build/raster splits. Will be added in the Flutter
+  benchmark app (Phase 2).
+- **Flutter inspector** — widget rebuild counts, repaint boundaries.
+  Same: requires a Flutter app.
+- **App size tool** — compile-time analysis, not runtime perf.
+- **Debugger** — interactive, not automatable.
 
 ## Capturing a baseline
 

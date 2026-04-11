@@ -195,9 +195,23 @@ no remaining Tier 1 or Tier 2 work to do.
    and look at the pendulum stress scaling curve to see whether the cost
    is per-particle (Vector2 allocs dominate) or per-FFI-call (Tier 1
    wins).
-4. **Escalate to DevTools.** When the benchmarks can't explain the
-   number, use `tool/profile_pipeline.dart` to capture a CPU profile in
-   DevTools and export a flame graph.
+4. **Escalate to DevTools.** Three automated paths, no manual interaction needed:
+
+   ```bash
+   # Per-class allocation breakdown → metadata.allocProfile in results.json
+   dart run --enable-vm-service --pause-isolates-on-exit=false \
+       benchmark/run_all.dart --devtools --filter=physics
+
+   # CPU profile → tool/cpu_profile.json (top-10 functions on stdout)
+   # + Timeline → tool/timeline.json (Chrome trace format)
+   dart run --enable-vm-service --pause-isolates-on-exit=false \
+       tool/profile_pipeline.dart
+   ```
+
+   If you need the DevTools UI (flame graph, Memory tab, etc.), use
+   `tool/profile_pipeline.dart --interactive` which prints the VM Service
+   URL and waits for you to connect before starting the frame loop.
+
 5. **Only then optimise.** Revisit the tier table above and pick the
    first-tier candidate that matches the measured bottleneck.
 

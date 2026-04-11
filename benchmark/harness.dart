@@ -43,6 +43,7 @@
 // Stopwatch overhead). Matrix/vector ops are OpKind.singleCall.
 
 import 'dart:convert';
+import 'dart:developer' as developer;
 import 'dart:io';
 import 'dart:math' as math;
 
@@ -232,15 +233,23 @@ abstract class CubismBenchmark extends BenchmarkBase {
   /// Runs one timing pass and returns a single result. Subclasses that
   /// override [measureAndEmit] call this for each variant they want to emit.
   BenchResult runOne({String? overrideVariant, Map<String, Object?>? meta}) {
+    final variantKey = _makeName(
+        module, benchName, overrideVariant ?? variant);
+    BenchLog.benchStart(variantKey);
     setup();
     try {
       _warmup();
       final samples = _collectSamples();
-      return _statsFromSamples(
+      final result = _statsFromSamples(
         samples,
         overrideVariant ?? variant,
         meta ?? metadata,
       );
+      BenchLog.benchResult(result);
+      return result;
+    } catch (e) {
+      BenchLog.error(variantKey, e);
+      rethrow;
     } finally {
       teardown();
     }
@@ -446,5 +455,52 @@ class BenchSink {
   static Object? _last;
   static void sink(Object? v) {
     _last = v;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Structured logging for DevTools Logging view
+// ---------------------------------------------------------------------------
+
+/// Emits structured JSON events via [developer.log] so benchmark lifecycle
+/// is visible in the DevTools Logging tab. All events use the category name
+/// `cubism.benchmark`, which can be filtered in the Logging view.
+///
+/// These coexist with the existing `stdout` printing — `BenchLog` is a
+/// parallel channel for DevTools, not a replacement for console output.
+class BenchLog {
+  BenchLog._();
+
+  static const String _name = 'cubism.benchmark';
+
+  /// Logs the start of a benchmark.
+  static void benchStart(String key) {
+    developer.log(
+      jsonEncode({'event': 'start', 'key': key}),
+      name: _name,
+    );
+  }
+
+  /// Logs a condensed result for a completed benchmark.
+  static void benchResult(BenchResult r) {
+    final payload = <String, Object?>{
+      'event': 'result',
+      'key': r.key,
+      'opKind': r.opKind.name,
+      'meanNs': (r.meanNs * 100).roundToDouble() / 100,
+      if (r.perFrameNs != null)
+        'perFrameNs': (r.perFrameNs! * 100).roundToDouble() / 100,
+      if (r.bytesAllocPerOp != null) 'bytesAllocPerOp': r.bytesAllocPerOp,
+    };
+    developer.log(jsonEncode(payload), name: _name);
+  }
+
+  /// Logs an error during benchmark execution.
+  static void error(String key, Object error) {
+    developer.log(
+      jsonEncode({'event': 'error', 'key': key, 'error': '$error'}),
+      name: _name,
+      level: 1000, // severe
+    );
   }
 }

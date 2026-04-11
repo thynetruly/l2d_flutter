@@ -95,26 +95,43 @@ Future<int> main(List<String> argv) async {
   }
 
   // Alloc pass — optional, second run under VM service.
-  if (args.alloc) {
+  // --alloc: basic whole-heap byte delta per benchmark.
+  // --devtools: detailed per-class allocation breakdown (implies --alloc).
+  if (args.alloc || args.devtools) {
     final tracker = await AllocTracker.connect();
     if (tracker == null) {
       warnAllocUnavailable();
     } else {
-      stdout.writeln('Running allocation pass...');
+      stdout.writeln(args.devtools
+          ? 'Running detailed allocation pass (per-class breakdown)...'
+          : 'Running allocation pass...');
       final allocResults = <String, int>{};
+      final detailedResults = <String, List<Map<String, Object>>>{};
       for (final bench in filtered) {
-        // Re-run via the same path but use the tracker around one sample's
-        // worth of inner iterations to get bytes-per-op.
         try {
           bench.setup();
           try {
-            final sample = await tracker.sample(() {
-              for (int i = 0; i < bench.innerIterations; i++) {
-                bench.run();
+            if (args.devtools) {
+              // Detailed: per-class instance/byte deltas.
+              final detailed = await tracker.detailedSample(() {
+                for (int i = 0; i < bench.innerIterations; i++) {
+                  bench.run();
+                }
+              });
+              final perOp = detailed.totalBytes ~/ bench.innerIterations;
+              allocResults[bench.name] = perOp;
+              if (detailed.topClasses.isNotEmpty) {
+                detailedResults[bench.name] = detailed.topClassesToJson();
               }
-            });
-            final perOp = sample.bytes ~/ bench.innerIterations;
-            allocResults[bench.name] = perOp;
+            } else {
+              // Basic: whole-heap delta.
+              final sample = await tracker.sample(() {
+                for (int i = 0; i < bench.innerIterations; i++) {
+                  bench.run();
+                }
+              });
+              allocResults[bench.name] = sample.bytes ~/ bench.innerIterations;
+            }
           } finally {
             bench.teardown();
           }
@@ -129,6 +146,12 @@ Future<int> main(List<String> argv) async {
         final r = reporter.results[i];
         final bytes = allocResults[r.key];
         if (bytes == null) continue;
+        // Merge per-class alloc data into metadata if available.
+        final meta = Map<String, Object?>.of(r.metadata);
+        final classData = detailedResults[r.key];
+        if (classData != null) {
+          meta['allocProfile'] = classData;
+        }
         reporter.results[i] = BenchResult(
           module: r.module,
           name: r.name,
@@ -146,7 +169,7 @@ Future<int> main(List<String> argv) async {
           iterationsPerSample: r.iterationsPerSample,
           bytesAllocPerOp: bytes,
           gcCount: r.gcCount,
-          metadata: r.metadata,
+          metadata: meta,
         );
       }
     }
@@ -162,17 +185,27 @@ Future<int> main(List<String> argv) async {
 class _Args {
   final String? filter;
   final bool alloc;
+  final bool devtools;
   final String? output;
 
-  const _Args({this.filter, required this.alloc, this.output});
+  const _Args({
+    this.filter,
+    required this.alloc,
+    required this.devtools,
+    this.output,
+  });
 
   static _Args parse(List<String> argv) {
     String? filter;
     String? output;
     bool alloc = false;
+    bool devtools = false;
     for (final a in argv) {
       if (a == '--alloc') {
         alloc = true;
+      } else if (a == '--devtools') {
+        devtools = true;
+        alloc = true; // --devtools implies --alloc
       } else if (a.startsWith('--filter=')) {
         filter = a.substring('--filter='.length);
       } else if (a.startsWith('--output=')) {
@@ -186,7 +219,8 @@ class _Args {
         exit(2);
       }
     }
-    return _Args(filter: filter, alloc: alloc, output: output);
+    return _Args(
+        filter: filter, alloc: alloc, devtools: devtools, output: output);
   }
 
   static void _printHelp() {
@@ -196,10 +230,27 @@ Usage: dart run benchmark/run_all.dart [options]
 Options:
   --filter=<substr>   Only run benchmarks whose key contains <substr>.
                       Matches against "module/name@variant".
-  --alloc             Enable allocation profiling. Requires launching with
-                      --enable-vm-service --pause-isolates-on-exit=false.
+  --alloc             Enable basic allocation profiling (whole-heap byte delta).
+                      Requires: --enable-vm-service --pause-isolates-on-exit=false.
+  --devtools          Enable all DevTools integrations: per-class allocation
+                      breakdown (metadata.allocProfile), structured developer.log
+                      events. Implies --alloc. Requires --enable-vm-service.
   --output=<path>     Write results to <path> (default: benchmark/results.json).
   --help, -h          Show this message.
+
+DevTools integration:
+
+  Basic:
+    dart run --enable-vm-service --pause-isolates-on-exit=false \\
+        benchmark/run_all.dart --alloc
+
+  Full (per-class allocations + structured logging):
+    dart run --enable-vm-service --pause-isolates-on-exit=false \\
+        benchmark/run_all.dart --devtools
+
+  CPU profiling + timeline (separate tool):
+    dart run --enable-vm-service --pause-isolates-on-exit=false \\
+        tool/profile_pipeline.dart
 ''');
   }
 }
