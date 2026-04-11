@@ -21,7 +21,9 @@ import 'package:l2d_flutter_plugin/src/core/cubism_model.dart';
 import 'package:l2d_flutter_plugin/src/framework/effect/cubism_breath.dart';
 import 'package:l2d_flutter_plugin/src/framework/effect/cubism_eye_blink.dart';
 import 'package:l2d_flutter_plugin/src/framework/effect/cubism_pose.dart';
+import 'package:l2d_flutter_plugin/src/framework/motion/cubism_expression_motion.dart';
 import 'package:l2d_flutter_plugin/src/framework/motion/cubism_motion.dart';
+import 'package:l2d_flutter_plugin/src/framework/motion/cubism_motion_manager.dart';
 import 'package:l2d_flutter_plugin/src/framework/physics/cubism_physics.dart';
 
 import '../fixtures.dart';
@@ -170,7 +172,107 @@ class _FullFrameBench extends CubismBenchmark {
       };
 }
 
+/// Managed variant: uses CubismMotionManager + CubismExpressionMotionManager,
+/// matching the real Live2DController.update() pipeline. Captures the
+/// queue-management, fade-weight, and expression-blending overhead that
+/// the direct-call variant skips.
+class _ManagedFullFrameBench extends CubismBenchmark {
+  _ManagedFullFrameBench({required this.targetFps, required this.seconds})
+      : super(
+          module: 'pipeline',
+          benchName: 'fullFrame',
+          variant: 'managed@${targetFps}fps',
+          opKind: OpKind.frameRun,
+          framesPerOp: (targetFps * seconds).round(),
+          innerIterations: 1,
+          sampleCount: 20,
+          warmupMs: 100,
+        );
+
+  final int targetFps;
+  final double seconds;
+  late final int _frames = (targetFps * seconds).round();
+  late final double _dt = 1.0 / targetFps;
+
+  late ModelFixture _fixture;
+  late CubismModel _model;
+  late CubismMotionManager _motionManager;
+  late CubismExpressionMotionManager _exprManager;
+  late CubismEyeBlink _eyeBlink;
+  late CubismBreath _breath;
+  CubismPhysics? _physics;
+  CubismPose? _pose;
+
+  @override
+  void setup() {
+    _fixture = Fixtures.haru();
+    _model = _fixture.newModel();
+    _motionManager = CubismMotionManager();
+
+    // Start an idle motion through the manager, like the real controller does.
+    final motion = _fixture.newIdleMotion()!;
+    motion.isLoop = true;
+    motion.fadeInSeconds = 0.5;
+    motion.fadeOutSeconds = 0.5;
+    _motionManager.startMotionPriority(motion, priority: 1);
+
+    // Start an expression if available, so expression blending is exercised.
+    _exprManager = CubismExpressionMotionManager();
+    final expressions = _fixture.newExpressions(1);
+    if (expressions.isNotEmpty) {
+      _exprManager.startExpression(expressions.first);
+    }
+
+    _eyeBlink = CubismEyeBlink(
+      parameterIds: _fixture.settings.eyeBlinkParameterIds,
+      random: math.Random(42),
+    );
+    _breath = CubismBreath(parameters: const [
+      BreathParameterData(
+        parameterId: 'ParamBreath',
+        offset: 0.0,
+        peak: 0.4,
+        cycle: 3.2345,
+        weight: 0.5,
+      ),
+    ]);
+    _physics = _fixture.newPhysics();
+    _physics?.stabilization(_model);
+    _pose = _fixture.newPose();
+  }
+
+  @override
+  void run() {
+    for (int f = 0; f < _frames; f++) {
+      // Matches Live2DController.update() order exactly:
+      _motionManager.updateMotion(_model, _dt);
+      _exprManager.updateMotion(_model, _dt);
+      _eyeBlink.updateParameters(_model, _dt);
+      _breath.updateParameters(_model, _dt);
+      _physics?.evaluate(_model, _dt);
+      _pose?.updateParameters(_model, _dt);
+      _model.update();
+    }
+  }
+
+  @override
+  void teardown() {
+    _model.dispose();
+  }
+
+  @override
+  Map<String, Object?> get metadata => {
+        'frames': _frames,
+        'dt_seconds': _dt,
+        'target_fps': targetFps,
+        'frame_budget_ms': 1000.0 / targetFps,
+        'pipeline': 'managed (motionManager + expressionManager)',
+      };
+}
+
 List<CubismBenchmark> all() => [
       _FullFrameBench(targetFps: 60, seconds: 5.0),
       _FullFrameBench(targetFps: 120, seconds: 5.0),
+      _ManagedFullFrameBench(targetFps: 60, seconds: 5.0),
+      _ManagedFullFrameBench(targetFps: 120, seconds: 5.0),
     ];

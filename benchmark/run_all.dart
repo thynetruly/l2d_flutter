@@ -32,8 +32,13 @@ import 'motion/queue_transition.dart' as queue_transition;
 import 'physics/pendulum.dart' as pendulum;
 import 'physics/pendulum_stress.dart' as pendulum_stress;
 import 'pipeline/full_frame.dart' as full_frame;
+import 'pipeline/model_scaling.dart' as model_scaling;
 import 'pipeline/multi_instance.dart' as multi_instance;
 import 'pipeline/multi_model.dart' as multi_model;
+import 'rendering/cpu_draw.dart' as cpu_draw;
+import 'stress/expression_storm.dart' as expression_storm;
+import 'stress/gc_pressure.dart' as gc_pressure;
+import 'stress/motion_spam.dart' as motion_spam;
 
 Future<int> main(List<String> argv) async {
   final args = _Args.parse(argv);
@@ -59,6 +64,11 @@ Future<int> main(List<String> argv) async {
     ...full_frame.all(),
     ...multi_instance.all(),
     ...multi_model.all(),
+    ...model_scaling.all(),
+    ...cpu_draw.all(),
+    ...motion_spam.all(),
+    ...expression_storm.all(),
+    ...gc_pressure.all(),
   ];
 
   // Apply --filter. Filter is a substring match on the canonical key prefix

@@ -18,6 +18,7 @@ import 'package:l2d_flutter_plugin/src/core/cubism_model.dart';
 import 'package:l2d_flutter_plugin/src/core/native_library.dart';
 import 'package:l2d_flutter_plugin/src/framework/cubism_model_setting_json.dart';
 import 'package:l2d_flutter_plugin/src/framework/effect/cubism_pose.dart';
+import 'package:l2d_flutter_plugin/src/framework/motion/cubism_expression_motion.dart';
 import 'package:l2d_flutter_plugin/src/framework/motion/cubism_motion.dart';
 import 'package:l2d_flutter_plugin/src/framework/physics/cubism_physics.dart';
 import 'package:l2d_flutter_plugin/src/generated/cubism_core_bindings.dart';
@@ -91,6 +92,14 @@ class ModelFixture {
   final String? poseJson;
   final String? idleMotionJson;
 
+  /// All motion JSON strings keyed by filename, for queue/stress benchmarks
+  /// that need to cycle through multiple distinct motions.
+  final Map<String, String> allMotionJsons;
+
+  /// All expression JSON strings keyed by name, for expression-storm
+  /// benchmarks that crossfade multiple expressions simultaneously.
+  final Map<String, String> allExpressionJsons;
+
   ModelFixture._({
     required this.sample,
     required this.sampleDir,
@@ -99,6 +108,8 @@ class ModelFixture {
     required this.physicsJson,
     required this.poseJson,
     required this.idleMotionJson,
+    this.allMotionJsons = const {},
+    this.allExpressionJsons = const {},
   });
 
   /// Constructs a fresh model instance sharing this fixture's moc.
@@ -123,6 +134,35 @@ class ModelFixture {
   CubismMotion? newIdleMotion() => idleMotionJson == null
       ? null
       : CubismMotion.fromString(idleMotionJson!);
+
+  /// Returns a list of up to [count] distinct CubismMotion instances parsed
+  /// from this model's motion files. Used by queue/stress benchmarks to feed
+  /// multiple different motions to CubismMotionManager. Falls back to
+  /// duplicating the idle motion if fewer motions are available.
+  List<CubismMotion> newMotions(int count) {
+    final result = <CubismMotion>[];
+    for (final json in allMotionJsons.values) {
+      result.add(CubismMotion.fromString(json));
+      if (result.length >= count) return result;
+    }
+    // Pad with idle copies if we don't have enough distinct motions.
+    final idle = idleMotionJson;
+    while (result.length < count && idle != null) {
+      result.add(CubismMotion.fromString(idle));
+    }
+    return result;
+  }
+
+  /// Returns a list of up to [count] distinct CubismExpressionMotion
+  /// instances. Used by expression-storm benchmarks.
+  List<CubismExpressionMotion> newExpressions(int count) {
+    final result = <CubismExpressionMotion>[];
+    for (final json in allExpressionJsons.values) {
+      result.add(CubismExpressionMotion.fromString(json));
+      if (result.length >= count) return result;
+    }
+    return result;
+  }
 }
 
 /// Central registry of parsed fixtures. Loaded on demand.
@@ -174,6 +214,8 @@ class Fixtures {
         : _readIfExists('$dir/$poseFileName');
 
     final idleMotionJson = _findIdleMotion(dir, settings);
+    final allMotions = _loadAllMotions(dir, settings);
+    final allExpressions = _loadAllExpressions(dir, settings);
 
     final fixture = ModelFixture._(
       sample: model,
@@ -183,6 +225,8 @@ class Fixtures {
       physicsJson: physicsJson,
       poseJson: poseJson,
       idleMotionJson: idleMotionJson,
+      allMotionJsons: allMotions,
+      allExpressionJsons: allExpressions,
     );
     _cache[model] = fixture;
     return fixture;
@@ -216,6 +260,36 @@ class Fixtures {
       }
     }
     return null;
+  }
+
+  /// Loads all motion JSON files referenced in model3.json.
+  static Map<String, String> _loadAllMotions(
+      String dir, CubismModelSettingJson settings) {
+    final result = <String, String>{};
+    for (int g = 0; g < settings.motionGroupCount; g++) {
+      final groupName = settings.getMotionGroupName(g);
+      for (int i = 0; i < settings.getMotionCount(groupName); i++) {
+        final file = settings.getMotionFileName(groupName, i);
+        if (file.isEmpty) continue;
+        final content = _readIfExists('$dir/$file');
+        if (content != null) result[file] = content;
+      }
+    }
+    return result;
+  }
+
+  /// Loads all expression JSON files referenced in model3.json.
+  static Map<String, String> _loadAllExpressions(
+      String dir, CubismModelSettingJson settings) {
+    final result = <String, String>{};
+    for (int i = 0; i < settings.expressionCount; i++) {
+      final name = settings.getExpressionName(i);
+      final file = settings.getExpressionFileName(i);
+      if (file.isEmpty) continue;
+      final content = _readIfExists('$dir/$file');
+      if (content != null) result[name.isNotEmpty ? name : file] = content;
+    }
+    return result;
   }
 
   static String _corePath() {

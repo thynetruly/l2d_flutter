@@ -1,20 +1,11 @@
 {
   "_comment": [
     "Committed performance baseline.",
-    "",
-    "prevMeanNs = mean ns per full op. For frameRun benchmarks the op",
-    "is the entire frame loop, so prevMeanNs is total-run time. Use",
-    "prevPerFrameNs for the per-frame cost (derived as meanNs/framesPerOp",
-    "by the harness) or consult the _note for a human-readable summary.",
-    "",
-    "compare_baseline.dart reads prevMeanNs for percent-regression gating",
-    "(default 20% tolerance via defaults.regressionTolerancePct). To add",
-    "a hard ceiling, include maxMeanNs (ns) or maxMsPerFrame (ms) \u2014",
-    "maxMsPerFrame uses perFrameNs automatically for frameRun benchmarks.",
-    "",
-    "Numbers captured on Linux x86_64 dev hardware (Dart 3.11.4 /",
-    "Flutter 3.41.6). They drift across machines; re-capture by running",
-    "the full suite on CI and updating this file."
+    "See benchmark/README.md for the schema and how to read the numbers.",
+    "prevMeanNs = ns per full op (see opKind for what an op means).",
+    "prevPerFrameNs = meanNs / framesPerOp (for frameRun benchmarks only).",
+    "compare_baseline.dart uses prevMeanNs for 20% regression gating.",
+    "Numbers captured on Linux x86_64 dev hardware, Dart 3.11.4."
   ],
   "schemaVersion": 1,
   "defaults": {
@@ -24,269 +15,374 @@
   },
   "benchmarks": {
     "math/cosf": {
-      "prevMeanNs": 76.36
+      "prevMeanNs": 89.81
     },
     "math/cosf@isLeaf": {
-      "prevMeanNs": 72.91
+      "prevMeanNs": 102.21
     },
     "math/cosf@dartMath": {
-      "prevMeanNs": 99.81
+      "prevMeanNs": 128.37
     },
     "math/sinf": {
-      "prevMeanNs": 72.72
+      "prevMeanNs": 85.0
     },
     "math/sinf@isLeaf": {
-      "prevMeanNs": 86.83
+      "prevMeanNs": 85.29
     },
     "math/sinf@dartMath": {
-      "prevMeanNs": 105.93
+      "prevMeanNs": 152.43
     },
     "math/tanf": {
-      "prevMeanNs": 151.46
+      "prevMeanNs": 214.37
     },
     "math/tanf@isLeaf": {
-      "prevMeanNs": 142.64
+      "prevMeanNs": 226.64
     },
     "math/tanf@dartMath": {
-      "prevMeanNs": 112.54
+      "prevMeanNs": 168.27
     },
     "math/sqrtf": {
-      "prevMeanNs": 62.37
+      "prevMeanNs": 83.05
     },
     "math/sqrtf@isLeaf": {
-      "prevMeanNs": 61.11
+      "prevMeanNs": 80.72
     },
     "math/sqrtf@dartMath": {
-      "prevMeanNs": 89.12
+      "prevMeanNs": 148.7
     },
     "math/cbrtf": {
-      "prevMeanNs": 146.16
+      "prevMeanNs": 243.64
     },
     "math/cbrtf@isLeaf": {
-      "prevMeanNs": 149.54
+      "prevMeanNs": 199.08
     },
     "math/cbrtf@dartMath": {
-      "prevMeanNs": 164.52
+      "prevMeanNs": 226.25
     },
     "math/acos": {
-      "prevMeanNs": 96.28
+      "prevMeanNs": 133.81
     },
     "math/acos@isLeaf": {
-      "prevMeanNs": 100.9
+      "prevMeanNs": 126.1
     },
     "math/acos@dartMath": {
-      "prevMeanNs": 102.86
+      "prevMeanNs": 127.81
     },
     "math/cbrt": {
-      "prevMeanNs": 137.62
+      "prevMeanNs": 188.33
     },
     "math/cbrt@isLeaf": {
-      "prevMeanNs": 137.42
+      "prevMeanNs": 173.16
     },
     "math/cbrt@dartMath": {
-      "prevMeanNs": 166.84
+      "prevMeanNs": 244.76
     },
     "math/atan2f": {
-      "prevMeanNs": 153.3
+      "prevMeanNs": 189.66
     },
     "math/atan2f@isLeaf": {
-      "prevMeanNs": 124.29
+      "prevMeanNs": 168.68
     },
     "math/atan2f@dartMath": {
-      "prevMeanNs": 174.06
+      "prevMeanNs": 230.06
     },
     "math/powf": {
-      "prevMeanNs": 99.1
+      "prevMeanNs": 125.55
     },
     "math/powf@isLeaf": {
-      "prevMeanNs": 98.02
+      "prevMeanNs": 111.28
     },
     "math/powf@dartMath": {
-      "prevMeanNs": 167.69
+      "prevMeanNs": 226.13
     },
     "math/cardanoAlgorithmForBezier": {
-      "prevMeanNs": 549.67
+      "prevMeanNs": 775.41
     },
     "math/quadraticEquation": {
-      "prevMeanNs": 42.55
+      "prevMeanNs": 57.46
     },
     "math/getEasingSine": {
-      "prevMeanNs": 83.1
+      "prevMeanNs": 135.14
     },
     "math/matrixMultiply@nonAliased": {
-      "prevMeanNs": 58.85
+      "prevMeanNs": 94.7
     },
     "math/matrixMultiply@aliased": {
-      "prevMeanNs": 61.66
+      "prevMeanNs": 85.04
     },
     "math/translateRelative": {
-      "prevMeanNs": 139.85
+      "prevMeanNs": 203.13
     },
     "math/scaleRelative": {
-      "prevMeanNs": 134.92
+      "prevMeanNs": 202.37
     },
     "math/getInvert": {
-      "prevMeanNs": 80.08
+      "prevMeanNs": 106.27
     },
     "math/vector2.addChain": {
-      "prevMeanNs": 5.95
+      "prevMeanNs": 8.2
     },
     "math/vector2.length": {
-      "prevMeanNs": 12.49
+      "prevMeanNs": 16.06
     },
     "math/vector2.distanceTo": {
-      "prevMeanNs": 12.74
+      "prevMeanNs": 18.0
     },
     "math/vector2.normalize": {
-      "prevMeanNs": 19.02
+      "prevMeanNs": 28.05
     },
     "math/vector2.dot": {
-      "prevMeanNs": 4.4
+      "prevMeanNs": 6.33
     },
     "effect/breath": {
-      "prevMeanNs": 83966.67,
-      "prevPerFrameNs": 233.24,
-      "_note": "0.23 \u00b5s/frame (360 frames/run)"
+      "prevMeanNs": 128933.33,
+      "prevPerFrameNs": 358.15,
+      "_note": "0.36 \u00b5s/frame (360 frames/run)"
     },
     "effect/eyeBlink@steady": {
-      "prevMeanNs": 51133.33,
-      "prevPerFrameNs": 85.22,
-      "_note": "0.09 \u00b5s/frame (600 frames/run)"
+      "prevMeanNs": 74133.33,
+      "prevPerFrameNs": 123.56,
+      "_note": "0.12 \u00b5s/frame (600 frames/run)"
     },
     "effect/eyeBlink@transition": {
-      "prevMeanNs": 4766.67,
-      "prevPerFrameNs": 79.44,
-      "_note": "0.08 \u00b5s/frame (60 frames/run)"
+      "prevMeanNs": 9333.33,
+      "prevPerFrameNs": 155.56,
+      "_note": "0.16 \u00b5s/frame (60 frames/run)"
     },
     "effect/look": {
-      "prevMeanNs": 509.9
+      "prevMeanNs": 877.88
     },
     "effect/pose": {
-      "prevMeanNs": 10166.67,
-      "prevPerFrameNs": 84.72,
-      "_note": "0.08 \u00b5s/frame (120 frames/run)"
+      "prevMeanNs": 28800.0,
+      "prevPerFrameNs": 240.0,
+      "_note": "0.24 \u00b5s/frame (120 frames/run)"
     },
     "motion/curveEval@linear": {
-      "prevMeanNs": 132.66
+      "prevMeanNs": 198.67
     },
     "motion/curveEval@bezierCardano": {
-      "prevMeanNs": 1668.02
+      "prevMeanNs": 2697.02
     },
     "motion/curveEval@bezierRestricted": {
-      "prevMeanNs": 186.8
+      "prevMeanNs": 280.62
     },
     "motion/curveEval@stepped": {
-      "prevMeanNs": 151.26
+      "prevMeanNs": 245.86
     },
     "motion/fullMotion": {
-      "prevMeanNs": 3782600.0,
-      "prevPerFrameNs": 6304.33,
-      "_note": "6.30 \u00b5s/frame (600 frames/run)"
+      "prevMeanNs": 6558600.0,
+      "prevPerFrameNs": 10931.0,
+      "_note": "10.93 \u00b5s/frame (600 frames/run)"
     },
     "motion/queueTransition": {
-      "prevMeanNs": 965440.0,
-      "prevPerFrameNs": 8045.33,
-      "_note": "8.05 \u00b5s/frame (120 frames/run)"
+      "prevMeanNs": 2121200.0,
+      "prevPerFrameNs": 17676.67,
+      "_note": "17.68 \u00b5s/frame (120 frames/run)"
     },
     "physics/pendulum@haru_8particles": {
-      "prevMeanNs": 676450.0,
-      "prevPerFrameNs": 2254.83,
-      "_note": "2.25 \u00b5s/frame (300 frames/run)"
+      "prevMeanNs": 857850.0,
+      "prevPerFrameNs": 2859.5,
+      "_note": "2.86 \u00b5s/frame (300 frames/run)"
     },
     "physics/pendulumStress@4rigs_5particles": {
-      "prevMeanNs": 1104650.0,
-      "prevPerFrameNs": 3682.17,
-      "_note": "3.68 \u00b5s/frame (300 frames/run)"
+      "prevMeanNs": 1977850.0,
+      "prevPerFrameNs": 6592.83,
+      "_note": "6.59 \u00b5s/frame (300 frames/run)"
     },
     "physics/pendulumStress@10rigs_5particles": {
-      "prevMeanNs": 2801500.0,
-      "prevPerFrameNs": 9338.33,
-      "_note": "9.34 \u00b5s/frame (300 frames/run)"
+      "prevMeanNs": 3386300.0,
+      "prevPerFrameNs": 11287.67,
+      "_note": "11.29 \u00b5s/frame (300 frames/run)"
     },
     "physics/pendulumStress@10rigs_10particles": {
-      "prevMeanNs": 5012450.0,
-      "prevPerFrameNs": 16708.17,
-      "_note": "16.71 \u00b5s/frame (300 frames/run)"
+      "prevMeanNs": 8079200.0,
+      "prevPerFrameNs": 26930.67,
+      "_note": "26.93 \u00b5s/frame (300 frames/run)"
     },
     "pipeline/fullFrame@60fps": {
-      "prevMeanNs": 18375050.0,
-      "prevPerFrameNs": 61250.17,
-      "_note": "61.25 \u00b5s/frame (300 frames/run)"
+      "prevMeanNs": 33720450.0,
+      "prevPerFrameNs": 112401.5,
+      "_note": "112.40 \u00b5s/frame (300 frames/run)"
     },
     "pipeline/fullFrame@120fps": {
-      "prevMeanNs": 37053550.0,
-      "prevPerFrameNs": 61755.92,
-      "_note": "61.76 \u00b5s/frame (600 frames/run)"
+      "prevMeanNs": 57500400.0,
+      "prevPerFrameNs": 95834.0,
+      "_note": "95.83 \u00b5s/frame (600 frames/run)"
+    },
+    "pipeline/fullFrame@managed@60fps": {
+      "prevMeanNs": 33139450.0,
+      "prevPerFrameNs": 110464.83,
+      "_note": "110.46 \u00b5s/frame (300 frames/run)"
+    },
+    "pipeline/fullFrame@managed@120fps": {
+      "prevMeanNs": 62896950.0,
+      "prevPerFrameNs": 104828.25,
+      "_note": "104.83 \u00b5s/frame (600 frames/run)"
     },
     "pipeline/multiInstance@1x60fps": {
-      "prevMeanNs": 7195600.0,
-      "prevPerFrameNs": 59963.33,
-      "_note": "59.96 \u00b5s/frame (120 frames/run)"
+      "prevMeanNs": 9580333.33,
+      "prevPerFrameNs": 79836.11,
+      "_note": "79.84 \u00b5s/frame (120 frames/run)"
     },
     "pipeline/multiInstance@1x120fps": {
-      "prevMeanNs": 14474466.67,
-      "prevPerFrameNs": 60310.28,
-      "_note": "60.31 \u00b5s/frame (240 frames/run)"
+      "prevMeanNs": 18157066.67,
+      "prevPerFrameNs": 75654.44,
+      "_note": "75.65 \u00b5s/frame (240 frames/run)"
     },
     "pipeline/multiInstance@2x60fps": {
-      "prevMeanNs": 14327000.0,
-      "prevPerFrameNs": 119391.67,
-      "_note": "119.39 \u00b5s/frame (120 frames/run)"
+      "prevMeanNs": 18667800.0,
+      "prevPerFrameNs": 155565.0,
+      "_note": "155.56 \u00b5s/frame (120 frames/run)"
     },
     "pipeline/multiInstance@2x120fps": {
-      "prevMeanNs": 29402533.33,
-      "prevPerFrameNs": 122510.56,
-      "_note": "122.51 \u00b5s/frame (240 frames/run)"
+      "prevMeanNs": 44021266.67,
+      "prevPerFrameNs": 183421.94,
+      "_note": "183.42 \u00b5s/frame (240 frames/run)"
     },
     "pipeline/multiInstance@4x60fps": {
-      "prevMeanNs": 29094466.67,
-      "prevPerFrameNs": 242453.89,
-      "_note": "242.45 \u00b5s/frame (120 frames/run)"
+      "prevMeanNs": 44382466.67,
+      "prevPerFrameNs": 369853.89,
+      "_note": "369.85 \u00b5s/frame (120 frames/run)"
     },
     "pipeline/multiInstance@4x120fps": {
-      "prevMeanNs": 58280400.0,
-      "prevPerFrameNs": 242835.0,
-      "_note": "242.84 \u00b5s/frame (240 frames/run)"
+      "prevMeanNs": 99872133.33,
+      "prevPerFrameNs": 416133.89,
+      "_note": "416.13 \u00b5s/frame (240 frames/run)"
     },
     "pipeline/multiInstance@8x60fps": {
-      "prevMeanNs": 60812666.67,
-      "prevPerFrameNs": 506772.22,
-      "_note": "506.77 \u00b5s/frame (120 frames/run)"
+      "prevMeanNs": 93375666.67,
+      "prevPerFrameNs": 778130.56,
+      "_note": "778.13 \u00b5s/frame (120 frames/run)"
     },
     "pipeline/multiInstance@8x120fps": {
-      "prevMeanNs": 118584800.0,
-      "prevPerFrameNs": 494103.33,
-      "_note": "494.10 \u00b5s/frame (240 frames/run)"
+      "prevMeanNs": 173521866.67,
+      "prevPerFrameNs": 723007.78,
+      "_note": "723.01 \u00b5s/frame (240 frames/run)"
     },
     "pipeline/multiModel@2models@60fps": {
-      "prevMeanNs": 17332133.33,
-      "prevPerFrameNs": 144434.44,
-      "_note": "144.43 \u00b5s/frame (120 frames/run)"
+      "prevMeanNs": 22515400.0,
+      "prevPerFrameNs": 187628.33,
+      "_note": "187.63 \u00b5s/frame (120 frames/run)"
     },
     "pipeline/multiModel@2models@120fps": {
-      "prevMeanNs": 34195133.33,
-      "prevPerFrameNs": 142479.72,
-      "_note": "142.48 \u00b5s/frame (240 frames/run)"
+      "prevMeanNs": 46120666.67,
+      "prevPerFrameNs": 192169.44,
+      "_note": "192.17 \u00b5s/frame (240 frames/run)"
     },
     "pipeline/multiModel@4models@60fps": {
-      "prevMeanNs": 58443733.33,
-      "prevPerFrameNs": 487031.11,
-      "_note": "487.03 \u00b5s/frame (120 frames/run)"
+      "prevMeanNs": 78905800.0,
+      "prevPerFrameNs": 657548.33,
+      "_note": "657.55 \u00b5s/frame (120 frames/run)"
     },
     "pipeline/multiModel@4models@120fps": {
-      "prevMeanNs": 119174066.67,
-      "prevPerFrameNs": 496558.61,
-      "_note": "496.56 \u00b5s/frame (240 frames/run)"
+      "prevMeanNs": 148882133.33,
+      "prevPerFrameNs": 620342.22,
+      "_note": "620.34 \u00b5s/frame (240 frames/run)"
     },
     "pipeline/multiModel@8models@60fps": {
-      "prevMeanNs": 107866066.67,
-      "prevPerFrameNs": 898883.89,
-      "_note": "898.88 \u00b5s/frame (120 frames/run)"
+      "prevMeanNs": 144351733.33,
+      "prevPerFrameNs": 1202931.11,
+      "_note": "1202.93 \u00b5s/frame (120 frames/run)"
     },
     "pipeline/multiModel@8models@120fps": {
-      "prevMeanNs": 210027133.33,
-      "prevPerFrameNs": 875113.06,
-      "_note": "875.11 \u00b5s/frame (240 frames/run)"
+      "prevMeanNs": 283969600.0,
+      "prevPerFrameNs": 1183206.67,
+      "_note": "1183.21 \u00b5s/frame (240 frames/run)"
+    },
+    "pipeline/modelScaling@1models_simultaneous": {
+      "prevMeanNs": 10892666.67,
+      "prevPerFrameNs": 90772.22,
+      "_note": "90.77 \u00b5s/frame (120 frames/run)"
+    },
+    "pipeline/modelScaling@2models_simultaneous": {
+      "prevMeanNs": 27815400.0,
+      "prevPerFrameNs": 231795.0,
+      "_note": "231.79 \u00b5s/frame (120 frames/run)"
+    },
+    "pipeline/modelScaling@4models_simultaneous": {
+      "prevMeanNs": 68828933.33,
+      "prevPerFrameNs": 573574.44,
+      "_note": "573.57 \u00b5s/frame (120 frames/run)"
+    },
+    "pipeline/modelScaling@8models_simultaneous": {
+      "prevMeanNs": 158178533.33,
+      "prevPerFrameNs": 1318154.44,
+      "_note": "1318.15 \u00b5s/frame (120 frames/run)"
+    },
+    "pipeline/modelScaling@16models_simultaneous": {
+      "prevMeanNs": 301763800.0,
+      "prevPerFrameNs": 2514698.33,
+      "_note": "2514.70 \u00b5s/frame (120 frames/run)"
+    },
+    "pipeline/modelScaling@32models_simultaneous": {
+      "prevMeanNs": 542054733.33,
+      "prevPerFrameNs": 4517122.78,
+      "_note": "4517.12 \u00b5s/frame (120 frames/run)"
+    },
+    "pipeline/modelScaling@2models_staggered": {
+      "prevMeanNs": 295858000.0,
+      "prevPerFrameNs": 2465483.33,
+      "_note": "2465.48 \u00b5s/frame (120 frames/run)"
+    },
+    "pipeline/modelScaling@4models_staggered": {
+      "prevMeanNs": 324997900.0,
+      "prevPerFrameNs": 2708315.83,
+      "_note": "2708.32 \u00b5s/frame (120 frames/run)"
+    },
+    "pipeline/modelScaling@8models_staggered": {
+      "prevMeanNs": 366589400.0,
+      "prevPerFrameNs": 3054911.67,
+      "_note": "3054.91 \u00b5s/frame (120 frames/run)"
+    },
+    "pipeline/modelScaling@16models_staggered": {
+      "prevMeanNs": 313556400.0,
+      "prevPerFrameNs": 2612970.0,
+      "_note": "2612.97 \u00b5s/frame (120 frames/run)"
+    },
+    "rendering/cpuDraw": {
+      "prevMeanNs": 201218.67,
+      "prevPerFrameNs": 201218.67,
+      "_note": "201.22 \u00b5s/frame (1 frames/run)"
+    },
+    "rendering/cpuDrawScale@1x": {
+      "prevMeanNs": 183672.5,
+      "prevPerFrameNs": 183672.5,
+      "_note": "183.67 \u00b5s/frame (1 frames/run)"
+    },
+    "rendering/cpuDrawScale@3x": {
+      "prevMeanNs": 587247.5,
+      "prevPerFrameNs": 587247.5,
+      "_note": "587.25 \u00b5s/frame (1 frames/run)"
+    },
+    "rendering/cpuDrawScale@5x": {
+      "prevMeanNs": 929410.0,
+      "prevPerFrameNs": 929410.0,
+      "_note": "929.41 \u00b5s/frame (1 frames/run)"
+    },
+    "stress/motionSpam@5motions": {
+      "prevMeanNs": 4882733.33,
+      "prevPerFrameNs": 16275.78,
+      "_note": "16.28 \u00b5s/frame (300 frames/run)"
+    },
+    "stress/motionSpam@10motions": {
+      "prevMeanNs": 6287733.33,
+      "prevPerFrameNs": 20959.11,
+      "_note": "20.96 \u00b5s/frame (300 frames/run)"
+    },
+    "stress/expressionStorm@4expressions": {
+      "prevMeanNs": 6430750.0,
+      "prevPerFrameNs": 21435.83,
+      "_note": "21.44 \u00b5s/frame (300 frames/run)"
+    },
+    "stress/expressionStorm@8expressions": {
+      "prevMeanNs": 7814350.0,
+      "prevPerFrameNs": 26047.83,
+      "_note": "26.05 \u00b5s/frame (300 frames/run)"
+    },
+    "stress/gcPressure": {
+      "prevMeanNs": 37120733.33,
+      "prevPerFrameNs": 123735.78,
+      "_note": "123.74 \u00b5s/frame (300 frames/run)"
     }
   }
 }
